@@ -11,7 +11,7 @@ Personal portfolio and CV. Single-page site with experience, projects, skills, a
 | **[chrizefan.github.io/me](https://chrizefan.github.io/me/)** | Portfolio (use this in your CV contact section) |
 | [LinkedIn](https://linkedin.com/in/chris-stefan) | Profile |
 | [GitHub @chrizefan](https://github.com/chrizefan) | Personal repos |
-| [digithings.ai](https://github.com/digithings-ai) | Open-source agentic AI toolkit |
+| [digithings.ai](https://digithings.ai) | Open-source agentic AI toolkit |
 
 ---
 

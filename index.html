@@ -33,7 +33,7 @@
   "sameAs": [
     "https://linkedin.com/in/chris-stefan",
     "https://github.com/chrizefan",
-    "https://github.com/digithings-ai"
+    "https://digithings.ai"
   ],
   "knowsAbout": ["Agentic AI", "LLMs", "RAG", "Multi-agent Systems", "Python", "Databricks", "OpenAI API", "Claude API", "Institutional Finance", "SDK Design"]
 }
@@ -497,6 +497,9 @@ section {
   max-width: 600px;
   line-height: 1.6;
   margin-bottom: 2.5rem;
+}
+#experience .section-subtitle {
+  max-width: none;
 }
 
 /* ── ABOUT ─────────────────────────────────────── */
@@ -1072,6 +1075,13 @@ footer .copyright {
   color: var(--accent-l);
   margin-bottom: 0.6rem;
 }
+.side-project-card .sp-subtitle a {
+  color: inherit;
+  text-decoration: none;
+}
+.side-project-card .sp-subtitle a:hover {
+  text-decoration: underline;
+}
 
 .side-project-card .sp-desc {
   font-size: 0.88rem;
@@ -1352,7 +1362,7 @@ html {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
-  align-items: start;
+  align-items: stretch;
 }
 .projects-right-col {
   display: flex;
@@ -1465,7 +1475,7 @@ html {
       <a href="#contact" class="btn btn-ghost">Get in touch</a>
       <a href="https://linkedin.com/in/chris-stefan" class="btn btn-ghost" target="_blank">LinkedIn &nearr;</a>
       <a href="https://github.com/chrizefan" class="btn btn-ghost" target="_blank">GitHub (me) &nearr;</a>
-      <a href="https://github.com/digithings-ai" class="btn btn-ghost" target="_blank">digithings.ai &nearr;</a>
+      <a href="https://digithings.ai" class="btn btn-ghost" target="_blank">digithings.ai &nearr;</a>
     </div>
   </div>
 </section>
@@ -1498,7 +1508,7 @@ html {
       </p>
       <p>
         Outside of work, I'm a <strong>builder</strong>. I'm developing
-        <strong><a href="https://github.com/digithings-ai" target="_blank">digithings.ai</a></strong>,
+        <strong><a href="https://digithings.ai" target="_blank">digithings.ai</a></strong>,
         a modular agentic AI toolkit that distils what I've learned at PSP into reusable components
         anyone can use. Now that I've brought my flagship platform to production and scale, I'm looking
         for what's next: a role where I can keep building things that genuinely matter, with a team
@@ -1513,7 +1523,7 @@ html {
 <section id="experience" class="reveal">
   <div class="section-label">// experience</div>
   <div class="section-title">Where I've worked</div>
-  <div class="section-subtitle">4+ years across AI engineering, quantitative analytics, cybersecurity, and digital strategy &mdash; all grounded in institutional finance. Intern &rarr; contract &rarr; full-time at PSP Investments.</div>
+  <div class="section-subtitle">AI Engineer with 5 years building production AI at the intersection of artificial intelligence and institutional finance. Lead developer &amp; technical owner of PSP Investments' flagship agentic AI platform &mdash; 300 total users, 100 active &amp; recurring, platform showcased at the Databricks Data &amp; AI Summit. Full-stack ownership: architecture, SDK design, UI, onboarding, and stakeholder management across all asset classes. Seeking senior, lead, or consulting roles to build high-impact AI products.</div>
 
   <div class="timeline">
 
@@ -1521,22 +1531,22 @@ html {
     <div class="timeline-item current stagger-child">
       <div class="timeline-dot"></div>
       <div class="tl-header">
-        <span class="tl-title">AI Engineer</span>
-        <span class="tl-company">&middot; AlphaScience &ndash; PSP Investments</span>
+        <span class="tl-title">Senior AI Engineer, AlphaScience</span>
+        <span class="tl-company">&middot; PSP Investments</span>
         <span class="tl-date">Sep 2022 &ndash; Present</span>
       </div>
-      <div class="tl-sub">Institutional Asset Management (~$300B CAD AUM) &middot; Contract &rarr; Full-time Nov 2023 &middot; Montreal, QC</div>
       <ul class="tl-bullets">
-        <li>Build and own PSP's production agentic AI platform end-to-end &mdash; <strong>100+ active analysts</strong>; embedded in analyst–PM daily workflows (AI findings flow directly to PMs who audit &amp; red-team theses in the same session, cutting cycles ~10&times;) supporting <strong>20–30% broader name coverage</strong></li>
-        <li><strong>AlphaScience SDK</strong>: wraps Databricks (Vector Search, SQL Warehouses, Genie Agents) &amp; OpenAI (Responses + Files API), auto-auth via Databricks CLI &amp; Azure Key Vault &mdash; composable agent/workflow base-class framework, proprietary tracing, inter-agent persistence, pre-built financial utility agents &amp; skills; one-liner to spin up an agent or query a vector index</li>
-        <li><strong>Virtual Analyst Platform</strong>: custom chatbot UI with step-level tracing &amp; observability (reasoning trace, web search, RAG retrieval, parallel tool execution, subagents), source traceability, structured data persistence layer with sandboxed analysis &amp; live plotting, long-running workflow launcher &amp; scheduled task subscriptions</li>
-        <li><strong>Leadership</strong>: platform selected for live demo at Databricks Data &amp; AI Summit; mentored interns to ship production features independently; led onboarding for 100+ analysts; roadmap ownership &amp; direct collaboration with C-suite across all asset classes</li>
+        <li>Sole engineer &amp; full-stack owner of PSP's agentic AI platform &mdash; from initial POC through system architecture, design documentation, UI/UX, feature development, SDK packaging &amp; distribution, PR reviews, and ongoing maintenance; 100+ active analysts in daily workflows, cutting research cycles ~10&times; and supporting 20&ndash;30% broader name coverage.</li>
+        <li><strong>AlphaScience SDK:</strong> wraps Databricks (Vector Search, SQL Warehouses, Genie Agents) &amp; OpenAI (Responses + Files API), auto-auth via Databricks CLI &amp; Azure Key Vault &mdash; composable agent/workflow base-class framework, proprietary tracing, inter-agent persistence, pre-built financial utility agents &amp; skills; one-liner to spin up an agent or query a vector index</li>
+        <li><strong>Virtual Analyst Platform:</strong> custom chatbot UI with step-level tracing &amp; observability (reasoning trace, web search, RAG retrieval, parallel tool execution, subagents), source traceability, structured data persistence layer with sandboxed analysis &amp; live plotting, long-running workflow launcher &amp; scheduled task subscriptions</li>
+        <li><strong>Living roadmap:</strong> weekly-evolving priorities with rapid integration of bleeding-edge AI developments into production &mdash; each feature independently scoped, designed as an SDK tool, and surfaced through the platform from concept to deployment</li>
+        <li><strong>Cost impact:</strong> in-house platform (~$1M/year all-in: data, infrastructure &amp; engineering) displaces enterprise tooling priced at ~$20K/analyst/year (e.g., AlphaSense: $1.2M/year for 60 licenses) &mdash; at 100+ active users, avoided spend exceeds platform cost and scales with every analyst onboarded</li>
+        <li><strong>Leadership:</strong> platform selected for live demo at Databricks Data &amp; AI Summit; mentored interns to ship production features independently; led onboarding for 100+ analysts; direct collaboration with C-suite across all asset classes</li>
       </ul>
       <span class="tl-badge">Agentic AI</span>
       <span class="tl-badge">RAG</span>
-      <span class="tl-badge">Multi-agent</span>
-      <span class="tl-badge">Azure AI Foundry</span>
-      <span class="tl-badge">Azure AI Search</span>
+      <span class="tl-badge">Orchestration</span>
+      <span class="tl-badge">Azure AI</span>
       <span class="tl-badge">Evals</span>
       <span class="tl-badge">Observability</span>
     </div>
@@ -1547,9 +1557,8 @@ html {
       <div class="tl-header">
         <span class="tl-title">Analyst, Digital Innovation</span>
         <span class="tl-company">&middot; PSP Investments</span>
-        <span class="tl-date">Sep 2021 &ndash; Aug 2022</span>
+        <span class="tl-date">Sep 2021 &ndash; Aug 2022 &middot; Montreal, QC</span>
       </div>
-      <div class="tl-sub">Montreal, QC</div>
       <ul class="tl-bullets">
         <li>Co-developed <strong>Earnings Prediction Engine</strong> (ML beat/miss pipeline, point-in-time data, Power BI) and quantitative equity strategy for $8B active portfolio (+125 bps/year); built alt-data pipeline with data profiling, cleaning &amp; feature engineering for equity factor research; delivered POC analyses to drive stakeholder buy-in across asset class teams</li>
       </ul>
@@ -1717,6 +1726,7 @@ html {
 <section id="skills" class="reveal">
   <div class="section-label">// skills</div>
   <div class="section-title">What I work with</div>
+  <div class="section-subtitle">Complete skill set across production AI, data, and finance.</div>
 
   <div class="skills-grid">
     <div class="skill-card stagger-child">
@@ -1729,22 +1739,34 @@ html {
         <span class="skill-tag">Hugging Face</span>
         <span class="skill-tag">Prompt Engineering</span>
         <span class="skill-tag">Vector DBs</span>
+        <span class="skill-tag">Agentic AI</span>
+        <span class="skill-tag">RAG</span>
+        <span class="skill-tag">Orchestration</span>
+        <span class="skill-tag">Evals</span>
+        <span class="skill-tag">Observability</span>
+        <span class="skill-tag">LangGraph</span>
+        <span class="skill-tag">LiteLLM</span>
+        <span class="skill-tag">MCP</span>
+        <span class="skill-tag">OpenClaw</span>
       </div>
     </div>
     <div class="skill-card stagger-child">
       <div class="icon">&#x26A1;</div>
       <h3>Data &amp; Cloud</h3>
       <div class="skill-tags">
+        <span class="skill-tag">Azure</span>
+        <span class="skill-tag">GCP</span>
         <span class="skill-tag">Databricks</span>
         <span class="skill-tag">Spark</span>
         <span class="skill-tag">Delta Lake</span>
-        <span class="skill-tag">pandas / NumPy</span>
-        <span class="skill-tag">Azure</span>
-        <span class="skill-tag">GCP</span>
+        <span class="skill-tag">PostgreSQL</span>
+        <span class="skill-tag">SQL</span>
+        <span class="skill-tag">Supabase</span>
         <span class="skill-tag">MLOps</span>
         <span class="skill-tag">CI/CD</span>
-        <span class="skill-tag">PostgreSQL</span>
-        <span class="skill-tag">Supabase</span>
+        <span class="skill-tag">Docker</span>
+        <span class="skill-tag">ML Pipelines</span>
+        <span class="skill-tag">Power BI</span>
       </div>
     </div>
     <div class="skill-card stagger-child">
@@ -1752,12 +1774,13 @@ html {
       <h3>Programming</h3>
       <div class="skill-tags">
         <span class="skill-tag">Python</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">HTML</span>
+        <span class="skill-tag">CSS</span>
         <span class="skill-tag">FastAPI</span>
         <span class="skill-tag">Pydantic</span>
-        <span class="skill-tag">JavaScript</span>
-        <span class="skill-tag">HTML / CSS</span>
-        <span class="skill-tag">SDK Design</span>
         <span class="skill-tag">REST APIs</span>
+        <span class="skill-tag">SDK Design</span>
         <span class="skill-tag">Git</span>
       </div>
     </div>
@@ -1765,9 +1788,12 @@ html {
       <div class="icon">&#x1F4CA;</div>
       <h3>Visualization</h3>
       <div class="skill-tags">
-        <span class="skill-tag">Plotly / Dash</span>
+        <span class="skill-tag">Plotly</span>
+        <span class="skill-tag">Dash</span>
         <span class="skill-tag">Matplotlib</span>
         <span class="skill-tag">ECharts</span>
+        <span class="skill-tag">Mermaid</span>
+        <span class="skill-tag">Tableau</span>
       </div>
     </div>
     <div class="skill-card stagger-child">
@@ -1775,23 +1801,50 @@ html {
       <h3>AI Dev Tools</h3>
       <div class="skill-tags">
         <span class="skill-tag">Cursor</span>
+        <span class="skill-tag">Antigravity</span>
         <span class="skill-tag">GitHub Copilot</span>
         <span class="skill-tag">Claude Code</span>
         <span class="skill-tag">Bolt.new</span>
+        <span class="skill-tag">Open WebUI</span>
+        <span class="skill-tag">Ollama</span>
       </div>
     </div>
     <div class="skill-card stagger-child">
       <div class="icon">&#x1F4B0;</div>
-      <h3>Trading &amp; Data</h3>
+      <h3>Quant Trading</h3>
       <div class="skill-tags">
-        <span class="skill-tag">LSEG</span>
         <span class="skill-tag">QuantConnect</span>
-        <span class="skill-tag">Interactive Brokers API</span>
+        <span class="skill-tag">IBKR API</span>
         <span class="skill-tag">Nautilus Trader</span>
         <span class="skill-tag">TA-Lib</span>
-        <span class="skill-tag">IBES</span>
+        <span class="skill-tag">Quant Strategy</span>
+        <span class="skill-tag">Alt Data</span>
+      </div>
+    </div>
+    <div class="skill-card stagger-child">
+      <div class="icon">&#x1F4C4;</div>
+      <h3>Data &amp; Research</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">LSEG</span>
         <span class="skill-tag">Worldscope</span>
+        <span class="skill-tag">IBES</span>
         <span class="skill-tag">SEC Filings</span>
+        <span class="skill-tag">Broker Research</span>
+        <span class="skill-tag">Transcripts</span>
+        <span class="skill-tag">scikit-learn</span>
+        <span class="skill-tag">Cybersecurity</span>
+        <span class="skill-tag">Risk Analysis</span>
+      </div>
+    </div>
+    <div class="skill-card stagger-child">
+      <div class="icon">&#x1F6D2;</div>
+      <h3>Business Analytics &amp; E-commerce</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">SEO</span>
+        <span class="skill-tag">A/B Testing</span>
+        <span class="skill-tag">Shopify</span>
+        <span class="skill-tag">Lightspeed</span>
+        <span class="skill-tag">Analytics</span>
       </div>
     </div>
   </div>
@@ -1803,7 +1856,6 @@ html {
 <section id="qa" class="reveal">
   <div class="section-label">// interview Q&amp;A</div>
   <div class="section-title">In my own words</div>
-  <div class="section-subtitle">Answers to the questions I get asked most, written the way I'd actually say them.</div>
 
   <div class="qa-grid">
 
@@ -1814,16 +1866,14 @@ html {
       </div>
       <div class="qa-answer">
         <p>
-          I'm an AI engineer with a background in both computer science and finance. I studied CS first,
-          then switched to Finance and Business Analytics at McGill, and built my career at the intersection
-          of the two. For the past 4+ years I've been at PSP Investments building production AI systems
-          for institutional investment teams.
+          I'm an AI engineer with a background in computer science and finance. I studied CS first, then
+          Finance and Business Analytics at McGill, and I've spent the past 5 years at PSP Investments
+          building production AI systems for institutional investment teams.
         </p>
         <ul>
-          <li>What started as an internship evaluating alternative data turned into leading PSP's flagship agentic AI platform, used daily by 100+ analysts</li>
-          <li>I own it end-to-end: the SDK, the UI, the user onboarding, the roadmap</li>
-          <li>Outside of work, I'm building <strong>digithings.ai</strong>, an open-source modular agentic AI toolkit</li>
-          <li>I like building things that go from zero to something real, and I'm ready to do that in a new context</li>
+          <li>Started as an intern in digital innovation, then took on the agentic AI platform as it grew from POC to production</li>
+          <li>I handle the full stack: SDK, UI, onboarding, and roadmap</li>
+          <li>I'm looking to expand into new domains, learn from different industries, and keep building systems that deliver real value</li>
         </ul>
       </div>
     </div>
@@ -1835,15 +1885,14 @@ html {
       </div>
       <div class="qa-answer">
         <p>
-          I came at it from both sides. My CS background gave me the engineering instinct; my finance degree
-          gave me the domain knowledge to understand what analysts actually need, not just what's technically
-          impressive. That combination is rare, and it's what lets me build tools people actually trust and use.
+          I came at it from both sides. CS gave me the engineering foundation; finance gave me the domain
+          context to understand what analysts actually need. That mix has been useful for building tools
+          that people trust and use day to day.
         </p>
         <ul>
-          <li>Finance is one of the hardest environments for AI: the stakes are real, the data is messy, the users are sophisticated</li>
-          <li>When an analyst trusts my platform to help build a thesis on a billion-dollar position, that's production AI with real consequences</li>
-          <li>High-stakes environments sharpen your instinct for reliability, traceability, and user trust</li>
-          <li>The same patterns that work in institutional finance translate well to other complex, high-impact domains</li>
+          <li>Finance is demanding for AI: high stakes, messy data, sophisticated users who need to verify everything</li>
+          <li>Working in that environment has pushed me to focus on reliability, traceability, and making outputs verifiable</li>
+          <li>I'm interested in applying those patterns to other industries where the stakes and impact are high</li>
         </ul>
       </div>
     </div>
@@ -1854,29 +1903,18 @@ html {
         <span>"What's the biggest technical challenge you've solved?"</span>
       </div>
       <div class="qa-answer">
-        <p>Two challenges stand out, and both changed how I think about building AI systems.</p>
         <p>
-          <strong>Source traceability.</strong> Investment analysts can't just take an AI's word for something.
-          I designed a system where every claim links back to its exact document, page, and passage,
-          surfaced directly in the UI so analysts never have to leave the platform to verify a fact.
-          The harder part wasn't the engineering (tracking provenance through recursive agentic workflows
-          and multi-source RAG) but recognizing that without this trust layer, no analyst would use the tool
-          at all. That insight came from my finance background, not my CS background.
+          <strong>Source traceability.</strong> Analysts can't take an AI's word for something. I built a
+          system where every claim links back to its exact document, page, and passage, surfaced in the
+          UI so they can verify without leaving the platform. The engineering was one part; the other
+          was realizing that without that trust layer, the tool wouldn't get used at all.
         </p>
         <p>
-          <strong>Structured data integration.</strong> Financial data tables are massive. Dumping full
-          datasets into a model's context window isn't viable at scale. I built a backend data store
-          framework where the model references tables and plots by path, works with compact data profile
-          summaries, and runs traditional ML analysis on top of that structured layer. Results are relayed
-          back through the LLM. This keeps context windows clean and makes large structured datasets
-          genuinely usable inside agentic workflows. It's not a finance-only problem: healthcare, legal,
-          and operations face the same constraint.
+          <strong>Structured data integration.</strong> Financial datasets are too large for context windows.
+          I built a backend where the model references tables by path, works with compact summaries, and
+          runs ML analysis on top of that layer. Results flow back through the LLM. The same pattern
+          applies to healthcare, legal, and other domains with large structured data.
         </p>
-        <ul>
-          <li>Source traceability: provenance tracked through recursive agentic workflows and multi-source RAG, surfaced in the UI</li>
-          <li>Structured data: backend data store + data profile summaries + ML on top, relayed through the LLM</li>
-          <li>Both required combining engineering judgment with domain knowledge to get right</li>
-        </ul>
       </div>
     </div>
 
@@ -1887,19 +1925,15 @@ html {
       </div>
       <div class="qa-answer">
         <p>
-          I'm looking for a role where I can keep building things that genuinely matter.
-          The specifics are flexible; what I care about is the work and the people I'm doing it with.
+          I want to keep building production AI systems that matter. I'm open to full-time, contract, or
+          consulting, and I'm flexible on structure. What matters to me is the work, the team, and the
+          impact.
         </p>
         <ul>
+          <li>Interested in expanding beyond finance: healthcare, legal, operations, education, anywhere AI can add real value</li>
+          <li>I'd like to keep learning, apply what I've built in new contexts, and grow my production experience</li>
           <li>Open to remote roles with international or Europe-based teams</li>
-          <li>Full-time, contract, or part-time: I care about impact, not the structure</li>
-          <li>Interested in domains beyond finance: healthcare, legal, operations, education, anywhere the stakes and human impact are high</li>
-          <li>Not interested in being a cog: I want end-to-end ownership and the ability to shape what gets built</li>
         </ul>
-        <p>
-          I'm already building <strong><a href="https://github.com/digithings-ai" target="_blank">digithings.ai</a></strong>
-          on the side. My next role is where I deepen that work, apply it in a new context, and keep shipping things that matter.
-        </p>
       </div>
     </div>
 
@@ -1914,18 +1948,16 @@ html {
   <div class="section-title">What I build on my own time</div>
   <div class="section-subtitle">Production knowledge from institutional AI, distilled into open-source components anyone can use.</div>
 
-  <div style="max-width:640px;">
-
-    <div class="side-project-card stagger-child">
+  <div class="side-projects-grid">
+    <div class="side-project-card stagger-child" style="grid-column: 1 / -1;">
       <div class="sp-icon">&#x1F916;</div>
       <div class="sp-title">digithings.ai</div>
-      <div class="sp-subtitle">github.com/digithings-ai &mdash; Open Source &middot; POC with first client</div>
+      <div class="sp-subtitle"><a href="https://digithings.ai" target="_blank" rel="noopener">digithings.ai</a> &middot; <a href="https://github.com/digithings-ai" target="_blank" rel="noopener">github.com/digithings-ai</a> &mdash; Open Source</div>
       <p class="sp-desc">
-        A fully modular agentic AI toolkit: a family of composable components that can be configured,
-        deployed, and connected together to build AI-powered systems fast. Distilled from building
-        production AI at PSP. Direction: a "hedge fund in a box" that merges agentic AI with traditional
-        quantitative finance for automated investment decision-making, though the modular design makes it
-        applicable across industries.
+        Fully modular multi-agent AI toolkit. LangGraph orchestration, LiteLLM universal LLM wrapper,
+        pluggable RAG backends, built-in evals, Docker deployment, MCP &amp; Open WebUI integration,
+        OpenClaw layer for autonomous agent deployment. Direction: &ldquo;hedge fund in a box&rdquo; &mdash;
+        merging agentic AI with quantitative finance.
       </p>
       <ul class="sp-features">
         <li><strong>LangGraph orchestration</strong> &mdash; reusable agent graph patterns for multi-step agentic reasoning and workflow automation</li>
@@ -2040,11 +2072,8 @@ html {
       <a href="https://github.com/chrizefan" target="_blank" class="contact-pill">
         <span class="pill-icon">&#x1F4BB;</span> GitHub
       </a>
-      <a href="https://github.com/digithings-ai" target="_blank" class="contact-pill">
+      <a href="https://digithings.ai" target="_blank" class="contact-pill">
         <span class="pill-icon">&#x1F4BB;</span> digithings.ai
-      </a>
-      <a href="https://chrizefan.github.io/me/" target="_blank" class="contact-pill">
-        <span class="pill-icon">&#x1F517;</span> Portfolio
       </a>
     </div>
     <div class="copyright">Montreal, QC &middot; EU Citizen &middot; Relocating to Europe &middot; Remote-ready &middot; &copy; 2026 Chris Stefan</div>
