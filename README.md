@@ -1,23 +1,19 @@
 # Chris Stefan — Portfolio
 
-Personal portfolio site. Deployed on [GitHub Pages](https://pages.github.com/).
+**Senior AI Engineer** · Production agentic AI · Remote-ready
 
-## Links
+Personal portfolio and CV. Single-page site with experience, projects, skills, and interview Q&A. Deployed on [GitHub Pages](https://pages.github.com/).
 
-| What | URL |
-|------|-----|
-| **This site (portfolio)** | `https://chrizefan.github.io/me/` — use this in your CV contact section |
-| **Personal GitHub** | [github.com/chrizefan](https://github.com/chrizefan) |
-| **Organization** | [github.com/digithings-ai](https://github.com/digithings-ai) |
+---
 
-The `index.html` page links to both your personal profile and the digithings.ai org in the hero and contact footer.
+| Link | Description |
+|------|-------------|
+| **[chrizefan.github.io/me](https://chrizefan.github.io/me/)** | Portfolio (use this in your CV contact section) |
+| [LinkedIn](https://linkedin.com/in/chris-stefan) | Profile |
+| [GitHub @chrizefan](https://github.com/chrizefan) | Personal repos |
+| [digithings.ai](https://github.com/digithings-ai) | Open-source agentic AI toolkit |
 
-## Deploy to GitHub Pages
+---
 
-1. Push this repo to your **personal** GitHub account (`chrizefan`) as a repo named `me` (or any name; the site URL will be `https://chrizefan.github.io/<repo-name>/`).
-2. On GitHub: **Settings** → **Pages**.
-3. Under **Build and deployment** → **Source**, choose **Deploy from a branch**.
-4. Under **Branch**, select `main` (or your default branch) and **/ (root)**.
-5. Click **Save**. The site will be live at `https://chrizefan.github.io/me/` (if the repo is named `me`).
-
-Root contains `index.html` and `Chris_Stefan_CV.pdf`; the `.nojekyll` file ensures GitHub serves them as static files.
+**Chris Stefan**  
+chris.stefan@proton.me · [LinkedIn](https://linkedin.com/in/chris-stefan) · [GitHub](https://github.com/chrizefan)
