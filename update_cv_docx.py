@@ -58,7 +58,7 @@ p.runs[0].font.name = "Inter"
 p.paragraph_format.space_after = Pt(6)
 
 summary = (
-    "AI Engineer with 5 years building production AI at the intersection of "
+    "AI Engineer with 5 years building AI in production at the intersection of "
     "artificial intelligence and institutional finance. Lead developer & technical "
     "owner of PSP Investments' flagship agentic AI platform — 300 total users, 100 "
     "active & recurring, platform showcased at the Databricks Data & AI Summit. "
@@ -86,12 +86,12 @@ experiences = [
         "title": "Senior AI Engineer, AlphaScience — PSP Investments · Montreal, QC",
         "date": "Sep 2022 – Present",
         "bullets": [
-            "Sole engineer & full-stack owner of PSP's agentic AI platform — from initial POC through system architecture, design documentation, UI/UX, feature development, SDK packaging & distribution, PR reviews, and ongoing maintenance; 100+ active analysts in daily workflows, cutting research cycles ~10× and supporting 20–30% broader name coverage.",
+            "Engineered and owned the full stack of PSP's agentic AI platform — architect and designer of system architecture, design documentation, and UI/UX from concept to deployment; feature development, SDK packaging & distribution, PR reviews, and ongoing maintenance; 100+ active analysts in daily workflows, cutting research cycles ~10× and supporting 20–30% broader portfolio coverage.",
             "AlphaScience SDK: wraps Databricks (Vector Search, SQL Warehouses, Genie Agents) & OpenAI (Responses + Files API), auto-auth via Databricks CLI & Azure Key Vault — composable agent/workflow base-class framework, proprietary tracing, inter-agent persistence, pre-built financial utility agents & skills; one-liner to spin up an agent or query a vector index",
             "Virtual Analyst Platform: custom chatbot UI with step-level tracing & observability (reasoning trace, web search, RAG retrieval, parallel tool execution, subagents), source traceability, structured data persistence layer with sandboxed analysis & live plotting, long-running workflow launcher & scheduled task subscriptions",
-            "Living roadmap: weekly-evolving priorities with rapid integration of bleeding-edge AI developments into production — each feature independently scoped, designed as an SDK tool, and surfaced through the platform from concept to deployment",
-            "Cost impact: in-house platform (~$1M/year all-in: data, infrastructure & engineering) displaces enterprise tooling priced at ~$20K/analyst/year (e.g., AlphaSense: $1.2M/year for 60 licenses) — at 100+ active users, avoided spend exceeds platform cost and scales with every analyst onboarded",
-            "Leadership: platform selected for live demo at Databricks Data & AI Summit; mentored interns to ship production features independently; led onboarding for 100+ analysts; direct collaboration with C-suite across all asset classes",
+            "Agile roadmap: weekly-evolving priorities with rapid integration of bleeding-edge AI developments into production — each feature independently scoped, designed as an SDK tool, and surfaced through the platform from concept to deployment",
+            "Cost savings: in-house platform (~$1M/year all-in: data, infrastructure & engineering) displaces enterprise tooling priced at ~$20K/analyst/year (e.g., AlphaSense: $1.2M/year for 60 licenses) — at 100+ active users, avoided spend exceeds platform cost and scales with every analyst onboarded",
+            "Leadership: direct collaboration with C-suite across all asset classes; mentored interns and juniors to ship features in production independently; led onboarding for 100+ analysts on the Virtual Analyst Platform; coached AlphaScience SDK users; platform selected for live demo at Databricks Data & AI Summit",
         ],
         "pills": ["Agentic AI", "RAG", "Orchestration", "Azure AI", "Evals", "Observability"],
     },
@@ -260,7 +260,7 @@ p.runs[0].font.bold = True
 p.runs[0].font.name = "Inter"
 p.paragraph_format.space_after = Pt(6)
 
-p = doc.add_paragraph("English — Fluent\nFrench — Fluent\nSpanish — Basic\nItalian — Basic")
+p = doc.add_paragraph("English — Mother tongue\nFrench — Mother tongue\nSpanish — Basic\nItalian — Basic")
 for run in p.runs:
     run.font.size = Pt(9)
     run.font.name = "Inter"
