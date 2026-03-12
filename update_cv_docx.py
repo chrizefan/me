@@ -39,7 +39,7 @@ contact = [
     "linkedin.com/in/chris-stefan",
     "github.com/chrizefan",
     "chrizefan.github.io/me",
-    "EU Citizen · Relocating to Europe",
+    "Canada → Relocating to Europe",
 ]
 for line in contact:
     p = doc.add_paragraph(line, style="Normal")
@@ -63,7 +63,8 @@ summary = (
     "owner of PSP Investments' flagship agentic AI platform — 300 total users, 100 "
     "active & recurring, platform showcased at the Databricks Data & AI Summit. "
     "Full-stack ownership: architecture, SDK design, UI, onboarding, and "
-    "stakeholder management across all asset classes. Seeking senior, lead, or "
+    "stakeholder management across all asset classes. EU citizen with right to "
+    "work in the EU; no sponsorship required. Seeking senior, lead, or "
     "consulting roles to build high-impact AI products."
 )
 p = doc.add_paragraph(summary, style="Normal")
@@ -82,7 +83,7 @@ p.paragraph_format.space_after = Pt(6)
 
 experiences = [
     {
-        "title": "Senior AI Engineer, AlphaScience — PSP Investments",
+        "title": "Senior AI Engineer, AlphaScience — PSP Investments · Montreal, QC",
         "date": "Sep 2022 – Present",
         "bullets": [
             "Sole engineer & full-stack owner of PSP's agentic AI platform — from initial POC through system architecture, design documentation, UI/UX, feature development, SDK packaging & distribution, PR reviews, and ongoing maintenance; 100+ active analysts in daily workflows, cutting research cycles ~10× and supporting 20–30% broader name coverage.",
@@ -95,23 +96,23 @@ experiences = [
         "pills": ["Agentic AI", "RAG", "Orchestration", "Azure AI", "Evals", "Observability"],
     },
     {
-        "title": "Analyst, Digital Innovation — PSP Investments",
-        "date": "Sep 2021 – Aug 2022 · Montreal, QC",
+        "title": "Analyst, Digital Innovation — PSP Investments · Montreal, QC",
+        "date": "Sep 2021 – Aug 2022",
         "bullets": [
             "Co-developed Earnings Prediction Engine (ML beat/miss pipeline, point-in-time data, Power BI) and quantitative equity strategy for $8B active portfolio (+125 bps/year); built alt-data pipeline with data profiling, cleaning & feature engineering for equity factor research; delivered POC analyses to drive stakeholder buy-in across asset class teams",
         ],
         "pills": ["Quant Strategy", "Alt Data", "ML Pipelines", "Power BI", "scikit-learn"],
     },
     {
-        "title": "Intern, Information Security — PSP Investments",
-        "date": "May–Aug 2021",
+        "title": "Intern, Information Security — PSP Investments · Montreal, QC",
+        "date": "May 2021 – Aug 2021",
         "bullets": [
             "Enterprise risk framework implementation; automated risk assessment repository updates, improving data currency and reporting efficiency",
         ],
         "pills": ["Cybersecurity", "Risk Analysis"],
     },
     {
-        "title": "Business Analyst — Lunch à Porter",
+        "title": "Business Analyst — Lunch à Porter · Montreal, QC",
         "date": "Jun 2020 – Jun 2021",
         "bullets": [
             "SEO & A/B testing drove 2× online conversion rate; inventory analysis for data-informed merchandising decisions",
