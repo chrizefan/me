@@ -96,6 +96,8 @@
 [data-theme="light"] .btn-ghost { color: #5A5750; border-color: #D5D0C8; }
 [data-theme="light"] .btn-ghost:hover { color: #B55E2A; border-color: #B55E2A; }
 [data-theme="light"] .section-title { color: #1C1B18; }
+[data-theme="light"] .cv-details-btn { color: #B55E2A; background: rgba(181,94,42,0.08); border-color: rgba(181,94,42,0.25); }
+[data-theme="light"] .cv-details-btn:hover { color: #fff; background: #B55E2A; border-color: #B55E2A; }
 [data-theme="light"] .section-label { color: #B55E2A; -webkit-text-fill-color: #B55E2A; }
 [data-theme="light"] .section-subtitle { color: #5A5750; }
 [data-theme="light"] .about-text { color: #2A2825; }
@@ -489,6 +491,33 @@ section {
   color: var(--white);
   letter-spacing: -0.8px;
   margin-bottom: 1rem;
+}
+.section-title-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.section-title-row .section-title { margin-bottom: 0; }
+.cv-details-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-l);
+  background: rgba(201,107,46,0.1);
+  border: 1px solid rgba(201,107,46,0.3);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s;
+  letter-spacing: 0.2px;
+}
+.cv-details-btn:hover {
+  color: var(--white);
+  background: var(--accent);
+  border-color: var(--accent);
 }
 
 .section-subtitle {
@@ -1626,7 +1655,10 @@ html {
 <!-- ═══════ EXPERIENCE ═══════ -->
 <section id="experience" class="reveal">
   <div class="section-label">// experience</div>
-  <div class="section-title">Where I've worked</div>
+  <div class="section-title-row">
+    <div class="section-title">Where I've worked</div>
+    <a href="Chris_Stefan_CV.pdf" download="Chris_Stefan_CV.pdf" class="cv-details-btn" title="Download CV (PDF)">For more details, see the CV</a>
+  </div>
   <div class="section-subtitle">5 years building AI in production at the intersection of institutional finance and agentic systems. EU citizen with right to work in the EU; no sponsorship required. Seeking senior, lead, or consulting roles to build high-impact AI products.</div>
 
   <div class="timeline">
@@ -1888,15 +1920,15 @@ html {
       <div class="qa-answer">
         <p>
           <strong>Source traceability.</strong> Analysts can't take an AI's word for something. I built a
-          system where every claim links back to its exact document, page, and passage, surfaced in the
+          system that links every claim back to its exact document, page, and passage, surfaced in the
           UI so they can verify without leaving the platform. The engineering was one part; the other
           was realizing that without that trust layer, the tool wouldn't get used at all.
         </p>
         <p>
           <strong>Structured data integration.</strong> Financial datasets are too large for context windows.
-          I built a backend where the model references tables by path, works with compact summaries, and
-          runs ML analysis on top of that layer. Results flow back through the LLM. The same pattern
-          applies to healthcare, legal, and other domains with large structured data.
+          I built a backend that enables the model to reference tables by path, work with compact summaries, and
+          run ML analysis on top of that layer. Results flow back through the LLM. The same pain points
+          exist in healthcare, legal, and other domains with large structured data.
         </p>
       </div>
     </div>
@@ -1908,7 +1940,7 @@ html {
       </div>
       <div class="qa-answer">
         <p>
-          I want to keep building AI systems in production that matter. I'm open to full-time, contract, or consulting, and flexible on structure. Interested in expanding beyond finance (healthcare, legal, operations, education) anywhere AI can add real value. Open to remote roles with international or Europe-based teams.
+          I'm passionate about building AI systems in production that matter, and I want to keep learning and growing my expertise in the field. I'm open to any form of remote work; what matters to me is the work itself, the team, the value we ship, and the impact it has on clients.
         </p>
       </div>
     </div>
