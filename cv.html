@@ -160,22 +160,30 @@
     }
     .exp-item:first-of-type { margin-top: 0; }
 
+    .exp-header {
+      margin-bottom: 0.2rem;
+    }
     .exp-title {
       font-size: 0.85rem;
       font-weight: 700;
       color: #1C1B18;
       margin-bottom: 0.05rem;
     }
+    .exp-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
     .exp-company {
-      font-size: 0.75rem;
-      color: #5A5750;
+      font-size: 0.68rem;
+      color: #8A8782;
       font-weight: 500;
-      margin-bottom: 0.1rem;
     }
     .exp-date {
-      font-size: 0.62rem;
-      color: #706D68;
-      margin-bottom: 0.35rem;
+      font-size: 0.6rem;
+      color: #8A8782;
     }
     .exp-bullets {
       list-style: none;
@@ -249,32 +257,31 @@
         line-height: 1.28;
       }
       .header {
-        margin-bottom: 0.3rem;
-        padding-bottom: 0.28rem;
+        margin-bottom: 0.28rem;
+        padding-bottom: 0.26rem;
         page-break-after: avoid;
       }
-      .header h1 { font-size: 1.1rem; margin-bottom: 0.1rem; }
+      .header h1 { font-size: 1.1rem; margin-bottom: 0.08rem; }
       .header .tagline { font-size: 0.6rem; }
       .cv-layout {
         page-break-inside: avoid;
-        gap: 0.65rem;
-        min-height: 9.4in;
+        gap: 0.62rem;
         align-items: stretch;
       }
-      .section { margin-bottom: 0.55rem; }
-      .section-title { margin-bottom: 0.32rem; }
+      .section { margin-bottom: 0.52rem; }
+      .section-title { margin-bottom: 0.3rem; }
       .sidebar {
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
-        padding: 0.55rem 0.6rem;
+        padding: 0.52rem 0.58rem;
       }
-      .skills .section-title { margin-bottom: 0.35rem; }
-      .skill-category { margin-bottom: 0.38rem; }
-      .skill-cat-title { margin-bottom: 0.26rem; }
-      .skill-pills { gap: 0.18rem 0.28rem; }
-      .contact-line { margin-bottom: 0.24rem; font-size: 0.58rem; }
+      .skills .section-title { margin-bottom: 0.34rem; }
+      .skill-category { margin-bottom: 0.34rem; }
+      .skill-cat-title { margin-bottom: 0.24rem; }
+      .skill-pills { gap: 0.16rem 0.26rem; }
+      .contact-line { margin-bottom: 0.22rem; font-size: 0.58rem; }
       .contact-icon svg { width: 10px; height: 10px; color-adjust: exact; -webkit-print-color-adjust: exact; }
-      .edu-item, .cert-item { margin-bottom: 0.32rem; font-size: 0.62rem; }
+      .edu-item, .cert-item { margin-bottom: 0.3rem; font-size: 0.62rem; }
       .edu-item .meta, .cert-item .meta, .edu-item .location { font-size: 0.55rem; }
       .lang-item { margin-bottom: 0.12rem; font-size: 0.58rem; }
       .main {
@@ -284,28 +291,31 @@
       .main .project-section {
         margin-top: auto;
       }
-      .main .section-title { margin-bottom: 0.32rem; }
-      .exp-section { padding-top: 0.45rem; }
-      .exp-item { margin-top: 0.58rem; }
+      .main .section-title { margin-bottom: 0.3rem; }
+      .exp-section { padding-top: 0.42rem; }
+      .exp-item { margin-top: 0.52rem; }
       .exp-item:first-of-type { margin-top: 0; }
-      .exp-title { font-size: 0.75rem; margin-bottom: 0.04rem; }
-      .exp-date { font-size: 0.58rem; margin-bottom: 0.22rem; }
-      .exp-bullets { margin-bottom: 0.28rem; }
+      .exp-header { margin-bottom: 0.2rem; }
+      .exp-title { font-size: 0.76rem; margin-bottom: 0.04rem; }
+      .exp-meta { display: flex; justify-content: space-between; align-items: baseline; }
+      .exp-company { font-size: 0.58rem; color: #8A8782; }
+      .exp-date { font-size: 0.58rem; color: #8A8782; }
+      .exp-bullets { margin-bottom: 0.22rem; }
       .exp-bullets li {
         margin-bottom: 0.14rem;
-        font-size: 0.65rem;
+        font-size: 0.64rem;
         line-height: 1.32;
       }
       .exp-pills {
-        margin-top: 0.15rem;
-        margin-bottom: 0.28rem;
+        margin-top: 0.14rem;
+        margin-bottom: 0.22rem;
         gap: 0.14rem 0.22rem;
       }
-      .exp-pills .pill { font-size: 0.5rem; padding: 0.05rem 0.2rem; }
-      .summary-text { font-size: 0.65rem; line-height: 1.36; margin-bottom: 0.35rem; }
-      .project-section { padding-top: 0.45rem; }
+      .exp-pills .pill { font-size: 0.5rem; padding: 0.05rem 0.22rem; }
+      .summary-text { font-size: 0.64rem; line-height: 1.34; margin-bottom: 0.3rem; }
+      .project-section { padding-top: 0.42rem; }
       .project-title { font-size: 0.7rem; margin-bottom: 0.14rem; }
-      .project-desc { font-size: 0.65rem; line-height: 1.36; margin-bottom: 0.35rem; }
+      .project-desc { font-size: 0.64rem; line-height: 1.34; margin-bottom: 0.3rem; }
     }
   </style>
 </head>
@@ -469,10 +479,10 @@
 
       <div class="section">
         <div class="section-title">Languages</div>
-        <div class="lang-item">English — Fluent</div>
-        <div class="lang-item">French — Fluent</div>
-        <div class="lang-item">Spanish — Basic</div>
-        <div class="lang-item">Italian — Basic</div>
+        <div class="lang-item">English · Mother tongue</div>
+        <div class="lang-item">French · Mother tongue</div>
+        <div class="lang-item">Spanish · Basic</div>
+        <div class="lang-item">Italian · Basic</div>
       </div>
     </aside>
 
@@ -481,7 +491,7 @@
       <div class="section">
         <div class="section-title">Summary</div>
         <p class="summary-text">
-          AI Engineer with 5 years building AI in production at the intersection of artificial intelligence and institutional finance. Lead developer &amp; technical owner of PSP Investments' flagship agentic AI platform — 300 total users, 100 active &amp; recurring, platform showcased at the Databricks Data &amp; AI Summit. Full-stack ownership: architecture, SDK design, UI, onboarding, and stakeholder management across all asset classes. EU citizen with right to work in the EU; no sponsorship required. Seeking senior, lead, or consulting roles to build high-impact AI products.
+          AI Engineer with 5 years building production AI at the intersection of artificial intelligence and institutional finance. Lead developer &amp; technical owner of PSP Investments' flagship agentic AI platform: 300 total users, 100 active &amp; recurring, platform showcased at the Databricks Data &amp; AI Summit. Full-stack ownership: architecture, SDK design, UI, onboarding, and stakeholder management across all asset classes. EU citizen with right to work in the EU; no sponsorship required. Seeking senior, lead, or consulting roles to build high-impact AI products.
         </p>
       </div>
 
@@ -489,15 +499,20 @@
         <div class="section-title">Experience</div>
 
         <div class="exp-item">
-          <div class="exp-title">Senior AI Engineer, AlphaScience — PSP Investments</div>
-          <div class="exp-date">Sep 2022 – Present · Montreal, QC</div>
+          <div class="exp-header">
+            <div class="exp-title">Senior AI Engineer</div>
+            <div class="exp-meta">
+              <div class="exp-company">Alpha Science · PSP Investments · Montreal, QC</div>
+              <div class="exp-date">Sep 2022 – Present</div>
+            </div>
+          </div>
           <ul class="exp-bullets">
-            <li>Engineered and owned the full stack of PSP's agentic AI platform — from initial POC through system architecture, design documentation, UI/UX, feature development, SDK packaging &amp; distribution, PR reviews, and ongoing maintenance; 100+ active analysts in daily workflows, cutting research cycles ~10× and supporting 20–30% broader name coverage.</li>
-            <li><strong>AlphaScience SDK:</strong> wraps Databricks (Vector Search, SQL Warehouses, Genie Agents) &amp; OpenAI (Responses + Files API), auto-auth via Databricks CLI &amp; Azure Key Vault — composable agent/workflow base-class framework, proprietary tracing, inter-agent persistence, pre-built financial utility agents &amp; skills; one-liner to spin up an agent or query a vector index</li>
+            <li>Engineered and owned the full stack of PSP's agentic AI platform: architect and designer of system architecture, design documentation, and UI/UX from concept to deployment; feature development, SDK packaging &amp; distribution, PR reviews, and ongoing maintenance; 100+ active analysts in daily workflows, cutting research cycles ~10&times; and supporting 20&ndash;30% broader portfolio coverage.</li>
+            <li><strong>Alpha Science SDK:</strong> wraps Databricks (Vector Search, SQL Warehouses, Genie Agents) &amp; OpenAI (Responses + Files API), auto-auth via Databricks CLI &amp; Azure Key Vault. Composable agent/workflow base-class framework, proprietary tracing, inter-agent persistence, pre-built financial utility agents &amp; skills; one-liner to spin up an agent or query a vector index</li>
             <li><strong>Virtual Analyst Platform:</strong> custom chatbot UI with step-level tracing &amp; observability (reasoning trace, web search, RAG retrieval, parallel tool execution, subagents), source traceability, structured data persistence layer with sandboxed analysis &amp; live plotting, long-running workflow launcher &amp; scheduled task subscriptions</li>
-            <li><strong>Living roadmap:</strong> weekly-evolving priorities with rapid integration of bleeding-edge AI developments into production — each feature independently scoped, designed as an SDK tool, and surfaced through the platform from concept to deployment</li>
-            <li><strong>Cost impact:</strong> in-house platform (~$1M/year all-in: data, infrastructure &amp; engineering) displaces enterprise tooling priced at ~$20K/analyst/year (e.g., AlphaSense: $1.2M/year for 60 licenses) — at 100+ active users, avoided spend exceeds platform cost and scales with every analyst onboarded</li>
-            <li><strong>Leadership:</strong> platform selected for live demo at Databricks Data &amp; AI Summit; mentored interns to ship features in production independently; led onboarding for 100+ analysts; direct collaboration with C-suite across all asset classes</li>
+            <li><strong>Agile roadmap:</strong> weekly-evolving priorities with rapid integration of bleeding-edge AI developments into production. Each feature independently scoped, designed as an SDK tool, and surfaced through the platform from concept to deployment</li>
+            <li><strong>Cost savings:</strong> in-house platform (~$1M/year all-in: data, infrastructure &amp; engineering) displaces enterprise tooling priced at ~$20K/analyst/year (e.g., AlphaSense: $1.2M/year for 60 licenses). At 100+ active users, avoided spend exceeds platform cost and scales with every analyst onboarded</li>
+            <li><strong>Leadership:</strong> direct collaboration with C-suite across all asset classes; mentored interns and juniors to ship production features independently; led onboarding for 100+ analysts on the Virtual Analyst Platform; coached Alpha Science SDK users; platform selected for live demo at Databricks Data &amp; AI Summit</li>
           </ul>
           <div class="exp-pills">
             <span class="pill">Agentic AI</span>
@@ -510,8 +525,13 @@
         </div>
 
         <div class="exp-item">
-          <div class="exp-title">Analyst, Digital Innovation — PSP Investments</div>
-          <div class="exp-date">Sep 2021 – Aug 2022 · Montreal, QC</div>
+          <div class="exp-header">
+            <div class="exp-title">Analyst</div>
+            <div class="exp-meta">
+              <div class="exp-company">Digital Innovation · PSP Investments · Montreal, QC</div>
+              <div class="exp-date">Sep 2021 – Aug 2022</div>
+            </div>
+          </div>
           <ul class="exp-bullets">
             <li>Co-developed <strong>Earnings Prediction Engine</strong> (ML beat/miss pipeline, point-in-time data, Power BI) and quantitative equity strategy for $8B active portfolio (+125 bps/year); built alt-data pipeline with data profiling, cleaning &amp; feature engineering for equity factor research; delivered POC analyses to drive stakeholder buy-in across asset class teams</li>
           </ul>
@@ -525,8 +545,13 @@
         </div>
 
         <div class="exp-item">
-          <div class="exp-title">Intern, Information Security — PSP Investments</div>
-          <div class="exp-date">May 2021 – Aug 2021 · Montreal, QC</div>
+          <div class="exp-header">
+            <div class="exp-title">Intern</div>
+            <div class="exp-meta">
+              <div class="exp-company">Information Security · PSP Investments · Montreal, QC</div>
+              <div class="exp-date">May 2021 – Aug 2021</div>
+            </div>
+          </div>
           <ul class="exp-bullets">
             <li>Enterprise risk framework implementation; automated risk assessment repository updates, improving data currency and reporting efficiency</li>
           </ul>
@@ -537,10 +562,15 @@
         </div>
 
         <div class="exp-item">
-          <div class="exp-title">Business Analyst — Lunch à Porter</div>
-          <div class="exp-date">Jun 2020 – Jun 2021 · Montreal, QC</div>
+          <div class="exp-header">
+            <div class="exp-title">Business Analyst</div>
+            <div class="exp-meta">
+              <div class="exp-company">Lunch à Porter · Montreal, QC</div>
+              <div class="exp-date">Jun 2020 – Jun 2021</div>
+            </div>
+          </div>
           <ul class="exp-bullets">
-            <li>SEO &amp; A/B testing drove 2× online conversion rate; inventory analysis for data-informed merchandising decisions</li>
+            <li>SEO &amp; A/B testing drove 2&times; online conversion rate; inventory analysis for data-informed merchandising decisions</li>
           </ul>
           <div class="exp-pills">
             <span class="pill">SEO</span>
@@ -556,7 +586,7 @@
         <div class="section-title">Personal Project</div>
         <div class="project-title"><a href="https://digithings.ai" target="_blank">digithings.ai</a> · <a href="https://github.com/digithings-ai" target="_blank">github.com/digithings-ai</a></div>
         <p class="project-desc">
-          Fully modular multi-agent AI toolkit. LangGraph orchestration, LiteLLM universal LLM wrapper, pluggable RAG backends, built-in evals, Docker deployment, MCP &amp; Open WebUI integration, OpenClaw layer for autonomous agent deployment. Direction: "hedge fund in a box" — merging agentic AI with quantitative finance.
+          Fully modular multi-agent AI toolkit. LangGraph orchestration, LiteLLM universal LLM wrapper, pluggable RAG backends, built-in evals, Docker deployment, MCP &amp; Open WebUI integration, OpenClaw layer for autonomous agent deployment. Direction: "hedge fund in a box": merging agentic AI with quantitative finance.
         </p>
         <div class="exp-pills">
           <span class="pill">LangGraph</span>

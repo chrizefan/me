@@ -58,14 +58,10 @@ p.runs[0].font.name = "Inter"
 p.paragraph_format.space_after = Pt(6)
 
 summary = (
-    "AI Engineer with 5 years building AI in production at the intersection of "
-    "artificial intelligence and institutional finance. Lead developer & technical "
-    "owner of PSP Investments' flagship agentic AI platform — 300 total users, 100 "
-    "active & recurring, platform showcased at the Databricks Data & AI Summit. "
-    "Full-stack ownership: architecture, SDK design, UI, onboarding, and "
-    "stakeholder management across all asset classes. EU citizen with right to "
-    "work in the EU; no sponsorship required. Seeking senior, lead, or "
-    "consulting roles to build high-impact AI products."
+    "AI Engineer with 5 years building production AI at the intersection of "
+    "institutional finance and agentic systems. EU citizen with right to work "
+    "in the EU; no sponsorship required. Seeking senior, lead, or consulting "
+    "roles to build high-impact AI products."
 )
 p = doc.add_paragraph(summary, style="Normal")
 p.paragraph_format.space_after = Pt(12)
@@ -83,20 +79,20 @@ p.paragraph_format.space_after = Pt(6)
 
 experiences = [
     {
-        "title": "Senior AI Engineer, AlphaScience — PSP Investments · Montreal, QC",
+        "title": "Senior AI Engineer · Alpha Science · PSP Investments · Montreal, QC",
         "date": "Sep 2022 – Present",
         "bullets": [
-            "Engineered and owned the full stack of PSP's agentic AI platform — architect and designer of system architecture, design documentation, and UI/UX from concept to deployment; feature development, SDK packaging & distribution, PR reviews, and ongoing maintenance; 100+ active analysts in daily workflows, cutting research cycles ~10× and supporting 20–30% broader portfolio coverage.",
-            "AlphaScience SDK: wraps Databricks (Vector Search, SQL Warehouses, Genie Agents) & OpenAI (Responses + Files API), auto-auth via Databricks CLI & Azure Key Vault — composable agent/workflow base-class framework, proprietary tracing, inter-agent persistence, pre-built financial utility agents & skills; one-liner to spin up an agent or query a vector index",
+            "Engineered and owned the full stack of PSP's agentic AI platform: architect and designer of system architecture, design documentation, and UI/UX from concept to deployment; feature development, SDK packaging & distribution, PR reviews, and ongoing maintenance; 100+ active analysts in daily workflows, cutting research cycles ~10× and supporting 20–30% broader portfolio coverage.",
+            "Alpha Science SDK: wraps Databricks (Vector Search, SQL Warehouses, Genie Agents) & OpenAI (Responses + Files API), auto-auth via Databricks CLI & Azure Key Vault. Composable agent/workflow base-class framework, proprietary tracing, inter-agent persistence, pre-built financial utility agents & skills; one-liner to spin up an agent or query a vector index",
             "Virtual Analyst Platform: custom chatbot UI with step-level tracing & observability (reasoning trace, web search, RAG retrieval, parallel tool execution, subagents), source traceability, structured data persistence layer with sandboxed analysis & live plotting, long-running workflow launcher & scheduled task subscriptions",
-            "Agile roadmap: weekly-evolving priorities with rapid integration of bleeding-edge AI developments into production — each feature independently scoped, designed as an SDK tool, and surfaced through the platform from concept to deployment",
-            "Cost savings: in-house platform (~$1M/year all-in: data, infrastructure & engineering) displaces enterprise tooling priced at ~$20K/analyst/year (e.g., AlphaSense: $1.2M/year for 60 licenses) — at 100+ active users, avoided spend exceeds platform cost and scales with every analyst onboarded",
-            "Leadership: direct collaboration with C-suite across all asset classes; mentored interns and juniors to ship features in production independently; led onboarding for 100+ analysts on the Virtual Analyst Platform; coached AlphaScience SDK users; platform selected for live demo at Databricks Data & AI Summit",
+            "Agile roadmap: weekly-evolving priorities with rapid integration of bleeding-edge AI developments into production. Each feature independently scoped, designed as an SDK tool, and surfaced through the platform from concept to deployment",
+            "Cost savings: in-house platform (~$1M/year all-in: data, infrastructure & engineering) displaces enterprise tooling priced at ~$20K/analyst/year (e.g., AlphaSense: $1.2M/year for 60 licenses). At 100+ active users, avoided spend exceeds platform cost and scales with every analyst onboarded",
+            "Leadership: direct collaboration with C-suite across all asset classes; mentored interns and juniors to ship production features independently; led onboarding for 100+ analysts on the Virtual Analyst Platform; coached Alpha Science SDK users; platform selected for live demo at Databricks Data & AI Summit",
         ],
         "pills": ["Agentic AI", "RAG", "Orchestration", "Azure AI", "Evals", "Observability"],
     },
     {
-        "title": "Analyst, Digital Innovation — PSP Investments · Montreal, QC",
+        "title": "Analyst · Digital Innovation · PSP Investments · Montreal, QC",
         "date": "Sep 2021 – Aug 2022",
         "bullets": [
             "Co-developed Earnings Prediction Engine (ML beat/miss pipeline, point-in-time data, Power BI) and quantitative equity strategy for $8B active portfolio (+125 bps/year); built alt-data pipeline with data profiling, cleaning & feature engineering for equity factor research; delivered POC analyses to drive stakeholder buy-in across asset class teams",
@@ -104,7 +100,7 @@ experiences = [
         "pills": ["Quant Strategy", "Alt Data", "ML Pipelines", "Power BI", "scikit-learn"],
     },
     {
-        "title": "Intern, Information Security — PSP Investments · Montreal, QC",
+        "title": "Intern · Information Security · PSP Investments · Montreal, QC",
         "date": "May 2021 – Aug 2021",
         "bullets": [
             "Enterprise risk framework implementation; automated risk assessment repository updates, improving data currency and reporting efficiency",
@@ -112,7 +108,7 @@ experiences = [
         "pills": ["Cybersecurity", "Risk Analysis"],
     },
     {
-        "title": "Business Analyst — Lunch à Porter · Montreal, QC",
+        "title": "Business Analyst · Lunch à Porter · Montreal, QC",
         "date": "Jun 2020 – Jun 2021",
         "bullets": [
             "SEO & A/B testing drove 2× online conversion rate; inventory analysis for data-informed merchandising decisions",

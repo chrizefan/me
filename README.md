@@ -1,6 +1,6 @@
 # Chris Stefan — Portfolio
 
-**Senior AI Engineer** · Agentic AI in production · Remote-ready
+**Senior AI Engineer** · Production agentic AI · Remote-ready
 
 Personal portfolio and CV. Single-page site with experience, projects, skills, and interview Q&A. Deployed on [GitHub Pages](https://pages.github.com/).
 
