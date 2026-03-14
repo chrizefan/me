@@ -18,7 +18,7 @@
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Chris Stefan · Senior AI Engineer">
-<meta name="twitter:description" content="Agentic AI engineer. Systems in production at PSP Investments. EU citizen, remote-ready. Open to full-time, contract & consulting.">
+<meta name="twitter:description" content="Agentic AI engineer. Systems in production at PSP Investments. EU citizen, remote-ready. Open to full-time and contract.">
 
 <!-- JSON-LD Person Schema -->
 <script type="application/ld+json">
@@ -86,6 +86,8 @@
 [data-theme="light"] nav .logo { color: #1C1B18; }
 [data-theme="light"] nav .links a { color: #5A5750; }
 [data-theme="light"] nav .links a:hover { color: #1C1B18; }
+[data-theme="light"] nav .cv-download-btn { color: #fff !important; }
+[data-theme="light"] nav .cv-download-btn:hover { color: #fff !important; }
 [data-theme="light"] .hero::before { display: none; }
 [data-theme="light"] .hero::after  { display: none; }
 [data-theme="light"] .hero h1 { color: #1C1B18; }
@@ -299,7 +301,10 @@
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
 
 body {
   font-family: var(--font);
@@ -340,6 +345,8 @@ nav .logo {
   font-size: 1.05rem;
   color: var(--white);
   letter-spacing: -0.3px;
+  white-space: nowrap;
+  margin-right: 1.5rem;
 }
 
 nav .logo span { color: var(--accent); }
@@ -351,8 +358,84 @@ nav .links a {
   color: var(--text-m);
   letter-spacing: 0.3px;
   transition: color 0.2s;
+  white-space: nowrap;
 }
 nav .links a:hover { color: var(--white); }
+
+nav .cv-download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  background: var(--accent);
+  border: none;
+  border-radius: 6px;
+  color: #fff !important;
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0 0.75rem;
+  letter-spacing: 0.2px;
+  font-family: var(--font);
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+nav .cv-download-btn:hover { color: #fff !important; background: #A55826; }
+nav .theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-m);
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0 0.5rem;
+  flex-shrink: 0;
+}
+
+nav .nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+/* Hamburger button — hidden on desktop */
+nav .hamburger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  padding: 6px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+nav .hamburger-btn span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--text-m);
+  border-radius: 1px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+nav .hamburger-btn.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+nav .hamburger-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+nav .hamburger-btn.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
 
 /* ── HERO ───────────────────────────────────────── */
 .hero {
@@ -1428,12 +1511,99 @@ html {
 [data-theme="light"] .qa-answer ul li::before { color: #B55E2A; }
 
 /* ── RESPONSIVE ────────────────────────────────── */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  /* Stack all grids to single column */
   .about-grid, .skills-grid, .edu-grid, .side-projects-grid, .projects-layout { grid-template-columns: 1fr; }
   .beyond-grid { grid-template-columns: 1fr; }
-  .tl-header { flex-direction: column; gap: 0.2rem; }
+  .proj-features { grid-template-columns: 1fr; }
+
+  /* Section spacing */
+  section { padding: 3rem 1.25rem; }
+  .section-subtitle { margin-bottom: 1.5rem; }
+
+  /* Hero */
+  .hero { padding: 5rem 1.25rem 3rem; min-height: auto; }
+  .hero h1 { font-size: clamp(2rem, 8vw, 2.8rem); }
+  .hero .subtitle { font-size: 1rem; }
+  .hero-btns { flex-direction: column; align-items: stretch; gap: 0.5rem; }
+  .hero-btns .btn { justify-content: center; }
+
+  /* Nav — hamburger menu */
+  nav .hamburger-btn { display: flex; }
+  nav .links {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 1.25rem 1.5rem;
+    background: rgba(17, 17, 16, 0.98);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.2s ease;
+    z-index: 99;
+  }
+  nav .links.open {
+    max-height: 80vh;
+    overflow-y: auto;
+    opacity: 1;
+  }
+  nav .links a,
+  nav .links .btn {
+    display: block;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(54,54,52,0.5);
+    white-space: nowrap;
+  }
+  nav .links a:last-of-type { border-bottom: none; }
+  [data-theme="light"] nav .links { background: rgba(250,250,248,0.98); border-bottom-color: #D5D0C8; }
+  nav .inner { max-width: 100%; padding: 0 1rem; }
+
+  /* Experience timeline */
+  .tl-header { flex-direction: column; align-items: flex-start; gap: 0.2rem; }
   .tl-date { margin-left: 0; }
-  nav .links { gap: 1rem; }
+  .timeline-item { padding-left: 44px; }
+  .tl-bullets li { font-size: 0.85rem; }
+
+  /* Project cards */
+  .project-card { padding: 1.25rem 1.25rem; }
+  .proj-header { flex-direction: column; align-items: flex-start; gap: 0.3rem; }
+  .proj-org { font-size: 0.78rem; }
+  .proj-stats { flex-direction: column; gap: 0.5rem; }
+  .proj-stat { width: 100%; }
+
+  /* Disable scroll-snap on mobile for smoother touch scrolling */
+  html { scroll-snap-type: none; }
+  .hero, section, footer { scroll-snap-align: none; }
+
+  /* Prevent compression */
+  .project-card, .skill-card, .side-project-card, .qa-card, .beyond-card, .edu-card, .cert-card {
+    min-width: 0;
+  }
+  .about-text, .proj-desc, .section-subtitle, .tl-bullets li {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Divider */
+  .divider { margin: 0 1.25rem; }
+
+  /* Footer */
+  footer { padding: 2.5rem 1.25rem; }
+  .contact-links { flex-direction: column; align-items: stretch; }
+  .contact-pill { justify-content: center; }
+}
+
+@media (max-width: 480px) {
+  section { padding: 2.5rem 1rem; }
+  .hero { padding: 4rem 1rem 2.5rem; }
+  nav .links { font-size: 0.72rem; gap: 0.4rem; }
 }
 </style>
 </head>
@@ -1443,43 +1613,25 @@ html {
 <nav>
   <div class="inner">
     <div class="logo">Chris Stefan</div>
-    <div class="links">
+    <div class="links" id="nav-links">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
+      <a href="#qa">Q&amp;A</a>
       <a href="#side-projects">Open Source</a>
       <a href="#education">Education</a>
-      <a href="#qa">Q&amp;A</a>
+      <a href="#beyond">Beyond</a>
       <a href="#contact">Contact</a>
-      <a href="Chris_Stefan_CV.pdf" download="Chris_Stefan_CV.pdf" title="Download CV (PDF)" style="
-        display: inline-flex;
-        align-items: center;
-        background: var(--accent);
-        border: none;
-        border-radius: 6px;
-        color: #fff;
-        cursor: pointer;
-        font-size: 0.78rem;
-        font-weight: 600;
-        padding: 0.3rem 0.75rem;
-        transition: all 0.2s;
-        line-height: 1.4;
-        letter-spacing: 0.2px;
-        font-family: var(--font);
-        text-decoration: none;
-      ">⬇ CV</a>
-      <button id="theme-toggle" onclick="toggleTheme()" title="Toggle light/dark mode" style="
-        background: var(--bg-card);
-        border: 1px solid var(--border);
-        border-radius: 6px;
-        color: var(--text-m);
-        cursor: pointer;
-        font-size: 0.9rem;
-        padding: 0.25rem 0.5rem;
-        transition: all 0.2s;
-        line-height: 1;
-      ">☀️</button>
+    </div>
+    <div class="nav-actions">
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a href="Chris_Stefan_CV.pdf" download="Chris_Stefan_CV.pdf" title="Download CV (PDF)" class="cv-download-btn">⬇ CV</a>
+      <button id="theme-toggle" onclick="toggleTheme()" title="Toggle light/dark mode" class="theme-toggle-btn">☀️</button>
     </div>
   </div>
 </nav>
@@ -1660,7 +1812,7 @@ html {
     <div class="section-title">Where I've worked</div>
     <a href="Chris_Stefan_CV.pdf" download="Chris_Stefan_CV.pdf" class="cv-details-btn" title="Download CV (PDF)">For more details, see the CV</a>
   </div>
-  <div class="section-subtitle">5 years building AI in production at the intersection of institutional finance and agentic systems. EU citizen with right to work in the EU; no sponsorship required. Seeking senior, lead, or consulting roles to build high-impact AI products.</div>
+  <div class="section-subtitle">5 years building AI in production at the intersection of institutional finance and agentic systems. EU citizen with right to work in the EU; no sponsorship required. Seeking senior, lead, or principal roles to build high-impact AI products.</div>
 
   <div class="timeline">
 
@@ -2017,7 +2169,11 @@ html {
     </div>
     <div class="lang-chip stagger-child">
       <div class="lang-name">French</div>
-      <div class="lang-level">Mother tongue</div>
+      <div class="lang-level">Native</div>
+    </div>
+    <div class="lang-chip stagger-child">
+      <div class="lang-name">Romanian</div>
+      <div class="lang-level">Native</div>
     </div>
     <div class="lang-chip stagger-child">
       <div class="lang-name">Spanish</div>
@@ -2091,6 +2247,25 @@ html {
 
 <!-- ═══════ SCROLL REVEAL + THEME ═══════ -->
 <script>
+// ── HAMBURGER MENU ─────────────────────────────────────────
+(function() {
+  const btn = document.getElementById('hamburger-btn');
+  const links = document.getElementById('nav-links');
+  if (!btn || !links) return;
+  btn.addEventListener('click', function() {
+    btn.classList.toggle('open');
+    links.classList.toggle('open');
+    btn.setAttribute('aria-expanded', links.classList.contains('open'));
+  });
+  links.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      btn.classList.remove('open');
+      links.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+
 // ── STAGGER HELPERS ─────────────────────────────────────────
 function staggerIn(section) {
   const kids = section.querySelectorAll('.stagger-child');
