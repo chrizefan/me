@@ -170,9 +170,9 @@ ul { list-style: none; padding: 0; }
 .site-nav { position: sticky; top: 0; z-index: 50; border-bottom: 1px solid transparent; transition: background 0.4s var(--ease), border-color 0.4s var(--ease); }
 .site-nav.is-stuck { background: color-mix(in srgb, var(--bg) 72%, transparent); backdrop-filter: blur(14px) saturate(150%); -webkit-backdrop-filter: blur(14px) saturate(150%); border-bottom-color: var(--hair); }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 1rem; }
-.brand { display: inline-flex; align-items: center; gap: 0.6rem; font-weight: 600; letter-spacing: -0.02em; font-size: 1.05rem; }
-.brand-mark { width: 30px; height: 30px; border-radius: 8px; display: inline-grid; place-items: center; background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 80%, #fff), var(--accent)); color: var(--on-accent); font-family: var(--font-mono); font-weight: 600; font-size: 0.82rem; box-shadow: 0 0 18px var(--accent-weak); }
-.brand b { color: var(--accent); font-weight: 600; }
+.brand { display: inline-flex; align-items: center; gap: 0.7rem; font-weight: 600; letter-spacing: -0.01em; font-size: 1rem; }
+.brand-mark { width: 8px; height: 8px; background: var(--accent); transform: rotate(45deg); border-radius: 1px; box-shadow: 0 0 10px var(--accent-weak); flex-shrink: 0; transition: transform 0.4s var(--ease); }
+.brand:hover .brand-mark { transform: rotate(135deg); }
 
 .nav-links { display: flex; align-items: center; gap: clamp(0.9rem, 2.2vw, 1.7rem); }
 .nav-links > a:not(.btn) { font-size: 0.92rem; color: var(--ink-soft); position: relative; padding: 0.4rem 0; transition: color 0.18s var(--ease); }
@@ -271,8 +271,9 @@ ul { list-style: none; padding: 0; }
 .product-card:hover { transform: translateY(-4px); border-color: var(--hair-2); }
 .product-card:hover::before { transform: scaleX(1); }
 .product-card.span-2 { grid-column: 1 / -1; }
-.pc-top { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.5rem; }
-.pc-glyph { width: 34px; height: 34px; border-radius: 9px; display: inline-grid; place-items: center; font-size: 1rem; background: var(--accent-weak); border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); }
+.pc-top { display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.5rem; }
+.pc-glyph { width: 22px; height: 22px; color: var(--accent); flex-shrink: 0; }
+.pc-glyph svg { width: 100%; height: 100%; }
 .pc-tier { margin-left: auto; font-family: var(--font-mono); font-size: 0.64rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); border-radius: 999px; padding: 0.2rem 0.55rem; }
 .pc-title { font-size: 1.25rem; font-weight: 600; letter-spacing: -0.02em; }
 .pc-meta { font-family: var(--font-mono); font-size: 0.78rem; color: var(--ink-mute); margin: 0.2rem 0 0.9rem; }
@@ -293,15 +294,16 @@ ul { list-style: none; padding: 0; }
 .cmdline .term-cursor { display: inline-block; width: 0.55em; height: 1em; background: var(--accent); vertical-align: -0.12em; animation: blink 1.05s steps(1) infinite; }
 @keyframes blink { 50% { opacity: 0; } }
 
-/* ── skills ─────────────────────────────────────────────────────────── */
-.skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
-.skill-card { background: var(--surface); border: 1px solid var(--hair); border-radius: var(--r-md); padding: 1.4rem; transition: transform 0.3s var(--ease), border-color 0.3s var(--ease); }
-.skill-card:hover { transform: translateY(-3px); border-color: var(--hair-2); }
-.skill-card .sc-icon { font-size: 1.3rem; margin-bottom: 0.6rem; }
-.skill-card h3 { font-size: 1.02rem; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 0.9rem; }
-.skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-.skill-tag { font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink-soft); background: color-mix(in srgb, var(--ink) 5%, transparent); border: 1px solid var(--hair); border-radius: 6px; padding: 0.26rem 0.5rem; transition: color 0.18s var(--ease), border-color 0.18s var(--ease); }
-.skill-tag:hover { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 40%, transparent); }
+/* ── skills (spec-list) ─────────────────────────────────────────────── */
+.skills-spec { border-top: 1px solid var(--hair); }
+.skill-row { display: grid; grid-template-columns: 13rem 1fr; gap: 1.5rem 2rem; padding: 1.3rem 0; border-bottom: 1px solid var(--hair); align-items: baseline; }
+.skill-row-label { display: flex; align-items: baseline; gap: 0.7rem; }
+.skill-row-num { font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent); }
+.skill-row-name { font-size: 1rem; font-weight: 600; letter-spacing: -0.01em; }
+.skill-tags { display: flex; flex-wrap: wrap; gap: 0.45rem 0.55rem; }
+.skill-tag { font-family: var(--font-mono); font-size: 0.78rem; color: var(--ink-soft); transition: color 0.18s var(--ease); position: relative; }
+.skill-tag:not(:last-child)::after { content: "·"; color: var(--ink-mute); margin-left: 0.55rem; }
+.skill-tag:hover { color: var(--accent); }
 
 /* ── Q&A ────────────────────────────────────────────────────────────── */
 .qa-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
@@ -324,7 +326,8 @@ ul { list-style: none; padding: 0; }
 .edu-card .degree { color: var(--ink-soft); margin: 0.25rem 0; font-size: 0.95rem; }
 .edu-card .meta { font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-mute); }
 .cert-card { display: flex; align-items: center; gap: 1rem; background: var(--surface); border: 1px solid var(--hair); border-radius: var(--r-md); padding: 1.2rem 1.5rem; margin-bottom: 1.6rem; }
-.cert-card .ci { font-size: 1.4rem; }
+.cert-card .ci { color: var(--accent); width: 22px; height: 22px; flex-shrink: 0; }
+.cert-card .ci svg { width: 100%; height: 100%; }
 .cert-card .ct { font-weight: 600; }
 .cert-card .cm { font-family: var(--font-mono); font-size: 0.74rem; color: var(--ink-mute); }
 .lang-row { display: flex; flex-wrap: wrap; gap: 0.7rem; }
@@ -332,12 +335,11 @@ ul { list-style: none; padding: 0; }
 .lang-chip .ln { font-weight: 600; font-size: 0.95rem; }
 .lang-chip .ll { font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink-mute); margin-top: 0.1rem; }
 
-/* ── beyond ─────────────────────────────────────────────────────────── */
-.beyond-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; }
-.beyond-card { background: var(--surface); border: 1px solid var(--hair); border-radius: var(--r-md); padding: 1.6rem; transition: transform 0.3s var(--ease), border-color 0.3s var(--ease); }
-.beyond-card:hover { transform: translateY(-3px); border-color: var(--hair-2); }
-.beyond-card .bi { font-size: 1.5rem; margin-bottom: 0.7rem; }
-.beyond-card .bt { font-size: 1.08rem; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 0.5rem; }
+/* ── beyond (numbered rules) ────────────────────────────────────────── */
+.beyond-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.5rem, 4vw, 3rem); }
+.beyond-card { padding-top: 1.3rem; border-top: 1px solid var(--hair-2); }
+.beyond-card .bi { font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent); }
+.beyond-card .bt { font-size: 1.1rem; font-weight: 600; letter-spacing: -0.01em; margin: 0.7rem 0 0.5rem; }
 .beyond-card .bd { color: var(--ink-soft); font-size: 0.92rem; line-height: 1.6; }
 
 /* ── contact / footer ───────────────────────────────────────────────── */
@@ -347,7 +349,8 @@ ul { list-style: none; padding: 0; }
 .contact-links { display: flex; flex-wrap: wrap; gap: 0.7rem; justify-content: center; }
 .contact-pill { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--surface); border: 1px solid var(--hair); border-radius: 999px; padding: 0.6rem 1.1rem; font-size: 0.92rem; color: var(--ink-soft); transition: color 0.18s var(--ease), border-color 0.18s var(--ease), transform 0.18s var(--ease); }
 .contact-pill:hover { color: var(--ink); border-color: var(--hair-2); transform: translateY(-2px); }
-.contact-pill .pi { color: var(--accent); }
+.contact-pill .pi { color: var(--accent); display: inline-flex; width: 15px; height: 15px; }
+.contact-pill .pi svg { width: 100%; height: 100%; }
 .footer { border-top: 1px solid var(--hair); padding: 2.2rem 0; margin-top: clamp(3rem, 7vw, 5rem); }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
 .footer-meta { font-family: var(--font-mono); font-size: 0.76rem; color: var(--ink-mute); }
@@ -373,7 +376,9 @@ ul { list-style: none; padding: 0; }
 @media (max-width: 900px) {
   .flagship { grid-template-columns: 1fr; }
   .product-grid, .qa-grid, .edu-grid { grid-template-columns: 1fr; }
-  .beyond-grid { grid-template-columns: 1fr; }
+  .beyond-grid { grid-template-columns: 1fr; gap: 0; }
+  .beyond-card { margin-top: 1.4rem; }
+  .skill-row { grid-template-columns: 1fr; gap: 0.7rem; padding: 1.1rem 0; }
 }
 @media (max-width: 860px) {
   .nav-toggle { display: inline-flex; flex-direction: column; gap: 5px; justify-content: center; width: 40px; height: 40px; background: var(--surface); border: 1px solid var(--hair); border-radius: 10px; cursor: pointer; }
@@ -406,8 +411,8 @@ ul { list-style: none; padding: 0; }
 <header class="site-nav" id="nav">
   <div class="wrap nav-inner">
     <a class="brand" href="#top" aria-label="Chris Stefan — home">
-      <span class="brand-mark" aria-hidden="true">CS</span>
-      <span>chris <b>stefan</b></span>
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>Chris Stefan</span>
     </a>
     <nav class="nav-links" id="nav-links" aria-label="Primary">
       <a href="#about">About</a>
@@ -621,7 +626,7 @@ ul { list-style: none; padding: 0; }
 
       <div class="product-card span-2">
         <div class="pc-top">
-          <span class="pc-glyph" aria-hidden="true">🤖</span>
+          <span class="pc-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3 21 8 12 13 3 8 12 3Z"/><path d="M3 16 12 21 21 16"/><path d="M3 12 12 17 21 12"/></svg></span>
           <div>
             <div class="pc-title">digithings.ai</div>
           </div>
@@ -648,7 +653,7 @@ ul { list-style: none; padding: 0; }
 
       <div class="product-card span-2">
         <div class="pc-top">
-          <span class="pc-glyph" aria-hidden="true">📈</span>
+          <span class="pc-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M3 3v18h18"/><path d="M7 14l3.5-4 3 3L21 6"/></svg></span>
           <div><div class="pc-title">DigiQuant · Olympus</div></div>
           <span class="pc-tier">Product</span>
         </div>
@@ -674,7 +679,7 @@ ul { list-style: none; padding: 0; }
 
       <div class="product-card span-2">
         <div class="pc-top">
-          <span class="pc-glyph" aria-hidden="true">💼</span>
+          <span class="pc-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 12h18"/></svg></span>
           <div><div class="pc-title">Freelance Services</div></div>
           <span class="pc-tier">Web · AI · Tech</span>
         </div>
@@ -701,9 +706,9 @@ ul { list-style: none; padding: 0; }
       <h2>What I work with</h2>
       <p>Complete skill set across AI in production, data, and finance.</p>
     </div>
-    <div class="skills-grid stagger">
-      <div class="skill-card">
-        <div class="sc-icon">🧠</div><h3>Gen AI &amp; LLMs</h3>
+    <div class="skills-spec stagger">
+      <div class="skill-row">
+        <div class="skill-row-label"><span class="skill-row-num">01</span><span class="skill-row-name">Gen AI &amp; LLMs</span></div>
         <div class="skill-tags">
           <span class="skill-tag">OpenAI API</span><span class="skill-tag">Gemini API</span><span class="skill-tag">Claude API</span>
           <span class="skill-tag">Hugging Face</span><span class="skill-tag">Prompt Engineering</span><span class="skill-tag">Vector DBs</span>
@@ -712,8 +717,8 @@ ul { list-style: none; padding: 0; }
           <span class="skill-tag">LiteLLM</span><span class="skill-tag">MCP</span><span class="skill-tag">OpenClaw</span>
         </div>
       </div>
-      <div class="skill-card">
-        <div class="sc-icon">⚡</div><h3>Data &amp; Cloud</h3>
+      <div class="skill-row">
+        <div class="skill-row-label"><span class="skill-row-num">02</span><span class="skill-row-name">Data &amp; Cloud</span></div>
         <div class="skill-tags">
           <span class="skill-tag">Azure</span><span class="skill-tag">GCP</span><span class="skill-tag">Databricks</span>
           <span class="skill-tag">Spark</span><span class="skill-tag">Delta Lake</span><span class="skill-tag">PostgreSQL</span>
@@ -721,45 +726,45 @@ ul { list-style: none; padding: 0; }
           <span class="skill-tag">CI/CD</span><span class="skill-tag">Docker</span><span class="skill-tag">ML Pipelines</span><span class="skill-tag">Power BI</span>
         </div>
       </div>
-      <div class="skill-card">
-        <div class="sc-icon">💻</div><h3>Programming</h3>
+      <div class="skill-row">
+        <div class="skill-row-label"><span class="skill-row-num">03</span><span class="skill-row-name">Programming</span></div>
         <div class="skill-tags">
           <span class="skill-tag">Python</span><span class="skill-tag">JavaScript</span><span class="skill-tag">HTML</span>
           <span class="skill-tag">CSS</span><span class="skill-tag">FastAPI</span><span class="skill-tag">Pydantic</span>
           <span class="skill-tag">REST APIs</span><span class="skill-tag">SDK Design</span><span class="skill-tag">Git</span>
         </div>
       </div>
-      <div class="skill-card">
-        <div class="sc-icon">📊</div><h3>Visualization</h3>
+      <div class="skill-row">
+        <div class="skill-row-label"><span class="skill-row-num">04</span><span class="skill-row-name">Visualization</span></div>
         <div class="skill-tags">
           <span class="skill-tag">Plotly</span><span class="skill-tag">Dash</span><span class="skill-tag">Matplotlib</span>
           <span class="skill-tag">ECharts</span><span class="skill-tag">Mermaid</span><span class="skill-tag">Tableau</span>
         </div>
       </div>
-      <div class="skill-card">
-        <div class="sc-icon">🤖</div><h3>AI Dev Tools</h3>
+      <div class="skill-row">
+        <div class="skill-row-label"><span class="skill-row-num">05</span><span class="skill-row-name">AI Dev Tools</span></div>
         <div class="skill-tags">
           <span class="skill-tag">Cursor</span><span class="skill-tag">Antigravity</span><span class="skill-tag">GitHub Copilot</span>
           <span class="skill-tag">Claude Code</span><span class="skill-tag">Bolt.new</span><span class="skill-tag">Open WebUI</span><span class="skill-tag">Ollama</span>
         </div>
       </div>
-      <div class="skill-card">
-        <div class="sc-icon">💰</div><h3>Quant Trading</h3>
+      <div class="skill-row">
+        <div class="skill-row-label"><span class="skill-row-num">06</span><span class="skill-row-name">Quant Trading</span></div>
         <div class="skill-tags">
           <span class="skill-tag">QuantConnect</span><span class="skill-tag">IBKR API</span><span class="skill-tag">Nautilus Trader</span>
           <span class="skill-tag">TA-Lib</span><span class="skill-tag">Quant Strategy</span><span class="skill-tag">Alt Data</span>
         </div>
       </div>
-      <div class="skill-card">
-        <div class="sc-icon">📄</div><h3>Data &amp; Research</h3>
+      <div class="skill-row">
+        <div class="skill-row-label"><span class="skill-row-num">07</span><span class="skill-row-name">Data &amp; Research</span></div>
         <div class="skill-tags">
           <span class="skill-tag">LSEG</span><span class="skill-tag">Worldscope</span><span class="skill-tag">IBES</span>
           <span class="skill-tag">SEC Filings</span><span class="skill-tag">Broker Research</span><span class="skill-tag">Transcripts</span>
           <span class="skill-tag">scikit-learn</span><span class="skill-tag">Cybersecurity</span><span class="skill-tag">Risk Analysis</span>
         </div>
       </div>
-      <div class="skill-card">
-        <div class="sc-icon">🛒</div><h3>Business Analytics &amp; E-commerce</h3>
+      <div class="skill-row">
+        <div class="skill-row-label"><span class="skill-row-num">08</span><span class="skill-row-name">Business Analytics</span></div>
         <div class="skill-tags">
           <span class="skill-tag">SEO</span><span class="skill-tag">A/B Testing</span><span class="skill-tag">Shopify</span>
           <span class="skill-tag">Lightspeed</span><span class="skill-tag">Analytics</span>
@@ -831,7 +836,7 @@ ul { list-style: none; padding: 0; }
       </div>
     </div>
     <div class="cert-card">
-      <span class="ci" aria-hidden="true">🏅</span>
+      <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M9 14.5 8 22l4-2 4 2-1-7.5"/></svg></span>
       <div>
         <div class="ct">Microsoft Azure AI Fundamentals</div>
         <div class="cm">Sep 2023 · Credential ID: D9F91E8DF4C7D0CE</div>
@@ -857,18 +862,18 @@ ul { list-style: none; padding: 0; }
     </div>
     <div class="beyond-grid stagger">
       <div class="beyond-card">
-        <div class="bi" aria-hidden="true">🛠️</div>
-        <div class="bt">Builder Mentality</div>
+        <div class="bi">01</div>
+        <div class="bt">Builder mentality</div>
         <div class="bd">I don't just tinker; I ship. From AI toolkits to open-source components to full product builds, every interest becomes a project. I use AI to accelerate everything I make.</div>
       </div>
       <div class="beyond-card">
-        <div class="bi" aria-hidden="true">📈</div>
-        <div class="bt">Markets &amp; Finance</div>
+        <div class="bi">02</div>
+        <div class="bt">Markets &amp; finance</div>
         <div class="bd">Actively follow tech, AI, equities, and crypto. My finance background keeps me close to the markets, and my engineering instinct makes me want to automate every thesis and strategy I come across.</div>
       </div>
       <div class="beyond-card">
-        <div class="bi" aria-hidden="true">🚀</div>
-        <div class="bt">AI Latest Developments</div>
+        <div class="bi">03</div>
+        <div class="bt">The AI frontier</div>
         <div class="bd">Closely following the frontier: new model releases from OpenAI and Anthropic, the evolution of agentic frameworks, and what's actually shifting in how AI systems are built and deployed at scale.</div>
       </div>
     </div>
@@ -882,11 +887,11 @@ ul { list-style: none; padding: 0; }
     <h2>Let's talk.</h2>
     <p class="tagline">Remote-ready · Open to full-time, contract &amp; part-time · International &amp; Europe-based teams welcome.</p>
     <div class="contact-links">
-      <a href="mailto:chris.stefan@proton.me" class="contact-pill"><span class="pi" aria-hidden="true">✉</span> chris.stefan@proton.me</a>
-      <a href="tel:+393773930371" class="contact-pill"><span class="pi" aria-hidden="true">☎</span> +39 377 393 0371</a>
-      <a href="https://linkedin.com/in/chris-stefan" target="_blank" rel="noopener" class="contact-pill"><span class="pi" aria-hidden="true">🌐</span> LinkedIn</a>
-      <a href="https://github.com/chrizefan" target="_blank" rel="noopener" class="contact-pill"><span class="pi" aria-hidden="true">💻</span> GitHub</a>
-      <a href="https://digithings.ai" target="_blank" rel="noopener" class="contact-pill"><span class="pi" aria-hidden="true">🤖</span> digithings.ai</a>
+      <a href="mailto:chris.stefan@proton.me" class="contact-pill"><span class="pi" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span> chris.stefan@proton.me</a>
+      <a href="tel:+393773930371" class="contact-pill"><span class="pi" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L20 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg></span> +39 377 393 0371</a>
+      <a href="https://linkedin.com/in/chris-stefan" target="_blank" rel="noopener" class="contact-pill"><span class="pi" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.44-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.55V9h3.57v11.45Z"/></svg></span> LinkedIn</a>
+      <a href="https://github.com/chrizefan" target="_blank" rel="noopener" class="contact-pill"><span class="pi" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.7c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.55-1.14-4.55-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.36 9.36 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9l-.01 2.82c0 .27.18.59.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></span> GitHub</a>
+      <a href="https://digithings.ai" target="_blank" rel="noopener" class="contact-pill"><span class="pi" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span> digithings.ai</a>
     </div>
   </div>
 </section>
@@ -896,8 +901,8 @@ ul { list-style: none; padding: 0; }
 <footer class="footer">
   <div class="wrap footer-inner">
     <a class="brand" href="#top" aria-label="Chris Stefan — home">
-      <span class="brand-mark" aria-hidden="true">CS</span>
-      <span>chris <b>stefan</b></span>
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>Chris Stefan</span>
     </a>
     <nav class="footer-links" aria-label="Footer">
       <a href="#experience">Experience</a>
