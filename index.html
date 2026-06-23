@@ -22,6 +22,7 @@
 
 <meta name="theme-color" content="#0B0C0E" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#FBFBF9" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B0C0E'/%3E%3Crect x='10.5' y='10.5' width='11' height='11' rx='2' transform='rotate(45 16 16)' fill='%23E89A4D'/%3E%3C/svg%3E">
 
 <!-- JSON-LD Person Schema -->
 <script type="application/ld+json">
@@ -203,15 +204,32 @@ ul { list-style: none; padding: 0; }
 .eyebrow-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); animation: pulse 2.6s var(--ease) infinite; }
 @keyframes pulse { 0% { box-shadow: 0 0 0 0 var(--accent-weak); } 70% { box-shadow: 0 0 0 8px transparent; } 100% { box-shadow: 0 0 0 0 transparent; } }
 .prompt { color: var(--accent); font-weight: 600; font-family: var(--font-mono); }
-.kicker { font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.02em; color: var(--accent); }
+.kicker { display: inline-flex; align-items: center; gap: 0.6rem; font-family: var(--font-mono); font-size: 0.76rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-mute); }
+.kicker .kn { color: var(--accent); }
+.kicker .kn::after { content: ""; display: inline-block; width: 1.6rem; height: 1px; background: var(--hair-2); vertical-align: middle; margin-left: 0.6rem; }
 
 /* ── hero ───────────────────────────────────────────────────────────── */
 .hero { padding: clamp(3.5rem, 9vw, 6.5rem) 0 clamp(2.5rem, 5vw, 4rem); }
-.hero-title { font-family: var(--font-display); font-weight: 400; font-size: clamp(2.8rem, 7vw, 5.2rem); line-height: 1.03; letter-spacing: -0.02em; margin: 1.5rem 0 1.3rem; max-width: 18ch; }
+.hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+.hero-title { font-family: var(--font-display); font-weight: 400; font-size: clamp(2.8rem, 6vw, 4.6rem); line-height: 1.04; letter-spacing: -0.02em; margin: 1.4rem 0 1.3rem; max-width: 16ch; }
 .hero-title em { font-style: italic; color: var(--accent); }
-.hero-lede { font-size: clamp(1.05rem, 1.5vw, 1.22rem); color: var(--ink-soft); max-width: 56ch; }
+.hero-lede { font-size: clamp(1.02rem, 1.4vw, 1.16rem); color: var(--ink-soft); max-width: 52ch; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 0.85rem; margin-top: 2.1rem; }
-.hero-stats { display: flex; flex-wrap: wrap; gap: clamp(1.5rem, 4vw, 3rem); margin-top: 2.8rem; padding-top: 1.9rem; border-top: 1px solid var(--hair); }
+/* hero status panel */
+.hero-panel { background: var(--surface); border: 1px solid var(--hair); border-radius: var(--r-lg); padding: 0.4rem 1.4rem; box-shadow: 0 30px 70px -50px rgba(0,0,0,0.5); }
+.hp-row { display: flex; align-items: baseline; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid var(--hair); }
+.hp-row:last-of-type { border-bottom: 0; }
+.hp-k { flex-shrink: 0; width: 4.5rem; font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-mute); }
+.hp-v { font-size: 0.92rem; color: var(--ink); }
+.hp-v a { color: var(--ink-soft); transition: color 0.18s var(--ease); }
+.hp-v a:hover { color: var(--accent); }
+.hp-avail { display: inline-flex; align-items: center; gap: 0.5rem; }
+.hp-avail .eyebrow-dot { width: 7px; height: 7px; }
+.hp-links { display: flex; gap: 1.1rem; padding: 0.95rem 0 0.4rem; }
+.hp-links a { display: inline-flex; width: 18px; height: 18px; color: var(--ink-mute); transition: color 0.18s var(--ease), transform 0.18s var(--ease); }
+.hp-links a:hover { color: var(--accent); transform: translateY(-2px); }
+.hp-links svg { width: 100%; height: 100%; }
+.hero-stats { display: flex; flex-wrap: wrap; gap: clamp(1.5rem, 4vw, 3rem); margin-top: clamp(2.5rem, 5vw, 3.5rem); padding-top: 1.9rem; border-top: 1px solid var(--hair); }
 .hero-stats div { display: flex; flex-direction: column; }
 .hero-stats dt { font-size: 1.9rem; font-weight: 600; letter-spacing: -0.04em; font-family: var(--font-mono); color: var(--ink); }
 .hero-stats dd { font-size: 0.82rem; color: var(--ink-mute); margin-top: 0.15rem; }
@@ -231,12 +249,12 @@ ul { list-style: none; padding: 0; }
 .about-prose a:hover { text-decoration: underline; }
 
 /* ── timeline (experience) ──────────────────────────────────────────── */
-.timeline { position: relative; display: flex; flex-direction: column; gap: 1rem; }
-.tl-card { position: relative; overflow: hidden; background: var(--surface); border: 1px solid var(--hair); border-radius: var(--r-md); padding: 1.5rem 1.5rem 1.4rem; transition: transform 0.3s var(--ease), border-color 0.3s var(--ease); }
-.tl-card::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 2px; background: var(--accent); transform: scaleY(0); transform-origin: top; transition: transform 0.32s var(--ease); }
-.tl-card:hover { transform: translateY(-3px); border-color: var(--hair-2); }
-.tl-card:hover::before { transform: scaleY(1); }
-.tl-card.current::before { transform: scaleY(1); }
+.timeline { position: relative; margin-left: 4px; }
+.tl-card { position: relative; padding: 0 0 2.4rem 2.1rem; border-left: 1px solid var(--hair); }
+.tl-card:last-child { border-left-color: transparent; padding-bottom: 0; }
+.tl-card::before { content: ""; position: absolute; left: -5px; top: 0.25rem; width: 9px; height: 9px; border-radius: 50%; background: var(--bg); border: 2px solid var(--hair-2); transition: border-color 0.25s var(--ease), background 0.25s var(--ease); }
+.tl-card:hover::before { border-color: var(--accent); }
+.tl-card.current::before { background: var(--accent); border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-weak); }
 .tl-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.5rem 0.7rem; margin-bottom: 0.9rem; }
 .tl-title { font-size: 1.18rem; font-weight: 600; letter-spacing: -0.02em; }
 .tl-company { color: var(--ink-soft); font-size: 0.92rem; }
@@ -374,6 +392,7 @@ ul { list-style: none; padding: 0; }
 
 /* ── responsive ─────────────────────────────────────────────────────── */
 @media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 2.4rem; }
   .flagship { grid-template-columns: 1fr; }
   .product-grid, .qa-grid, .edu-grid { grid-template-columns: 1fr; }
   .beyond-grid { grid-template-columns: 1fr; gap: 0; }
@@ -437,17 +456,32 @@ ul { list-style: none; padding: 0; }
 <!-- ═══════ HERO ═══════ -->
 <section class="hero">
   <div class="wrap">
-    <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Senior AI Engineer · PSP Investments · Italy</p>
-    <h1 class="hero-title">I build <em>AI in production</em> for institutional finance.</h1>
-    <p class="hero-lede">
-      Lead developer of PSP Investments' in-house AI lab, building the company-wide Virtual Analyst Platform —
-      agentic AI used across the entire corporation, cutting research cycles ~10× and powering every AI workflow the team ships.
-      EU citizen, remote-ready, open to senior, lead &amp; principal roles.
-    </p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="#platform">See what I've built <span aria-hidden="true">→</span></a>
-      <a class="btn btn-ghost" href="#contact">Get in touch</a>
-      <a class="btn btn-ghost" href="Chris_Stefan_CV.pdf" download="Chris_Stefan_CV.pdf">Download CV</a>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Senior AI Engineer · PSP Investments</p>
+        <h1 class="hero-title">I build <em>AI in production</em> for institutional finance.</h1>
+        <p class="hero-lede">
+          Lead developer of PSP Investments' in-house AI lab, building the company-wide Virtual Analyst Platform:
+          agentic AI used across the entire corporation, cutting research cycles ~10× and powering every AI workflow the team ships.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#platform">See what I've built <span aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+          <a class="btn btn-ghost" href="Chris_Stefan_CV.pdf" download="Chris_Stefan_CV.pdf">Download CV</a>
+        </div>
+      </div>
+      <aside class="hero-panel" aria-label="At a glance">
+        <div class="hp-row"><span class="hp-k">Status</span><span class="hp-v hp-avail"><span class="eyebrow-dot" aria-hidden="true"></span> Open to senior, lead &amp; principal roles</span></div>
+        <div class="hp-row"><span class="hp-k">Based</span><span class="hp-v">Italy · EU citizen · remote-ready</span></div>
+        <div class="hp-row"><span class="hp-k">Focus</span><span class="hp-v">Agentic AI · RAG · production systems</span></div>
+        <div class="hp-row"><span class="hp-k">Now</span><span class="hp-v">Lead dev, PSP in-house AI lab</span></div>
+        <div class="hp-row"><span class="hp-k">Building</span><span class="hp-v"><a href="https://digithings.ai" target="_blank" rel="noopener">digithings.ai</a> · <a href="https://digiquant.io" target="_blank" rel="noopener">digiquant.io</a></span></div>
+        <div class="hp-links">
+          <a href="mailto:chris.stefan@proton.me" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+          <a href="https://linkedin.com/in/chris-stefan" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.44-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.55V9h3.57v11.45Z"/></svg></a>
+          <a href="https://github.com/chrizefan" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.7c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.55-1.14-4.55-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.36 9.36 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9l-.01 2.82c0 .27.18.59.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></a>
+        </div>
+      </aside>
     </div>
     <dl class="hero-stats">
       <div><dt>5 yrs</dt><dd>building AI in production</dd></div>
@@ -462,7 +496,7 @@ ul { list-style: none; padding: 0; }
 <section class="section section-alt reveal" id="about">
   <div class="wrap">
     <div class="section-head">
-      <span class="kicker">// about</span>
+      <span class="kicker"><span class="kn">01</span> About</span>
       <h2>Who I am</h2>
     </div>
     <div class="about-prose">
@@ -497,7 +531,7 @@ ul { list-style: none; padding: 0; }
     <div class="section-head" style="max-width:none;">
       <div class="head-row">
         <div>
-          <span class="kicker">// experience</span>
+          <span class="kicker"><span class="kn">02</span> Experience</span>
           <h2>Where I've worked</h2>
         </div>
         <a href="Chris_Stefan_CV.pdf" download="Chris_Stefan_CV.pdf" class="btn btn-ghost btn-sm">For more detail, see the CV <span aria-hidden="true">→</span></a>
@@ -577,7 +611,7 @@ ul { list-style: none; padding: 0; }
 <section class="section section-alt reveal" id="platform">
   <div class="wrap">
     <div class="section-head">
-      <span class="kicker">// flagship</span>
+      <span class="kicker"><span class="kn">03</span> Flagship</span>
       <h2>Virtual Analyst Platform</h2>
       <p>PSP Investments · Company-wide · Showcased at the Databricks Data &amp; AI Summit</p>
     </div>
@@ -617,7 +651,7 @@ ul { list-style: none; padding: 0; }
 <section class="section reveal" id="products">
   <div class="wrap">
     <div class="section-head">
-      <span class="kicker">// products, freelance &amp; open source</span>
+      <span class="kicker"><span class="kn">04</span> Products &amp; Freelance</span>
       <h2>What I build on my own time</h2>
       <p>Production knowledge from institutional AI, distilled into open-source tools and freelance services.</p>
     </div>
@@ -702,7 +736,7 @@ ul { list-style: none; padding: 0; }
 <section class="section section-alt reveal" id="skills">
   <div class="wrap">
     <div class="section-head">
-      <span class="kicker">// skills</span>
+      <span class="kicker"><span class="kn">05</span> Skills</span>
       <h2>What I work with</h2>
       <p>Complete skill set across AI in production, data, and finance.</p>
     </div>
@@ -778,7 +812,7 @@ ul { list-style: none; padding: 0; }
 <section class="section reveal" id="qa">
   <div class="wrap">
     <div class="section-head">
-      <span class="kicker">// in my own words</span>
+      <span class="kicker"><span class="kn">06</span> In My Own Words</span>
       <h2>Interview Q&amp;A</h2>
     </div>
     <div class="qa-grid stagger">
@@ -820,7 +854,7 @@ ul { list-style: none; padding: 0; }
 <section class="section section-alt reveal" id="education">
   <div class="wrap">
     <div class="section-head">
-      <span class="kicker">// education &amp; certifications</span>
+      <span class="kicker"><span class="kn">07</span> Education</span>
       <h2>Background</h2>
     </div>
     <div class="edu-grid stagger">
@@ -856,7 +890,7 @@ ul { list-style: none; padding: 0; }
 <section class="section reveal" id="beyond">
   <div class="wrap">
     <div class="section-head">
-      <span class="kicker">// beyond work</span>
+      <span class="kicker"><span class="kn">08</span> Beyond Work</span>
       <h2>What drives me outside the office</h2>
       <p>The passions, interests, and projects that shape who I am beyond the code.</p>
     </div>
@@ -883,7 +917,7 @@ ul { list-style: none; padding: 0; }
 <!-- ═══════ CONTACT ═══════ -->
 <section class="section reveal contact" id="contact">
   <div class="wrap">
-    <span class="kicker">// get in touch</span>
+    <span class="kicker" style="justify-content:center;"><span class="kn">09</span> Get in Touch</span>
     <h2>Let's talk.</h2>
     <p class="tagline">Remote-ready · Open to full-time, contract &amp; part-time · International &amp; Europe-based teams welcome.</p>
     <div class="contact-links">
