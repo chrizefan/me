@@ -271,11 +271,10 @@ ul { list-style: none; padding: 0; }
 .flagship { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: start; }
 .flagship-desc { color: var(--ink-soft); font-size: 1.05rem; margin-bottom: 1.6rem; }
 .flagship-desc strong { color: var(--ink); }
-.stat-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; }
-.stat-tile { background: var(--surface); border: 1px solid var(--hair); border-radius: var(--r-md); padding: 1.2rem 1rem; transition: transform 0.3s var(--ease), border-color 0.3s var(--ease); }
-.stat-tile:hover { transform: translateY(-3px); border-color: var(--hair-2); }
+.stat-tiles { display: flex; flex-wrap: wrap; gap: clamp(1.5rem, 4vw, 2.6rem); padding-top: 1.6rem; border-top: 1px solid var(--hair); }
+.stat-tile { display: flex; flex-direction: column; }
 .stat-tile .sv { font-family: var(--font-mono); font-size: 1.7rem; font-weight: 600; letter-spacing: -0.03em; color: var(--ink); }
-.stat-tile .sl { font-size: 0.74rem; color: var(--ink-mute); margin-top: 0.25rem; }
+.stat-tile .sl { font-size: 0.74rem; color: var(--ink-mute); margin-top: 0.2rem; }
 .feature-list { display: flex; flex-direction: column; gap: 0.85rem; }
 .feature-list li { position: relative; padding-left: 1.6rem; font-size: 0.96rem; color: var(--ink-soft); line-height: 1.55; }
 .feature-list li::before { content: "→"; position: absolute; left: 0; top: 0; color: var(--accent); font-family: var(--font-mono); }
@@ -306,11 +305,6 @@ ul { list-style: none; padding: 0; }
 .pc-link { margin-top: auto; padding-top: 1rem; font-size: 0.85rem; color: var(--accent); font-weight: 500; }
 .pc-link:hover { text-decoration: underline; }
 
-/* terminal accent chip in products section */
-.cmdline { display: inline-flex; align-items: center; gap: 0.7rem; background: var(--term-bg); border: 1px solid var(--term-hair); border-radius: 10px; padding: 0.55rem 1rem; font-family: var(--font-mono); font-size: 0.82rem; color: var(--term-ink); margin-bottom: 1.6rem; }
-.cmdline .prompt { color: var(--accent); }
-.cmdline .term-cursor { display: inline-block; width: 0.55em; height: 1em; background: var(--accent); vertical-align: -0.12em; animation: blink 1.05s steps(1) infinite; }
-@keyframes blink { 50% { opacity: 0; } }
 
 /* ── skills (spec-list) ─────────────────────────────────────────────── */
 .skills-spec { border-top: 1px solid var(--hair); }
@@ -324,13 +318,12 @@ ul { list-style: none; padding: 0; }
 .skill-tag:hover { color: var(--accent); }
 
 /* ── Q&A ────────────────────────────────────────────────────────────── */
-.qa-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
-.qa-card { background: var(--surface); border: 1px solid var(--hair); border-radius: var(--r-md); padding: 1.6rem; transition: transform 0.3s var(--ease), border-color 0.3s var(--ease); }
-.qa-card:hover { transform: translateY(-3px); border-color: var(--hair-2); }
-.qa-q { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.9rem; }
-.qa-q .qi { display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 7px; background: var(--accent-weak); color: var(--accent); font-family: var(--font-mono); font-weight: 600; font-size: 0.82rem; flex-shrink: 0; }
-.qa-q span:last-child { font-weight: 600; font-size: 1.02rem; letter-spacing: -0.01em; }
-.qa-a { color: var(--ink-soft); font-size: 0.94rem; line-height: 1.6; display: flex; flex-direction: column; gap: 0.7rem; }
+.qa-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 clamp(2rem, 5vw, 4rem); }
+.qa-card { padding: 1.6rem 0; border-top: 1px solid var(--hair); }
+.qa-q { display: flex; align-items: baseline; gap: 0.7rem; margin-bottom: 0.7rem; }
+.qa-q .qi { color: var(--accent); font-family: var(--font-mono); font-weight: 500; font-size: 0.82rem; flex-shrink: 0; }
+.qa-q span:last-child { font-family: var(--font-display); font-style: italic; font-weight: 400; font-size: 1.3rem; letter-spacing: -0.01em; color: var(--ink); line-height: 1.25; }
+.qa-a { color: var(--ink-soft); font-size: 0.94rem; line-height: 1.65; display: flex; flex-direction: column; gap: 0.7rem; }
 .qa-a strong { color: var(--ink); font-weight: 600; }
 .qa-a ul { display: flex; flex-direction: column; gap: 0.45rem; }
 .qa-a ul li { position: relative; padding-left: 1.2rem; }
@@ -502,13 +495,13 @@ ul { list-style: none; padding: 0; }
     <div class="about-prose">
       <p>
         I started in <strong>Computer Science</strong>, moved into <strong>Finance &amp; Business Analytics at McGill</strong>,
-        and found my edge where the two converge. I joined <strong>PSP Investments</strong> — first in information security,
-        then digital innovation — where I quickly moved from evaluating alternative data and cyber risk to actually building
+        and found my edge where the two converge. I joined <strong>PSP Investments</strong> (first in information security,
+        then digital innovation), where I quickly moved from evaluating alternative data and cyber risk to actually building
         the AI systems investment teams depend on. The team evolved from Digital Innovation into <strong>AlphaScience</strong>,
         and I converted to full-time AI Engineer in 2023.
       </p>
       <p>
-        Today I'm the lead developer of PSP's in-house AI lab, building the <strong>Virtual Analyst Platform</strong> —
+        Today I'm the lead developer of PSP's in-house AI lab, building the <strong>Virtual Analyst Platform</strong>,
         the company-wide agentic AI system used across the entire corporation. I designed the entire stack from scratch:
         a custom UI with full agentic transparency and source traceability, a workflow launcher for named structured analyses,
         and the underlying <strong>AlphaScience SDK</strong> that powers every AI workflow, RAG index, and dashboard the team ships.
@@ -518,7 +511,7 @@ ul { list-style: none; padding: 0; }
         <a href="https://digithings.ai" target="_blank" rel="noopener">digithings.ai</a> and
         <a href="https://digiquant.io" target="_blank" rel="noopener">digiquant.io</a>,
         distilling what I've learned at PSP into reusable components anyone can use. Having brought the flagship platform
-        to production and scale, I'm now based in Italy and seeking new challenges — shipping production AI with new teams,
+        to production and scale, I'm now based in Italy and seeking new challenges: shipping production AI with new teams,
         across new domains and industries. I want to keep building things that genuinely matter.
       </p>
     </div>
@@ -620,7 +613,7 @@ ul { list-style: none; padding: 0; }
         <p class="flagship-desc">
           PSP's company-wide flagship agentic AI platform (200+ active &amp; recurring users), embedded in analyst–PM
           daily workflows across the entire corporation. AI findings flow directly to PMs who audit &amp; red-team theses
-          in the same session — all powered by the proprietary <strong>AlphaScience SDK</strong>.
+          in the same session, all powered by the proprietary <strong>AlphaScience SDK</strong>.
         </p>
         <div class="stat-tiles">
           <div class="stat-tile"><div class="sv">200+</div><div class="sl">Active &amp; recurring users</div></div>
@@ -636,7 +629,7 @@ ul { list-style: none; padding: 0; }
         <ul class="feature-list">
           <li><strong>Custom dual-panel UI</strong> built from scratch: chat with full agentic step transparency plus a workflow launcher for named structured analyses</li>
           <li><strong>Workflow launcher</strong>: company overviews, deep research, thesis memos, bull/bear reviews, buy-side research review</li>
-          <li><strong>Source traceability</strong>: every claim links to its exact document, page, and passage — surfaced in the UI so analysts never leave to verify</li>
+          <li><strong>Source traceability</strong>: every claim links to its exact document, page, and passage, surfaced in the UI so analysts never leave to verify</li>
           <li><strong>Structured data</strong>: data retrieval &amp; manipulation in-chat, live charting (Plotly, Dash, ECharts), and interactive exportable dashboards</li>
           <li><strong>Artifact builder</strong>: export research to Microsoft Office documents and custom web pages</li>
           <li><strong>Sub-agent delegation</strong>: to-do list planning to organize tasks and research plans, with parallel tool execution</li>
@@ -655,7 +648,6 @@ ul { list-style: none; padding: 0; }
       <h2>What I build on my own time</h2>
       <p>Production knowledge from institutional AI, distilled into open-source tools and freelance services.</p>
     </div>
-    <div class="cmdline" aria-hidden="true"><span class="prompt">$</span> git clone digithings &amp;&amp; make build<span class="term-cursor"></span></div>
     <div class="product-grid">
 
       <div class="product-card span-2">
@@ -673,7 +665,7 @@ ul { list-style: none; padding: 0; }
         <p class="pc-desc">
           Fully modular multi-agent AI toolkit. LangGraph orchestration, LiteLLM universal LLM wrapper, pluggable RAG
           backends, built-in evals, Docker deployment, MCP &amp; Open WebUI integration, OpenClaw layer for autonomous
-          agent deployment. Direction: &ldquo;hedge fund in a box&rdquo; — merging agentic AI with quantitative finance.
+          agent deployment. Direction: &ldquo;hedge fund in a box&rdquo;: merging agentic AI with quantitative finance.
         </p>
         <ul class="pc-features">
           <li><strong>LangGraph orchestration</strong>: reusable agent graph patterns for multi-step reasoning and workflow automation</li>
@@ -696,14 +688,14 @@ ul { list-style: none; padding: 0; }
           <a href="https://github.com/digithings-ai" target="_blank" rel="noopener">github.com/digithings-ai</a>
         </div>
         <p class="pc-desc">
-          Quant-native financial-AI system — the deterministic quant engine of the DigiThings stack. A pipeline that
+          Quant-native financial-AI system, the deterministic quant engine of the DigiThings stack. A pipeline that
           ends in an order, not a markdown file: <strong>research → signals → execution</strong>, every run reproducible
           and audited. <strong>Olympus</strong> is the live dashboard that ties it together; strategies climb a
           backtest → paper → live ladder on a NautilusTrader core.
         </p>
         <ul class="pc-features">
-          <li><strong>Olympus dashboard</strong>: live operational surface over the whole system — Supabase as canonical state, Next.js front end, JSON artifacts as source of truth</li>
-          <li><strong>Atlas (research)</strong>: scheduled macro &amp; market research cycles across equities, crypto, and futures — structured, versioned views from open data (FRED, Treasury, CoinGecko, SEC/EDGAR, FX)</li>
+          <li><strong>Olympus dashboard</strong>: live operational surface over the whole system; Supabase as canonical state, Next.js front end, JSON artifacts as source of truth</li>
+          <li><strong>Atlas (research)</strong>: scheduled macro &amp; market research cycles across equities, crypto, and futures; structured, versioned views from open data (FRED, Treasury, CoinGecko, SEC/EDGAR, FX)</li>
           <li><strong>Hermes (signals)</strong>: translates research into allocations; every signal timestamped, attributed to its source views, and fully replayable</li>
           <li><strong>Kairos (execution)</strong>: human-gated execution on a NautilusTrader core; strategies climb backtest → paper → loopback → live, each rung an explicit gate</li>
           <li><strong>Strategy building &amp; backtesting</strong>: deterministic validate → backtest → optimize → export workflow; reproducible performance, no unaudited claims</li>
@@ -724,7 +716,7 @@ ul { list-style: none; padding: 0; }
         </p>
         <ul class="pc-features">
           <li><strong>Real-estate brokerage</strong>: full website build with integrated CRM, capturing residential and commercial property inquiries directly into automated email sequences</li>
-          <li><strong>TwelveX</strong>: automated FX (foreign-exchange) research pipeline — daily ingestion of bank/broker research, LLM extraction of structured per-currency analyst sentiment, stored to Supabase and published to Notion; built on the DigiThings toolkit</li>
+          <li><strong>TwelveX</strong>: automated FX (foreign-exchange) research pipeline. Daily ingestion of bank/broker research, LLM extraction of structured per-currency analyst sentiment, stored to Supabase and published to Notion; built on the DigiThings toolkit</li>
         </ul>
       </div>
 
