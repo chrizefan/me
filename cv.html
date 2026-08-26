@@ -16,7 +16,7 @@
       background: #fff;
       max-width: 8.5in;
       margin: 0 auto;
-      padding: 0.42in 0.52in;
+      padding: 0.5in 0.6in;
     }
 
     /* Two-column layout — main (summary/experience) left, sidebar (contact/skills) right */
@@ -56,7 +56,7 @@
 
     /* Section blocks */
     .section {
-      margin-bottom: 0.7rem;
+      margin-bottom: 0.9rem;
     }
     .section-title {
       font-size: 0.62rem;
@@ -242,15 +242,14 @@
       margin-bottom: 0.35rem;
     }
     .project-section {
-      margin-top: 0.7rem;
-      padding-top: 0.45rem;
+      margin-top: 1rem;
+      padding-top: 0.65rem;
       border-top: 1px solid #D5D0C8;
     }
 
-    /* Print — must fit one letter page with no overflow */
+    /* Print — must fit one letter page */
     @media print {
       @page { size: letter; margin: 0.28in 0.42in; }
-      html, body { height: auto; overflow: visible; }
       body {
         padding: 0;
         margin: 0;
@@ -326,7 +325,7 @@
 <body>
   <div class="header">
     <h1>Chris Stefan</h1>
-    <div class="tagline">Senior AI Engineer | Custom digithings applications | Open-source AI infra, no lock-in | Open to contract</div>
+    <div class="tagline">Senior AI Engineer | Forward deployed | Production RAG &amp; agents | Open to contract</div>
   </div>
 
   <div class="cv-layout">
@@ -496,7 +495,7 @@
       <div class="section">
         <div class="section-title">Summary</div>
         <p class="summary-text">
-          I build custom digithings applications for companies that want an AI story and AI infrastructure they actually own. digithings is open-source, modular AI infra (RAG, agents, chat, quant) with no vendor lock-in: your hosts, your keys, your models. Public proof is Olympus / digiquant, a research-to-paper-book pipeline on that same stack. The pattern I ship for desks: agentic research and workflow layers on the terminals, data, and research systems they already run. No rip-and-replace. Senior AI Engineer at PSP Investments (Sep 2022 – 28 Aug 2026), based in Italy (EU citizen, remote-ready). Open to contract. English, French, and Romanian at native level. digithings.ai · digiquant.io · github.com/chrizefan
+          Senior AI Engineer / forward deployed. Owned production RAG and agents at PSP Investments (Sep 2022 – 28 Aug 2026): Virtual Analyst Platform for analysts and PMs, source-traced answers, Alpha Science SDK on the firm’s Databricks, Azure, and OpenAI stack — demoed at the Databricks Data &amp; AI Summit. Custom digithings applications, client-owned, no vendor lock-in. Public proof: Olympus / digiquant. Native EN/FR/RO. Italy. Open to contract.
         </p>
       </div>
 
@@ -512,10 +511,10 @@
             </div>
           </div>
           <ul class="exp-bullets">
-            <li>Owned production agentic AI used in analyst and PM research workflows: custom UI with step-level tracing and source traceability, a launcher for named analyses, and the in-house SDK underneath.</li>
-            <li><strong>Alpha Science SDK:</strong> composable agents and RAG indexes on the firm’s existing data and model stack (Databricks, OpenAI, Azure), with artifact export and sub-agent delegation.</li>
-            <li>Shipped weekly: each capability scoped as an SDK tool and surfaced in the platform, from design through maintenance and intern mentorship.</li>
-            <li>Pattern: AI on top of the desk’s current terminals and research systems, not a rip-and-replace. Platform demoed at the Databricks Data &amp; AI Summit.</li>
+            <li>Owned the full stack of PSP's company-wide agentic AI platform for analysts and PMs: architecture, design documentation, and UI/UX from concept to deployment; feature development, SDK packaging &amp; distribution, PR reviews, and ongoing maintenance — source-traced answers in daily research workflows.</li>
+            <li><strong>Alpha Science SDK:</strong> wraps Databricks (Vector Search, SQL Warehouses, Genie Agents) &amp; OpenAI (Responses + Files API), auto-auth via Databricks CLI &amp; Azure Key Vault. Composable agent/workflow base-class framework on the firm’s existing stack; artifact export, sub-agent delegation, parallel tool execution.</li>
+            <li><strong>Virtual Analyst Platform:</strong> custom chatbot UI with step-level tracing &amp; observability, source traceability, structured data retrieval &amp; manipulation, live charting (Plotly/Dash/ECharts) &amp; exportable dashboards, workflow launcher &amp; scheduled tasks.</li>
+            <li><strong>Shipped weekly:</strong> each capability scoped as an SDK tool and surfaced in the platform; mentored interns and juniors. Platform demoed at the Databricks Data &amp; AI Summit.</li>
           </ul>
           <div class="exp-pills">
             <span class="pill">Agentic AI</span>
@@ -589,15 +588,15 @@
         <div class="section-title">Personal Projects</div>
         <div class="project-title"><a href="https://digithings.ai" target="_blank">digithings</a> &middot; <a href="https://github.com/digithings-ai" target="_blank">GitHub &nearr;</a></div>
         <p class="project-desc" style="margin-bottom:0.1rem;">
-          Open-source, modular AI infrastructure — RAG, agents, chat, quant — with no vendor lock-in. Custom applications on top for teams that want an AI story and AI infrastructure they own. MIT. digithings.ai · github.com/digithings-ai
+          Modular multi-agent AI toolkit — the infra you deploy and own (RAG, agents, chat, quant). LangGraph, LiteLLM, pluggable RAG, evals, Docker, MCP &amp; Open WebUI, OpenClaw. Custom digithings applications; MIT; no vendor lock-in.
         </p>
         <div class="project-title" style="margin-top:0.1rem;"><a href="https://digiquant.io" target="_blank">Olympus / digiquant</a> &middot; <a href="https://digiquant.io" target="_blank">digiquant.io &nearr;</a></div>
         <p class="project-desc" style="margin-bottom:0.1rem;">
-          Public proof of digithings in finance: a quant research desk in a glass box you own. Scheduled research and timestamped signals (Atlas, Hermes), Olympus as the live-valued research book, deterministic backtests. Paper and live execution are not claimed.
+          Public proof in finance: research &rarr; thesis &rarr; paper book. Olympus as the live-valued research book (Supabase, Next.js); Atlas &amp; Hermes for scheduled research and timestamped signals; deterministic backtests. Paper and live execution are not claimed.
         </p>
         <div class="project-title" style="margin-top:0.1rem;">Custom desk AI</div>
         <p class="project-desc" style="margin-bottom:0.1rem;">
-          Agentic research and workflow layers on a desk’s existing terminals and research stack. Source-traced answers, named analyses, the client owns the code. Built as digithings applications, not a locked SaaS seat.
+          Forward-deployed agentic layer on the desk’s current terminals and research stack. Source-traced answers; they keep the code. Built as digithings applications.
         </p>
         <div class="exp-pills">
           <span class="pill">Python</span>

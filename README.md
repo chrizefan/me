@@ -1,10 +1,10 @@
 # Chris Stefan — Portfolio
 
-**Senior AI Engineer** · Custom digithings applications · Open-source AI infra, no vendor lock-in · Open to contract
+**Senior AI Engineer** · Forward deployed · Production agentic AI · Open to contract
 
 Personal portfolio and CV. Single-page site with experience, projects, skills, and interview Q&A. Deployed on [GitHub Pages](https://pages.github.com/).
 
-I build custom digithings applications for companies that want an AI story and AI infrastructure they actually own. digithings is open-source, modular AI infra (RAG, agents, chat, quant) with no vendor lock-in. Public proof is Olympus / digiquant (research → thesis → paper book). Senior AI Engineer at PSP Investments (Sep 2022 – 28 Aug 2026), based in Italy (EU citizen, remote-ready).
+At PSP Investments (Sep 2022 – 28 Aug 2026) I owned the Virtual Analyst Platform. I also ship custom digithings applications — sit with the desk, ship on their stack, leave them the code. Public proof: Olympus / digiquant.
 
 ---
 
