@@ -226,6 +226,25 @@ ul { list-style: none; padding: 0; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 0.85rem; margin-top: 2.1rem; }
 /* hero status panel */
 .hero-panel { background: var(--surface); border: 1px solid var(--hair); border-radius: var(--r-lg); padding: 0.4rem 1.4rem; box-shadow: 0 30px 70px -50px rgba(0,0,0,0.5); }
+.hp-portrait {
+  display: flex;
+  align-items: center;
+  gap: 0.95rem;
+  padding: 1rem 0 0.85rem;
+  border-bottom: 1px solid var(--hair);
+}
+.hp-portrait img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--hair-2);
+  flex-shrink: 0;
+  background: var(--surface-2);
+}
+.hp-portrait-meta { display: flex; flex-direction: column; gap: 0.2rem; min-width: 0; }
+.hp-portrait-name { font-size: 1.02rem; font-weight: 600; letter-spacing: -0.02em; color: var(--ink); }
+.hp-portrait-role { font-size: 0.84rem; color: var(--ink-soft); line-height: 1.35; }
 .hp-row { display: flex; align-items: baseline; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid var(--hair); }
 .hp-row:last-of-type { border-bottom: 0; }
 .hp-k { flex-shrink: 0; width: 4.5rem; font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-mute); }
@@ -474,6 +493,13 @@ ul { list-style: none; padding: 0; }
         </div>
       </div>
       <aside class="hero-panel" aria-label="At a glance">
+        <div class="hp-portrait">
+          <img src="assets/chris.png" width="72" height="72" alt="Chris Stefan" decoding="async">
+          <div class="hp-portrait-meta">
+            <div class="hp-portrait-name">Chris Stefan</div>
+            <div class="hp-portrait-role">Senior AI Engineer · Italy</div>
+          </div>
+        </div>
         <div class="hp-row"><span class="hp-k">Status</span><span class="hp-v hp-avail"><span class="eyebrow-dot" aria-hidden="true"></span> Open to contract</span></div>
         <div class="hp-row"><span class="hp-k">Based</span><span class="hp-v">Italy · EU citizen · remote-ready</span></div>
         <div class="hp-row"><span class="hp-k">Focus</span><span class="hp-v">Agentic AI · RAG · production systems</span></div>
@@ -709,6 +735,27 @@ ul { list-style: none; padding: 0; }
           <li><strong>Strategy building &amp; backtesting</strong>: deterministic validate → backtest → optimize → export workflow; reproducible performance, no unaudited claims</li>
         </ul>
         <a href="https://digiquant.io" target="_blank" rel="noopener" class="pc-link">Visit digiquant.io ↗</a>
+      </div>
+
+      <div class="product-card span-2">
+        <div class="pc-top">
+          <span class="pc-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+          <div><div class="pc-title">DataTap</div></div>
+          <span class="pc-tier">digichat in the wild</span>
+        </div>
+        <div class="pc-meta">
+          <a href="https://datatap.stream" target="_blank" rel="noopener">datatap.stream</a> ·
+          <a href="https://datatap.stream/chat" target="_blank" rel="noopener">datatap.stream/chat</a>
+        </div>
+        <p class="pc-desc">
+          Live digichat embed on the product docs so users can chat the solutions documentation.
+          Public proof of digichat in the wild — not a locked SaaS seat, not a named private finance client.
+        </p>
+        <ul class="pc-features">
+          <li><strong>Docs you can talk to</strong>: chat the solutions documentation in place</li>
+          <li><strong>digichat proof</strong>: the same stack, shipped on a real product surface</li>
+        </ul>
+        <a href="https://datatap.stream/chat" target="_blank" rel="noopener" class="pc-link">Open datatap.stream/chat ↗</a>
       </div>
 
       <div class="product-card span-2">
