@@ -4,7 +4,7 @@
 
 Personal portfolio and CV. Single-page site with experience, projects, skills, and interview Q&A. Deployed on [GitHub Pages](https://pages.github.com/).
 
-I build custom digithings applications for companies that want an AI story and AI infrastructure they actually own. digithings is open-source, modular AI infra (RAG, agents, chat, quant) with no vendor lock-in. Public proof is Olympus / digiquant (research → thesis → paper book). Senior AI Engineer at PSP Investments (Sep 2022 – Aug 2026), based in Italy (EU citizen, remote-ready).
+I build custom digithings applications for companies that want an AI story and AI infrastructure they actually own. digithings is open-source, modular AI infra (RAG, agents, chat, quant) with no vendor lock-in. Public proof is Olympus / digiquant (research → thesis → paper book). Senior AI Engineer at PSP Investments (Sep 2022 – 28 Aug 2026), based in Italy (EU citizen, remote-ready).
 
 ---
 
