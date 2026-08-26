@@ -57,15 +57,15 @@ def generate_tailored_letter(company, role, skills, company_intro_suffix):
     is_infra_role = any(term in role_lower for term in ["infrastructure", "platform", "backend", "systems"])
 
     # Tailored intro paragraph
-    intro = f"Over the past five years at PSP Investments (~$300B CAD AUM), I have designed, built, and deployed production-grade infrastructure systems that power institutional operations. {company_intro_suffix}"
+    intro = f"Over the past five years at PSP Investments, I have designed, built, and deployed production-grade infrastructure systems that power institutional operations. {company_intro_suffix}"
 
     # Role-specific project highlight
     if is_ml_role:
-        project = f"For the {role} role at {company}, my most relevant experience comes from architecting and deploying production ML infrastructure systems serving institutional users. I built custom LLM-powered platforms with advanced retrieval and reasoning capabilities, implemented vector search pipelines, and designed systems serving 100+ active users in mission-critical environments. Every system I built prioritizes reliability, scalability, and interpretability—critical for {company}'s success in this space."
+        project = f"For the {role} role at {company}, my most relevant experience comes from architecting and deploying production ML infrastructure systems serving institutional users. I built custom LLM-powered platforms with advanced retrieval and reasoning capabilities, implemented vector search pipelines, and designed systems used in production research workflows in mission-critical environments. Every system I built prioritizes reliability, scalability, and interpretability—critical for {company}'s success in this space."
     elif is_data_role:
         project = f"For the {role} role at {company}, my most relevant experience comes from designing and building production data infrastructure at scale. I built comprehensive data pipelines on Databricks processing millions of records daily, designed systems handling high-throughput transactions, and implemented real-time data serving with strict SLA requirements. I bring hands-on expertise in exactly the tech stack {company} uses: building systems that are reliable, scalable, and operationally clear."
     else:
-        project = f"For the {role} role at {company}, my most relevant experience comes from architecting production infrastructure systems. I've led end-to-end projects including designing comprehensive data pipelines, building distributed systems, and implementing platforms serving 100+ active users. I have hands-on expertise in the full stack: system architecture, data infrastructure, LLM integration, custom interface development, and production deployment—everything needed to succeed in this role."
+        project = f"For the {role} role at {company}, my most relevant experience comes from architecting production infrastructure systems. I've led end-to-end projects including designing comprehensive data pipelines, building distributed systems, and implementing platforms used in production research workflows. I have hands-on expertise in the full stack: system architecture, data infrastructure, LLM integration, custom interface development, and production deployment—everything needed to succeed in this role."
 
     # Tailored tech skills (prioritize posted skills)
     if skills_list:
