@@ -11,21 +11,21 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'JetBrains Mono', ui-monospace, monospace;
-      font-size: 8.2pt;
-      line-height: 1.35;
-      letter-spacing: -0.015em;
+      font-size: 7.6pt;
+      line-height: 1.42;
+      letter-spacing: -0.012em;
       color: #14181B;
       background: #FBFBF9;
       max-width: 8.5in;
       margin: 0 auto;
-      padding: 0.42in 0.52in;
+      padding: 0.48in 0.58in;
     }
 
     /* Two-column layout — main (summary/experience) left, sidebar (contact/skills) right */
     .cv-layout {
       display: grid;
-      grid-template-columns: 2.2fr 1fr;
-      gap: 1rem;
+      grid-template-columns: 2.15fr 1fr;
+      gap: 1.15rem;
       align-items: stretch;
     }
 
@@ -36,20 +36,20 @@
       background: #FFFFFF;
       border: 1px solid rgba(10, 15, 20, 0.10);
       border-radius: 0;
-      padding: 0.75rem 0.9rem;
+      padding: 0.85rem 0.95rem;
     }
 
     /* Header */
     .header {
-      margin-bottom: 0.4rem;
-      padding-bottom: 0.35rem;
+      margin-bottom: 0.55rem;
+      padding-bottom: 0.45rem;
       border-bottom: 1px solid rgba(10, 15, 20, 0.10);
     }
     .header h1 {
-      font-size: 1.2rem;
+      font-size: 1.12rem;
       font-weight: 600;
       letter-spacing: -0.03em;
-      margin-bottom: 0.15rem;
+      margin-bottom: 0.2rem;
     }
     .header .tagline {
       font-size: 0.7rem;
@@ -59,7 +59,7 @@
 
     /* Section blocks */
     .section {
-      margin-bottom: 0.9rem;
+      margin-bottom: 1rem;
     }
     .section-title {
       font-size: 0.58rem;
@@ -231,10 +231,10 @@
 
     /* Summary */
     .summary-text {
-      font-size: 0.70rem;
-      line-height: 1.42;
+      font-size: 0.66rem;
+      line-height: 1.48;
       color: #14181B;
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.45rem;
       font-style: normal;
     }
 
@@ -296,29 +296,29 @@
 
     /* Print — single letter page; one spacing scale everywhere */
     @media print {
-      @page { size: letter; margin: 0.28in 0.42in; }
+      @page { size: letter; margin: 0.34in 0.48in; }
       body {
         padding: 0;
         margin: 0;
         max-width: none;
-        font-size: 7.05pt;
-        line-height: 1.24;
-        letter-spacing: -0.02em;
-        /* Global rhythm */
-        --gap-title: 0.18rem;   /* any section/cat title → its content */
-        --gap-block: 0.24rem;   /* between major blocks */
-        --gap-item: 0.16rem;    /* between stacked items */
-        --gap-inline: 0.08rem 0.14rem; /* pill wrap */
+        font-size: 6.55pt;
+        line-height: 1.32;
+        letter-spacing: -0.015em;
+        /* Global rhythm — airier than prior digiweb pack */
+        --gap-title: 0.22rem;   /* any section/cat title → its content */
+        --gap-block: 0.32rem;   /* between major blocks */
+        --gap-item: 0.2rem;    /* between stacked items */
+        --gap-inline: 0.1rem 0.16rem; /* pill wrap */
       }
       .header {
-        margin-bottom: 0.26rem;
-        padding-bottom: 0.24rem;
+        margin-bottom: 0.34rem;
+        padding-bottom: 0.28rem;
         page-break-after: avoid;
       }
-      .header h1 { font-size: 1.08rem; margin-bottom: 0.06rem; }
-      .header .tagline { font-size: 0.58rem; }
+      .header h1 { font-size: 0.98rem; margin-bottom: 0.1rem; }
+      .header .tagline { font-size: 0.52rem; }
       .cv-layout {
-        gap: 0.58rem;
+        gap: 0.7rem;
         align-items: stretch;
         /* Fill letter content box; avoid page-break-inside:avoid (Chromium multi-page bug) */
         min-height: 9.55in;
@@ -392,18 +392,18 @@
         min-height: 0;
       }
       .exp-section .section-title { flex-shrink: 0; }
-      .exp-item { margin-top: 0.28rem; }
-      .exp-item:first-of-type { margin-top: 0.14rem; }
-      .exp-header { margin-bottom: 0.12rem; }
-      .exp-title { font-size: 0.68rem; margin-bottom: 0.02rem; }
+      .exp-item { margin-top: 0.34rem; }
+      .exp-item:first-of-type { margin-top: 0.18rem; }
+      .exp-header { margin-bottom: 0.14rem; }
+      .exp-title { font-size: 0.64rem; margin-bottom: 0.04rem; }
       .exp-meta { display: flex; justify-content: space-between; align-items: baseline; }
-      .exp-company { font-size: 0.52rem; color: #5C636A; }
-      .exp-date { font-size: 0.52rem; color: #5C636A; }
-      .exp-bullets { margin-bottom: 0.12rem; }
+      .exp-company { font-size: 0.5rem; color: #5C636A; }
+      .exp-date { font-size: 0.5rem; color: #5C636A; }
+      .exp-bullets { margin-bottom: 0.14rem; }
       .exp-bullets li {
-        margin-bottom: 0.08rem;
-        font-size: 0.56rem;
-        line-height: 1.28;
+        margin-bottom: 0.1rem;
+        font-size: 0.52rem;
+        line-height: 1.34;
       }
       .exp-pills {
         margin-top: 0.12rem;
@@ -411,16 +411,16 @@
         gap: var(--gap-inline);
       }
       .exp-pills .pill { font-size: 0.48rem; padding: 0.04rem 0.2rem; }
-      .summary-text { font-size: 0.62rem; line-height: 1.34; margin-bottom: var(--gap-item); }
-      .project-section { padding-top: 0.26rem; }
+      .summary-text { font-size: 0.56rem; line-height: 1.4; margin-bottom: var(--gap-item); }
+      .project-section { padding-top: 0.3rem; }
       .project-section .section-title { margin-bottom: var(--gap-title); }
-      .project-block { margin-bottom: 0.28rem; }
-      .project-title { font-size: 0.68rem; margin-bottom: 0.06rem; }
-      .project-desc { font-size: 0.6rem; line-height: 1.3; margin-bottom: 0.1rem; }
+      .project-block { margin-bottom: 0.32rem; }
+      .project-title { font-size: 0.62rem; margin-bottom: 0.08rem; }
+      .project-desc { font-size: 0.54rem; line-height: 1.36; margin-bottom: 0.12rem; }
       .project-bullets li {
-        margin-bottom: 0.08rem;
-        font-size: 0.58rem;
-        line-height: 1.28;
+        margin-bottom: 0.1rem;
+        font-size: 0.52rem;
+        line-height: 1.34;
       }
     }
   </style>
