@@ -322,6 +322,7 @@ ul { list-style: none; padding: 0; }
   padding: 1.35rem 1.5rem;
   margin-bottom: 1.4rem;
 }
+.repo-activity .ra-live { text-transform: none; letter-spacing: 0.02em; color: var(--ink-mute); }
 .repo-activity .ra-kicker {
   font-family: var(--font-mono);
   font-size: 0.72rem;
@@ -653,23 +654,26 @@ ul { list-style: none; padding: 0; }
       <p>Open-source infra, product apps, DigiChat releases, and freelance builds. This is where I spend most of my time.</p>
     </div>
 
-    <div class="repo-activity reveal" id="repo-activity" aria-live="polite">
+    <div class="repo-activity reveal" id="repo-activity" aria-live="polite"
+         data-snapshot-commits="1567" data-snapshot-prs="983" data-snapshot-issues="388"
+         data-snapshot-release="digichat-v1.3.2 · 2026-08-25">
       <div>
-        <div class="ra-kicker">digithings · last 30 days on main</div>
+        <div class="ra-kicker">digithings · last 30 days on main <span class="ra-live" data-stat="freshness">· updating…</span></div>
         <div class="ra-stats">
-          <div class="ra-stat"><span class="ra-n is-loading" data-stat="commits">—</span><span class="ra-l">commits</span></div>
-          <div class="ra-stat"><span class="ra-n is-loading" data-stat="prs">—</span><span class="ra-l">PRs merged</span></div>
-          <div class="ra-stat"><span class="ra-n is-loading" data-stat="issues">—</span><span class="ra-l">issues closed</span></div>
+          <div class="ra-stat"><span class="ra-n" data-stat="commits">1,567</span><span class="ra-l">commits</span></div>
+          <div class="ra-stat"><span class="ra-n" data-stat="prs">983</span><span class="ra-l">PRs merged</span></div>
+          <div class="ra-stat"><span class="ra-n" data-stat="issues">388</span><span class="ra-l">issues closed</span></div>
         </div>
       </div>
       <div class="ra-side">
-        <div class="ra-release">Latest release · <strong data-stat="release">…</strong></div>
+        <div class="ra-release">Latest release · <strong data-stat="release">digichat-v1.3.2 · 2026-08-25</strong></div>
         <a class="ra-link" href="https://github.com/digithings-ai/digithings" target="_blank" rel="noopener">Browse the repo →</a>
       </div>
       <div class="ra-recent">
         <div class="ra-recent-label">Shipped recently</div>
         <ul class="ra-pr-list" data-stat="recent">
-          <li class="ra-pr-meta">Loading recent merges…</li>
+          <li><a href="https://github.com/digithings-ai/digithings/pull/3187" target="_blank" rel="noopener">#3187 feat(digiquant): GET profile + Settings profile hydrate</a><span class="ra-pr-meta">2026-08-30</span></li>
+          <li><a href="https://github.com/digithings-ai/digithings/pull/3190" target="_blank" rel="noopener">#3190 chore(sync): module/digichat &lt;- develop</a><span class="ra-pr-meta">2026-08-30</span></li>
         </ul>
       </div>
     </div>
@@ -1194,18 +1198,44 @@ ul { list-style: none; padding: 0; }
       if (n == null || isNaN(n)) return '—';
       try { return Number(n).toLocaleString('en-US'); } catch (e) { return String(n); }
     };
-    var setText = function (key, value, loading) {
+    var clean = function (s) {
+      return String(s || '').replace(/\u2014|\u2013/g, '-');
+    };
+    var setText = function (key, value) {
       var nodes = root.querySelectorAll('[data-stat="' + key + '"]');
       nodes.forEach(function (el) {
         if (key === 'recent') return;
         el.textContent = value;
-        el.classList.toggle('is-loading', !!loading);
+        el.classList.remove('is-loading');
+      });
+    };
+    var renderRecent = function (items) {
+      var list = root.querySelector('[data-stat="recent"]');
+      if (!list || !items || !items.length) return;
+      var filtered = items.filter(function (item) {
+        return !/\bkairos\b/i.test(item.title || '');
+      });
+      if (!filtered.length) filtered = items.slice(0, 5);
+      list.innerHTML = '';
+      filtered.slice(0, 5).forEach(function (item) {
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+        a.href = item.html_url;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        a.textContent = '#' + item.number + ' ' + clean(item.title);
+        var meta = document.createElement('span');
+        meta.className = 'ra-pr-meta';
+        meta.textContent = (item.closed_at || item.updated_at || '').slice(0, 10);
+        li.appendChild(a);
+        li.appendChild(meta);
+        list.appendChild(li);
       });
     };
     var since = new Date();
     since.setUTCDate(since.getUTCDate() - 30);
     var sinceDay = since.toISOString().slice(0, 10);
-    var headers = { 'Accept': 'application/vnd.github+json', 'User-Agent': 'chrizefan-portfolio' };
+    var headers = { 'Accept': 'application/vnd.github+json' };
 
     var fetchJson = function (url, extraHeaders) {
       var h = Object.assign({}, headers, extraHeaders || {});
@@ -1217,7 +1247,7 @@ ul { list-style: none; padding: 0; }
 
     Promise.all([
       fetchJson('https://api.github.com/search/commits?q=repo:digithings-ai/digithings+committer-date:>=' + sinceDay + '&per_page=1', { 'Accept': 'application/vnd.github.cloak-preview+json' }),
-      fetchJson('https://api.github.com/search/issues?q=repo:digithings-ai/digithings+is:pr+is:merged+merged:>=' + sinceDay + '&per_page=5&sort=updated'),
+      fetchJson('https://api.github.com/search/issues?q=repo:digithings-ai/digithings+is:pr+is:merged+merged:>=' + sinceDay + '&per_page=10&sort=updated'),
       fetchJson('https://api.github.com/search/issues?q=repo:digithings-ai/digithings+is:issue+is:closed+closed:>=' + sinceDay + '&per_page=1'),
       fetchJson('https://api.github.com/repos/digithings-ai/digithings/releases/latest')
     ]).then(function (results) {
@@ -1231,39 +1261,12 @@ ul { list-style: none; padding: 0; }
       if (release && release.tag_name) {
         var when = (release.published_at || '').slice(0, 10);
         setText('release', release.tag_name + (when ? ' · ' + when : ''));
-      } else {
-        setText('release', 'see GitHub');
       }
-      var list = root.querySelector('[data-stat="recent"]');
-      if (list && prs && Array.isArray(prs.items)) {
-        list.innerHTML = '';
-        prs.items.slice(0, 5).forEach(function (item) {
-          var li = document.createElement('li');
-          var a = document.createElement('a');
-          a.href = item.html_url;
-          a.target = '_blank';
-          a.rel = 'noopener';
-          a.textContent = '#' + item.number + ' ' + item.title;
-          var meta = document.createElement('span');
-          meta.className = 'ra-pr-meta';
-          meta.textContent = (item.closed_at || item.updated_at || '').slice(0, 10);
-          li.appendChild(a);
-          li.appendChild(meta);
-          list.appendChild(li);
-        });
-        if (!prs.items.length) {
-          list.innerHTML = '<li class="ra-pr-meta">No recent merges found.</li>';
-        }
-      }
+      renderRecent(prs && prs.items);
+      setText('freshness', '· live');
     }).catch(function () {
-      setText('commits', '—');
-      setText('prs', '—');
-      setText('issues', '—');
-      setText('release', 'see GitHub');
-      var list = root.querySelector('[data-stat="recent"]');
-      if (list) {
-        list.innerHTML = '<li class="ra-pr-meta">Could not load live stats. <a href="https://github.com/digithings-ai/digithings" target="_blank" rel="noopener">Open the repo</a>.</li>';
-      }
+      // Keep snapshot numbers already in the HTML; mark freshness.
+      setText('freshness', '· snapshot');
     });
   })();
 
