@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chris Stefan · Senior AI Engineer | Production Agentic AI</title>
-<meta name="description" content="Chris Stefan · Senior AI Engineer building agentic AI in production for institutional finance. Owned the company-wide Virtual Analyst Platform at PSP Investments (Sep 2022 – 28 Aug 2026). EU citizen, remote-ready. Open to contract.">
+<meta name="description" content="Chris Stefan · Senior AI Engineer. digithings open-source AI infra, Olympus on digiquant, DigiChat releases, and freelance desk AI. Previously owned the Virtual Analyst Platform at PSP Investments. Open to contract.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://chrizefan.github.io/me/">
 
@@ -12,17 +12,21 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://chrizefan.github.io/me/">
 <meta property="og:title" content="Chris Stefan · Senior AI Engineer | Production Agentic AI">
-<meta property="og:description" content="Senior AI Engineer at PSP Investments (Sep 2022 – 28 Aug 2026). Owned the company-wide Virtual Analyst Platform. EU citizen, remote-ready. Open to contract.">
+<meta property="og:description" content="Senior AI Engineer building digithings, Olympus, DigiChat, and client apps. Previously Virtual Analyst Platform at PSP Investments. Open to contract.">
 <meta property="og:site_name" content="Chris Stefan">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Chris Stefan · Senior AI Engineer">
-<meta name="twitter:description" content="Senior agentic AI engineer. Systems in production at PSP Investments. EU citizen, remote-ready. Open to full-time and contract.">
+<meta name="twitter:description" content="Senior agentic AI engineer. Systems in production at PSP Investments. EU citizen, remote-ready. Open to contract.">
 
 <meta name="theme-color" content="#0A0E0C" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#FBFBF9" media="(prefers-color-scheme: light)">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230A0E0C'/%3E%3Crect x='10.5' y='10.5' width='11' height='11' rx='2' transform='rotate(45 16 16)' fill='%23E89A4D'/%3E%3C/svg%3E">
+<link rel="icon" href="favicon.ico?v=3" sizes="any">
+<link rel="icon" type="image/png" href="assets/favicon-32.png?v=3" sizes="32x32">
+<link rel="icon" type="image/png" href="assets/favicon-48.png?v=3" sizes="48x48">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=3" sizes="180x180">
+<link rel="shortcut icon" href="favicon.ico?v=3">
 
 <!-- JSON-LD Person Schema -->
 <script type="application/ld+json">
@@ -46,22 +50,22 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <!-- Pre-paint theme: default dark, honour saved choice -->
 <script>try{var s=localStorage.getItem('cs-theme');document.documentElement.setAttribute('data-theme',s||'dark')}catch(e){}</script>
 
 <style>
 /* ==========================================================================
-   Chris Stefan — me page. Design language shared with digithings.ai /
-   digiquant.io: terminal-utilitarian, Geist + Instrument Serif, dark+light,
-   amber personal accent. Single self-contained file for GitHub Pages.
+   Chris Stefan — me page. digiweb design language (frontend/digiweb on
+   digithings develop, utilitarian v0.1): Instrument Panel — mono voice,
+   radius 0, ink/paper CTAs, phosphor accent for focus/live/identity.
    ========================================================================== */
 
-/* ── tokens ─────────────────────────────────────────────────────────── */
+/* ── tokens (digiweb [data-theme] layer) ─────────────────────────────── */
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg:        #0A0E0C; /* digithings warm canvas (canon 2026-07-02) */
+  --bg:        #0A0E0C;
   --surface:   #121417;
   --surface-2: #171A1E;
   --hair:      rgba(255, 255, 255, 0.09);
@@ -69,15 +73,15 @@
 
   --ink:       #ECEEF0;
   --ink-soft:  #9AA0A6;
-  --ink-mute:  #7D8389; /* digithings WCAG AA mute */
+  --ink-mute:  #7D8389;
 
-  /* Personal accent (amber) — digithings family tokens, personal livery */
-  --accent:      #E89A4D;
-  --accent-weak: rgba(232, 154, 77, 0.14);
-  --on-accent:   #2A1705;
+  --accent:      #3DD6C4; /* terminal phosphor — focus / live / identity */
+  --accent-weak: rgba(61, 214, 196, 0.14);
+  --on-accent:   #04201C;
 
-  --up:   #3DD6C4; /* digiquant phosphor for positive signals */
+  --up:   #3DD6C4;
   --down: #E5533E;
+  --warn: #E0B341;
 
   --term-bg:   #08090B;
   --term-ink:  #E7EAEC;
@@ -100,14 +104,15 @@
   --ink-soft:  #5C636A;
   --ink-mute:  #666C73;
 
-  --accent:      #B06A2E;
-  --accent-weak: rgba(176, 106, 46, 0.12);
+  --accent:      #0C7C71;
+  --accent-weak: rgba(12, 124, 113, 0.12);
   --on-accent:   #FFFFFF;
 
   --up:   #0C7C71;
   --down: #C9533B;
+  --warn: #B5832A;
 
-  --term-bg:   #F1EFEA;
+  --term-bg:   #F1F0EB;
   --term-ink:  #1A1E22;
   --term-mute: #6B7177;
   --term-hair: rgba(10, 15, 20, 0.12);
@@ -117,16 +122,18 @@
   --grain-blend: multiply;
 }
 :root {
-  --font-sans: "Geist", system-ui, -apple-system, sans-serif;
+  /* digiweb v0.1: one mono voice for claim, body, and chrome */
+  --font-sans: "Geist Mono", "JetBrains Mono", ui-monospace, monospace;
   --font-mono: "Geist Mono", "JetBrains Mono", ui-monospace, monospace;
-  --font-display: "Instrument Serif", Georgia, serif;
-  --wrap: 1180px; /* digithings --wrap */
+  --font-display: "Geist Mono", "JetBrains Mono", ui-monospace, monospace;
+  --wrap: 1180px;
   --wrap-wide: 1280px;
-  --gutter: clamp(1.25rem, 4vw, 3.25rem);
-  --section-y: clamp(4rem, 8vw, 7rem);
-  --r-sm: 6px;
-  --r-md: 8px;
-  --r-lg: 12px;
+  --gutter: clamp(1.4rem, 4.5vw, 3.5rem);
+  --section-y: clamp(5rem, 10vw, 8.5rem);
+  --section-y-tight: clamp(3rem, 6vw, 4.5rem);
+  --r-sm: 0;
+  --r-md: 0;
+  --r-lg: 0;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-glide: cubic-bezier(0.22, 1, 0.36, 1);
   --duration-reveal: 0.6s;
@@ -141,9 +148,10 @@ body {
   font-family: var(--font-sans);
   background: var(--bg);
   color: var(--ink);
+  font-size: 0.9rem;
   line-height: 1.65;
   font-weight: 400;
-  letter-spacing: -0.011em;
+  letter-spacing: -0.012em;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
@@ -153,7 +161,7 @@ img, svg { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 ul { list-style: none; padding: 0; }
 ::selection { background: var(--accent); color: var(--on-accent); }
-:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 0; }
 
 /* ── atmosphere ─────────────────────────────────────────────────────── */
 .grain {
@@ -173,25 +181,25 @@ ul { list-style: none; padding: 0; }
 
 /* ── layout ─────────────────────────────────────────────────────────── */
 .wrap { width: 100%; max-width: var(--wrap); margin-inline: auto; padding-inline: var(--gutter); position: relative; z-index: 1; }
-.skip-link { position: absolute; left: -999px; top: 0; z-index: 100; background: var(--accent); color: var(--on-accent); padding: 0.6rem 1rem; border-radius: 0 0 8px 0; font-weight: 600; }
+.skip-link { position: absolute; left: -999px; top: 0; z-index: 100; background: var(--ink); color: var(--bg); padding: 0.6rem 1rem; border-radius: 0; font-weight: 500; }
 .skip-link:focus { left: 0; }
 
 /* ── nav ────────────────────────────────────────────────────────────── */
 .site-nav { position: sticky; top: 0; z-index: 50; border-bottom: 1px solid transparent; transition: background 0.4s var(--ease), border-color 0.4s var(--ease); }
 .site-nav.is-stuck { background: color-mix(in srgb, var(--bg) 72%, transparent); backdrop-filter: blur(14px) saturate(150%); -webkit-backdrop-filter: blur(14px) saturate(150%); border-bottom-color: var(--hair); }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 1rem; }
-.brand { display: inline-flex; align-items: center; gap: 0.7rem; font-weight: 600; letter-spacing: -0.01em; font-size: 1rem; }
-.brand-mark { width: 8px; height: 8px; background: var(--accent); transform: rotate(45deg); border-radius: 1px; box-shadow: 0 0 10px var(--accent-weak); flex-shrink: 0; transition: transform 0.4s var(--ease); }
+.brand { display: inline-flex; align-items: center; gap: 0.7rem; font-weight: 600; letter-spacing: -0.01em; font-size: 0.88rem; }
+.brand-mark { width: 8px; height: 8px; background: var(--accent); transform: rotate(45deg); border-radius: 0; flex-shrink: 0; transition: transform 0.4s var(--ease); }
 .brand:hover .brand-mark { transform: rotate(135deg); }
 
 .nav-links { display: flex; align-items: center; gap: clamp(0.9rem, 2.2vw, 1.7rem); }
-.nav-links > a:not(.btn) { font-size: 0.92rem; color: var(--ink-soft); position: relative; padding: 0.4rem 0; transition: color 0.18s var(--ease); }
+.nav-links > a:not(.btn) { font-size: 0.8rem; color: var(--ink-soft); position: relative; padding: 0.4rem 0; transition: color 0.18s var(--ease); }
 .nav-links > a:not(.btn)::after { content: ""; position: absolute; left: 0; bottom: -2px; height: 1px; width: 0; background: var(--accent); transition: width 0.22s var(--ease); }
 .nav-links > a:not(.btn):hover { color: var(--ink); }
 .nav-links > a:not(.btn):hover::after { width: 100%; }
 .ext { opacity: 0.5; font-size: 0.8em; }
 .nav-tail { display: flex; align-items: center; gap: 0.55rem; }
-.theme-toggle { display: inline-grid; place-items: center; width: 38px; height: 38px; border: 1px solid var(--hair); border-radius: 10px; background: var(--surface); color: var(--ink-soft); cursor: pointer; transition: color 0.18s var(--ease), border-color 0.18s var(--ease), transform 0.18s var(--ease); }
+.theme-toggle { display: inline-grid; place-items: center; width: 38px; height: 38px; border: 1px solid var(--hair); border-radius: 0; background: var(--surface); color: var(--ink-soft); cursor: pointer; transition: color 0.18s var(--ease), border-color 0.18s var(--ease), transform 0.18s var(--ease); }
 .theme-toggle:hover { color: var(--ink); border-color: var(--hair-2); transform: translateY(-1px); }
 .theme-toggle svg { width: 17px; height: 17px; }
 :root[data-theme="dark"] .ico-moon { display: none; }
@@ -199,33 +207,33 @@ ul { list-style: none; padding: 0; }
 .nav-toggle { display: none; }
 
 /* ── buttons ────────────────────────────────────────────────────────── */
-.btn { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--font-sans); font-size: 0.95rem; font-weight: 500; padding: 0.72rem 1.25rem; border-radius: 10px; border: 1px solid var(--hair-2); cursor: pointer; white-space: nowrap; transition: transform 0.18s var(--ease), background 0.18s var(--ease), border-color 0.18s var(--ease), box-shadow 0.18s var(--ease); }
+.btn { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--font-mono); font-size: 0.82rem; font-weight: 500; padding: 0.58rem 1.05rem; border-radius: 0; border: 1px solid var(--hair-2); cursor: pointer; white-space: nowrap; transition: transform 0.18s var(--ease), background 0.18s var(--ease), border-color 0.18s var(--ease); }
 .btn span[aria-hidden] { transition: transform 0.18s var(--ease); }
 .btn:hover span[aria-hidden] { transform: translateX(3px); }
-.btn-sm { padding: 0.5rem 0.95rem; font-size: 0.88rem; }
-.btn-primary { background: var(--accent); color: var(--on-accent); border-color: var(--accent); font-weight: 600; box-shadow: 0 10px 30px -14px var(--accent); }
-.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 40px -14px var(--accent); }
+.btn-sm { padding: 0.4rem 0.8rem; font-size: 0.76rem; }
+.btn-primary { background: var(--ink); color: var(--bg); border-color: var(--ink); font-weight: 500; }
+.btn-primary:hover { transform: translateY(-2px); }
 .btn-ghost { background: transparent; color: var(--ink); }
 .btn-ghost:hover { background: var(--surface); border-color: var(--hair-2); transform: translateY(-2px); }
 
 /* ── eyebrow / kicker / prompt ──────────────────────────────────────── */
-.eyebrow { display: inline-flex; align-items: center; gap: 0.55rem; font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.02em; color: var(--ink-soft); border: 1px solid var(--hair); background: var(--surface); padding: 0.42rem 0.9rem; border-radius: 999px; }
+.eyebrow { display: inline-flex; align-items: center; gap: 0.55rem; font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.02em; color: var(--ink-soft); border: 1px solid var(--hair); background: var(--surface); padding: 0.36rem 0.75rem; border-radius: 0; }
 .eyebrow-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); animation: pulse 2.6s var(--ease) infinite; }
 @keyframes pulse { 0% { box-shadow: 0 0 0 0 var(--accent-weak); } 70% { box-shadow: 0 0 0 8px transparent; } 100% { box-shadow: 0 0 0 0 transparent; } }
 .prompt { color: var(--accent); font-weight: 600; font-family: var(--font-mono); }
-.kicker { display: inline-flex; align-items: center; gap: 0.6rem; font-family: var(--font-mono); font-size: 0.76rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-mute); }
+.kicker { display: inline-flex; align-items: center; gap: 0.6rem; font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-mute); }
 .kicker .kn { color: var(--accent); }
 .kicker .kn::after { content: ""; display: inline-block; width: 1.6rem; height: 1px; background: var(--hair-2); vertical-align: middle; margin-left: 0.6rem; }
 
 /* ── hero ───────────────────────────────────────────────────────────── */
-.hero { padding: clamp(3.5rem, 9vw, 6.5rem) 0 clamp(2.5rem, 5vw, 4rem); }
-.hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
-.hero-title { font-family: var(--font-display); font-weight: 400; font-size: clamp(2.8rem, 6vw, 4.6rem); line-height: 1.04; letter-spacing: -0.02em; margin: 1.4rem 0 1.3rem; max-width: 16ch; }
-.hero-title em { font-style: italic; color: var(--accent); }
-.hero-lede { font-size: clamp(1.02rem, 1.4vw, 1.16rem); color: var(--ink-soft); max-width: 52ch; }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 0.85rem; margin-top: 2.1rem; }
+.hero { padding: clamp(4rem, 10vw, 7rem) 0 clamp(3rem, 6vw, 4.75rem); }
+.hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: clamp(2.4rem, 5.5vw, 4.5rem); align-items: center; }
+.hero-title { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.55rem, 3.6vw, 2.45rem); line-height: 1.2; letter-spacing: -0.03em; margin: 1.5rem 0 1.45rem; max-width: 26ch; }
+.hero-title em { font-style: normal; color: var(--accent); }
+.hero-lede { font-size: clamp(0.88rem, 1.1vw, 0.95rem); color: var(--ink-soft); max-width: 56ch; line-height: 1.7; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 0.85rem; margin-top: 2.4rem; }
 /* hero status panel */
-.hero-panel { background: var(--surface); border: 1px solid var(--hair); border-radius: var(--r-lg); padding: 0.4rem 1.4rem; box-shadow: 0 30px 70px -50px rgba(0,0,0,0.5); }
+.hero-panel { background: var(--surface); border: 1px solid var(--hair); border-radius: 0; padding: 0.4rem 1.4rem; }
 .hp-portrait {
   display: flex;
   align-items: center;
@@ -243,12 +251,12 @@ ul { list-style: none; padding: 0; }
   background: var(--surface-2);
 }
 .hp-portrait-meta { display: flex; flex-direction: column; gap: 0.2rem; min-width: 0; }
-.hp-portrait-name { font-size: 1.02rem; font-weight: 600; letter-spacing: -0.02em; color: var(--ink); }
-.hp-portrait-role { font-size: 0.84rem; color: var(--ink-soft); line-height: 1.35; }
-.hp-row { display: flex; align-items: baseline; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid var(--hair); }
+.hp-portrait-name { font-size: 0.9rem; font-weight: 600; letter-spacing: -0.02em; color: var(--ink); }
+.hp-portrait-role { font-size: 0.74rem; color: var(--ink-soft); line-height: 1.4; }
+.hp-row { display: flex; align-items: baseline; gap: 1rem; padding: 0.7rem 0; border-bottom: 1px solid var(--hair); }
 .hp-row:last-of-type { border-bottom: 0; }
-.hp-k { flex-shrink: 0; width: 4.5rem; font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-mute); }
-.hp-v { font-size: 0.92rem; color: var(--ink); }
+.hp-k { flex-shrink: 0; width: 4.5rem; font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-mute); }
+.hp-v { font-size: 0.8rem; color: var(--ink); }
 .hp-v a { color: var(--ink-soft); transition: color 0.18s var(--ease); }
 .hp-v a:hover { color: var(--accent); }
 .hp-avail { display: inline-flex; align-items: center; gap: 0.5rem; }
@@ -259,59 +267,155 @@ ul { list-style: none; padding: 0; }
 .hp-links svg { width: 100%; height: 100%; }
 .hero-stats { display: flex; flex-wrap: wrap; gap: clamp(1.5rem, 4vw, 3rem); margin-top: clamp(2.5rem, 5vw, 3.5rem); padding-top: 1.9rem; border-top: 1px solid var(--hair); }
 .hero-stats div { display: flex; flex-direction: column; }
-.hero-stats dt { font-size: 1.9rem; font-weight: 600; letter-spacing: -0.04em; font-family: var(--font-mono); color: var(--ink); }
-.hero-stats dd { font-size: 0.82rem; color: var(--ink-mute); margin-top: 0.15rem; }
+.hero-stats dt { font-size: 1.2rem; font-weight: 500; letter-spacing: -0.04em; font-family: var(--font-mono); color: var(--ink); font-variant-numeric: tabular-nums; }
+.hero-stats dd { font-size: 0.72rem; color: var(--ink-mute); margin-top: 0.22rem; }
 
 /* ── sections ───────────────────────────────────────────────────────── */
-.section { padding: clamp(3.5rem, 8vw, 6.5rem) 0; }
+.section { padding: var(--section-y) 0; }
 .section-alt { background: var(--surface-2); border-block: 1px solid var(--hair); }
-.section-head { max-width: 60ch; margin-bottom: clamp(2.2rem, 5vw, 3.4rem); }
-.section-head h2 { font-size: clamp(1.9rem, 4vw, 2.9rem); font-weight: 600; letter-spacing: -0.03em; line-height: 1.08; margin: 0.6rem 0 0.85rem; }
-.section-head p { color: var(--ink-soft); font-size: clamp(1rem, 1.4vw, 1.1rem); }
+.section-head { max-width: 64ch; margin-bottom: clamp(2.5rem, 5.5vw, 3.8rem); }
+.section-head h2 { font-family: var(--font-display); font-size: clamp(1.35rem, 2.6vw, 1.95rem); font-weight: 500; letter-spacing: -0.03em; line-height: 1.2; margin: 0.75rem 0 1rem; }
+.section-head p { color: var(--ink-soft); font-size: clamp(0.86rem, 1.1vw, 0.94rem); line-height: 1.7; }
 .head-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
 
 /* ── about ──────────────────────────────────────────────────────────── */
-.about-prose { max-width: 64ch; display: flex; flex-direction: column; gap: 1.15rem; font-size: 1.08rem; color: var(--ink-soft); }
+.about-prose { max-width: 68ch; display: flex; flex-direction: column; gap: 1.4rem; font-size: 0.92rem; color: var(--ink-soft); line-height: 1.72; }
 .about-prose strong { color: var(--ink); font-weight: 600; }
 .about-prose a { color: var(--accent); }
 .about-prose a:hover { text-decoration: underline; }
 
 /* ── timeline (experience) ──────────────────────────────────────────── */
 .timeline { position: relative; margin-left: 4px; }
-.tl-card { position: relative; padding: 0 0 2.4rem 2.1rem; border-left: 1px solid var(--hair); }
+.tl-card { position: relative; padding: 0 0 2.85rem 2.1rem; border-left: 1px solid var(--hair); }
 .tl-card:last-child { border-left-color: transparent; padding-bottom: 0; }
 .tl-card::before { content: ""; position: absolute; left: -5px; top: 0.25rem; width: 9px; height: 9px; border-radius: 50%; background: var(--bg); border: 2px solid var(--hair-2); transition: border-color 0.25s var(--ease), background 0.25s var(--ease); }
 .tl-card:hover::before { border-color: var(--accent); }
 .tl-card.current::before { background: var(--accent); border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-weak); }
 .tl-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.5rem 0.7rem; margin-bottom: 0.9rem; }
-.tl-title { font-size: 1.18rem; font-weight: 600; letter-spacing: -0.02em; }
-.tl-company { color: var(--ink-soft); font-size: 0.92rem; }
-.tl-date { margin-left: auto; font-family: var(--font-mono); font-size: 0.76rem; color: var(--ink-mute); letter-spacing: 0.02em; white-space: nowrap; }
+.tl-title { font-size: 1rem; font-weight: 600; letter-spacing: -0.02em; }
+.tl-company { color: var(--ink-soft); font-size: 0.8rem; }
+.tl-date { margin-left: auto; font-family: var(--font-mono); font-size: 0.68rem; color: var(--ink-mute); letter-spacing: 0.02em; white-space: nowrap; }
 .tl-now { color: var(--accent); }
-.tl-bullets { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.1rem; }
-.tl-bullets li { position: relative; padding-left: 1.3rem; font-size: 0.94rem; color: var(--ink-soft); line-height: 1.55; }
+.tl-bullets { display: flex; flex-direction: column; gap: 0.58rem; margin-bottom: 1.25rem; }
+.tl-bullets li { position: relative; padding-left: 1.3rem; font-size: 0.84rem; color: var(--ink-soft); line-height: 1.68; }
 .tl-bullets li::before { content: ""; position: absolute; left: 2px; top: 0.55em; width: 6px; height: 6px; border-bottom: 1.5px solid var(--accent); border-right: 1.5px solid var(--accent); transform: rotate(-45deg); }
 .tl-bullets strong { color: var(--ink); font-weight: 600; }
 .badges { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-.badge { font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink-soft); background: color-mix(in srgb, var(--ink) 5%, transparent); border: 1px solid var(--hair); border-radius: 6px; padding: 0.28rem 0.55rem; }
+.badge { font-family: var(--font-mono); font-size: 0.62rem; color: var(--ink-mute); background: transparent; border: 1px solid var(--hair); border-radius: 0; padding: 0.12rem 0.42rem; }
 
 /* ── flagship (Virtual Analyst Platform) ────────────────────────────── */
 .flagship { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: start; }
-.flagship-desc { color: var(--ink-soft); font-size: 1.05rem; margin-bottom: 1.6rem; }
+.flagship-desc { color: var(--ink-soft); font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.85rem; }
 .flagship-desc strong { color: var(--ink); }
 .stat-tiles { display: flex; flex-wrap: wrap; gap: clamp(1.5rem, 4vw, 2.6rem); padding-top: 1.6rem; border-top: 1px solid var(--hair); }
 .stat-tile { display: flex; flex-direction: column; }
-.stat-tile .sv { font-family: var(--font-mono); font-size: 1.7rem; font-weight: 600; letter-spacing: -0.03em; color: var(--ink); }
-.stat-tile .sl { font-size: 0.74rem; color: var(--ink-mute); margin-top: 0.2rem; }
-.feature-list { display: flex; flex-direction: column; gap: 0.85rem; }
-.feature-list li { position: relative; padding-left: 1.6rem; font-size: 0.96rem; color: var(--ink-soft); line-height: 1.55; }
+.stat-tile .sv { font-family: var(--font-mono); font-size: 1.3rem; font-weight: 500; letter-spacing: -0.03em; color: var(--ink); }
+.stat-tile .sl { font-size: 0.66rem; color: var(--ink-mute); margin-top: 0.25rem; }
+.feature-list { display: flex; flex-direction: column; gap: 0.95rem; }
+.feature-list li { position: relative; padding-left: 1.6rem; font-size: 0.84rem; color: var(--ink-soft); line-height: 1.68; }
 .feature-list li::before { content: "→"; position: absolute; left: 0; top: 0; color: var(--accent); font-family: var(--font-mono); }
 .feature-list strong { color: var(--ink); font-weight: 600; }
 .flagship-badges { margin-top: 1.6rem; }
 
+
+/* ── repo activity (live digithings strip) ──────────────────────────── */
+.repo-activity {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.2rem 2rem;
+  align-items: end;
+  background: var(--surface);
+  border: 1px solid var(--hair);
+  border-radius: var(--r-md);
+  padding: 1.35rem 1.5rem;
+  margin-bottom: 1.4rem;
+}
+.repo-activity .ra-live { text-transform: none; letter-spacing: 0.02em; color: var(--ink-mute); }
+.repo-activity .ra-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin-bottom: 0.85rem;
+}
+.repo-activity .ra-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.2rem, 4vw, 2.4rem);
+}
+.repo-activity .ra-stat { display: flex; flex-direction: column; gap: 0.15rem; min-width: 5.5rem; }
+.repo-activity .ra-n {
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  line-height: 1.1;
+}
+.repo-activity .ra-n.is-loading { color: var(--ink-mute); }
+.repo-activity .ra-l { font-size: 0.74rem; color: var(--ink-mute); }
+.repo-activity .ra-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.55rem;
+  text-align: right;
+}
+.repo-activity .ra-release {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+.repo-activity .ra-release strong { color: var(--ink); font-weight: 600; }
+.repo-activity .ra-link {
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+.repo-activity .ra-link:hover { text-decoration: underline; }
+.repo-activity .ra-recent {
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--hair);
+  padding-top: 0.95rem;
+  margin-top: 0.2rem;
+}
+.repo-activity .ra-recent-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin-bottom: 0.55rem;
+}
+.repo-activity .ra-pr-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.repo-activity .ra-pr-list li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.7rem;
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+  line-height: 1.4;
+}
+.repo-activity .ra-pr-list a { color: var(--ink); }
+.repo-activity .ra-pr-list a:hover { color: var(--accent); }
+.repo-activity .ra-pr-meta {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--ink-mute);
+}
+@media (max-width: 700px) {
+  .repo-activity { grid-template-columns: 1fr; }
+  .repo-activity .ra-side { align-items: flex-start; text-align: left; }
+}
+
 /* ── products / freelance cards ─────────────────────────────────────── */
-.product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
-.product-card { position: relative; overflow: hidden; background: var(--surface); border: 1px solid var(--hair); border-radius: var(--r-md); padding: 1.7rem 1.6rem; display: flex; flex-direction: column; transition: transform 0.3s var(--ease), border-color 0.3s var(--ease); }
+.product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+.product-card { position: relative; overflow: hidden; background: var(--surface); border: 1px solid var(--hair); border-radius: var(--r-md); padding: 1.9rem 1.75rem; display: flex; flex-direction: column; transition: transform 0.3s var(--ease), border-color 0.3s var(--ease); }
 .product-card::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform 0.32s var(--ease); }
 .product-card:hover { transform: translateY(-4px); border-color: var(--hair-2); }
 .product-card:hover::before { transform: scaleX(1); }
@@ -319,29 +423,29 @@ ul { list-style: none; padding: 0; }
 .pc-top { display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.5rem; }
 .pc-glyph { width: 22px; height: 22px; color: var(--accent); flex-shrink: 0; }
 .pc-glyph svg { width: 100%; height: 100%; }
-.pc-tier { margin-left: auto; font-family: var(--font-mono); font-size: 0.64rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); border-radius: 999px; padding: 0.2rem 0.55rem; }
-.pc-title { font-size: 1.25rem; font-weight: 600; letter-spacing: -0.02em; }
-.pc-meta { font-family: var(--font-mono); font-size: 0.78rem; color: var(--ink-mute); margin: 0.2rem 0 0.9rem; }
+.pc-tier { margin-left: auto; font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); border-radius: 0; padding: 0.16rem 0.45rem; }
+.pc-title { font-size: 1.02rem; font-weight: 600; letter-spacing: -0.02em; }
+.pc-meta { font-family: var(--font-mono); font-size: 0.68rem; color: var(--ink-mute); margin: 0.3rem 0 1.05rem; }
 .pc-meta a { color: var(--ink-soft); }
 .pc-meta a:hover { color: var(--accent); }
-.pc-desc { font-size: 0.95rem; color: var(--ink-soft); line-height: 1.6; }
+.pc-desc { font-size: 0.84rem; color: var(--ink-soft); line-height: 1.7; }
 .pc-desc strong { color: var(--ink); }
 .pc-features { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem; }
-.pc-features li { position: relative; padding-left: 1.3rem; font-size: 0.88rem; color: var(--ink-soft); line-height: 1.5; }
+.pc-features li { position: relative; padding-left: 1.3rem; font-size: 0.78rem; color: var(--ink-soft); line-height: 1.62; }
 .pc-features li::before { content: ""; position: absolute; left: 2px; top: 0.5em; width: 6px; height: 6px; border-bottom: 1.5px solid var(--accent); border-right: 1.5px solid var(--accent); transform: rotate(-45deg); }
 .pc-features strong { color: var(--ink); font-weight: 600; }
-.pc-link { margin-top: auto; padding-top: 1rem; font-size: 0.85rem; color: var(--accent); font-weight: 500; }
+.pc-link { margin-top: auto; padding-top: 1.2rem; font-size: 0.76rem; color: var(--accent); font-weight: 500; }
 .pc-link:hover { text-decoration: underline; }
 
 
 /* ── skills (spec-list) ─────────────────────────────────────────────── */
 .skills-spec { border-top: 1px solid var(--hair); }
-.skill-row { display: grid; grid-template-columns: 13rem 1fr; gap: 1.5rem 2rem; padding: 1.3rem 0; border-bottom: 1px solid var(--hair); align-items: baseline; }
+.skill-row { display: grid; grid-template-columns: 12rem 1fr; gap: 1.5rem 2rem; padding: 1.15rem 0; border-bottom: 1px solid var(--hair); align-items: baseline; }
 .skill-row-label { display: flex; align-items: baseline; gap: 0.7rem; }
 .skill-row-num { font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent); }
-.skill-row-name { font-size: 1rem; font-weight: 600; letter-spacing: -0.01em; }
+.skill-row-name { font-size: 0.86rem; font-weight: 600; letter-spacing: -0.01em; }
 .skill-tags { display: flex; flex-wrap: wrap; gap: 0.45rem 0.55rem; }
-.skill-tag { font-family: var(--font-mono); font-size: 0.78rem; color: var(--ink-soft); transition: color 0.18s var(--ease); position: relative; }
+.skill-tag { font-family: var(--font-mono); font-size: 0.7rem; color: var(--ink-soft); transition: color 0.18s var(--ease); position: relative; }
 .skill-tag:not(:last-child)::after { content: "·"; color: var(--ink-mute); margin-left: 0.55rem; }
 .skill-tag:hover { color: var(--accent); }
 
@@ -350,8 +454,8 @@ ul { list-style: none; padding: 0; }
 .qa-card { padding: 1.6rem 0; border-top: 1px solid var(--hair); }
 .qa-q { display: flex; align-items: baseline; gap: 0.7rem; margin-bottom: 0.7rem; }
 .qa-q .qi { color: var(--accent); font-family: var(--font-mono); font-weight: 500; font-size: 0.82rem; flex-shrink: 0; }
-.qa-q span:last-child { font-family: var(--font-display); font-style: italic; font-weight: 400; font-size: 1.3rem; letter-spacing: -0.01em; color: var(--ink); line-height: 1.25; }
-.qa-a { color: var(--ink-soft); font-size: 0.94rem; line-height: 1.65; display: flex; flex-direction: column; gap: 0.7rem; }
+.qa-q span:last-child { font-family: var(--font-display); font-style: normal; font-weight: 500; font-size: 0.95rem; letter-spacing: -0.03em; color: var(--ink); line-height: 1.35; }
+.qa-a { color: var(--ink-soft); font-size: 0.84rem; line-height: 1.72; display: flex; flex-direction: column; gap: 0.85rem; }
 .qa-a strong { color: var(--ink); font-weight: 600; }
 .qa-a ul { display: flex; flex-direction: column; gap: 0.45rem; }
 .qa-a ul li { position: relative; padding-left: 1.2rem; }
@@ -359,10 +463,10 @@ ul { list-style: none; padding: 0; }
 
 /* ── education / certs / languages ──────────────────────────────────── */
 .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
-.edu-card { background: var(--surface); border: 1px solid var(--hair); border-radius: var(--r-md); padding: 1.5rem; transition: transform 0.3s var(--ease), border-color 0.3s var(--ease); }
+.edu-card { background: var(--surface); border: 1px solid var(--hair); border-radius: var(--r-md); padding: 1.6rem; transition: transform 0.3s var(--ease), border-color 0.3s var(--ease); }
 .edu-card:hover { transform: translateY(-3px); border-color: var(--hair-2); }
-.edu-card .school { font-size: 1.15rem; font-weight: 600; letter-spacing: -0.02em; }
-.edu-card .degree { color: var(--ink-soft); margin: 0.25rem 0; font-size: 0.95rem; }
+.edu-card .school { font-size: 0.95rem; font-weight: 600; letter-spacing: -0.02em; }
+.edu-card .degree { color: var(--ink-soft); margin: 0.3rem 0; font-size: 0.82rem; }
 .edu-card .meta { font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-mute); }
 .cert-card { display: flex; align-items: center; gap: 1rem; background: var(--surface); border: 1px solid var(--hair); border-radius: var(--r-md); padding: 1.2rem 1.5rem; margin-bottom: 1.6rem; }
 .cert-card .ci { color: var(--accent); width: 22px; height: 22px; flex-shrink: 0; }
@@ -378,23 +482,23 @@ ul { list-style: none; padding: 0; }
 .beyond-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.5rem, 4vw, 3rem); }
 .beyond-card { padding-top: 1.3rem; border-top: 1px solid var(--hair-2); }
 .beyond-card .bi { font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent); }
-.beyond-card .bt { font-size: 1.1rem; font-weight: 600; letter-spacing: -0.01em; margin: 0.7rem 0 0.5rem; }
-.beyond-card .bd { color: var(--ink-soft); font-size: 0.92rem; line-height: 1.6; }
+.beyond-card .bt { font-size: 0.92rem; font-weight: 600; letter-spacing: -0.01em; margin: 0.85rem 0 0.55rem; }
+.beyond-card .bd { color: var(--ink-soft); font-size: 0.82rem; line-height: 1.7; }
 
 /* ── contact / footer ───────────────────────────────────────────────── */
 .contact { text-align: center; }
-.contact h2 { font-family: var(--font-display); font-weight: 400; font-size: clamp(2.4rem, 6vw, 3.6rem); letter-spacing: -0.02em; }
-.contact .tagline { color: var(--ink-soft); max-width: 56ch; margin: 0.8rem auto 2rem; }
+.contact h2 { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.5rem, 3.5vw, 2.2rem); letter-spacing: -0.035em; }
+.contact .tagline { color: var(--ink-soft); max-width: 56ch; margin: 0.9rem auto 2.2rem; font-size: 0.88rem; }
 .contact-links { display: flex; flex-wrap: wrap; gap: 0.7rem; justify-content: center; }
-.contact-pill { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--surface); border: 1px solid var(--hair); border-radius: 999px; padding: 0.6rem 1.1rem; font-size: 0.92rem; color: var(--ink-soft); transition: color 0.18s var(--ease), border-color 0.18s var(--ease), transform 0.18s var(--ease); }
+.contact-pill { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--surface); border: 1px solid var(--hair); border-radius: 0; padding: 0.5rem 0.9rem; font-size: 0.78rem; color: var(--ink-soft); font-family: var(--font-mono); transition: color 0.18s var(--ease), border-color 0.18s var(--ease), transform 0.18s var(--ease); }
 .contact-pill:hover { color: var(--ink); border-color: var(--hair-2); transform: translateY(-2px); }
 .contact-pill .pi { color: var(--accent); display: inline-flex; width: 15px; height: 15px; }
 .contact-pill .pi svg { width: 100%; height: 100%; }
 .footer { border-top: 1px solid var(--hair); padding: 2.2rem 0; margin-top: clamp(3rem, 7vw, 5rem); }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
-.footer-meta { font-family: var(--font-mono); font-size: 0.76rem; color: var(--ink-mute); }
+.footer-meta { font-family: var(--font-mono); font-size: 0.68rem; color: var(--ink-mute); }
 .footer-links { display: flex; gap: 1.3rem; flex-wrap: wrap; }
-.footer-links a { font-size: 0.88rem; color: var(--ink-soft); transition: color 0.18s var(--ease); }
+.footer-links a { font-size: 0.78rem; color: var(--ink-soft); transition: color 0.18s var(--ease); }
 .footer-links a:hover { color: var(--ink); }
 
 /* ── reveal motion ──────────────────────────────────────────────────── */
@@ -421,7 +525,7 @@ ul { list-style: none; padding: 0; }
   .skill-row { grid-template-columns: 1fr; gap: 0.7rem; padding: 1.1rem 0; }
 }
 @media (max-width: 860px) {
-  .nav-toggle { display: inline-flex; flex-direction: column; gap: 5px; justify-content: center; width: 40px; height: 40px; background: var(--surface); border: 1px solid var(--hair); border-radius: 10px; cursor: pointer; }
+  .nav-toggle { display: inline-flex; flex-direction: column; gap: 5px; justify-content: center; width: 40px; height: 40px; background: var(--surface); border: 1px solid var(--hair); border-radius: 0; cursor: pointer; }
   .nav-toggle span { display: block; height: 2px; width: 18px; background: var(--ink); margin-inline: auto; transition: transform 0.3s var(--ease), opacity 0.3s var(--ease); }
   .nav-toggle[aria-expanded="true"] span:first-child { transform: translateY(3.5px) rotate(45deg); }
   .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
@@ -446,20 +550,20 @@ ul { list-style: none; padding: 0; }
 <div class="grain" aria-hidden="true"></div>
 <canvas id="starfield" aria-hidden="true"></canvas>
 <div class="glow" aria-hidden="true"></div>
-<a class="skip-link" href="#about">Skip to content</a>
+<a class="skip-link" href="#work">Skip to content</a>
 
 <!-- ═══════ NAV ═══════ -->
 <header class="site-nav" id="nav">
   <div class="wrap nav-inner">
-    <a class="brand" href="#top" aria-label="Chris Stefan — home">
+    <a class="brand" href="#top" aria-label="Chris Stefan home">
       <span class="brand-mark" aria-hidden="true"></span>
       <span>Chris Stefan</span>
     </a>
     <nav class="nav-links" id="nav-links" aria-label="Primary">
       <a href="#about">About</a>
+      <a href="#work">Work</a>
       <a href="#experience">Experience</a>
-      <a href="#platform">Platform</a>
-      <a href="#products">Products</a>
+      <a href="#education">Education</a>
       <a href="#contact">Contact</a>
       <a class="btn btn-sm btn-primary" href="Chris_Stefan_CV.pdf" download="Chris_Stefan_CV.pdf">Download CV</a>
     </nav>
@@ -480,14 +584,15 @@ ul { list-style: none; padding: 0; }
   <div class="wrap">
     <div class="hero-grid">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Senior AI Engineer · Forward deployed · Open to contract</p>
-        <h1 class="hero-title">I build <em>AI in production</em> for institutional finance.</h1>
+        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Senior AI Engineer · Open source · Open to contract</p>
+        <h1 class="hero-title">I build <em>AI tools</em> people use: open-source infra, product apps, and desk work.</h1>
         <p class="hero-lede">
-          At PSP Investments I owned the company-wide Virtual Analyst Platform — agentic AI used across the corporation,
-          powering every AI workflow the team shipped. For clients I sit with the desk, ship on their stack, and leave them the code.
+          Computer science and finance are where I work best. I ramp up quickly, stay close to what clients need, and ship full stack with agents in the loop.
+          Most of my time now goes into <a href="https://digithings.ai" target="_blank" rel="noopener">digithings</a>, <a href="https://digiquant.io" target="_blank" rel="noopener">digiquant</a> (Olympus), DigiChat releases, and freelance builds on that stack.
+          Before that I owned production agentic AI at PSP Investments, a large Canadian pension fund.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#platform">See what I've built <span aria-hidden="true">→</span></a>
+          <a class="btn btn-primary" href="#work">See what I'm building <span aria-hidden="true">→</span></a>
           <a class="btn btn-ghost" href="#contact">Get in touch</a>
           <a class="btn btn-ghost" href="Chris_Stefan_CV.pdf" download="Chris_Stefan_CV.pdf">Download CV</a>
         </div>
@@ -502,21 +607,21 @@ ul { list-style: none; padding: 0; }
         </div>
         <div class="hp-row"><span class="hp-k">Status</span><span class="hp-v hp-avail"><span class="eyebrow-dot" aria-hidden="true"></span> Open to contract</span></div>
         <div class="hp-row"><span class="hp-k">Based</span><span class="hp-v">Italy · EU citizen · remote-ready</span></div>
-        <div class="hp-row"><span class="hp-k">Focus</span><span class="hp-v">Agentic AI · RAG · production systems</span></div>
-        <div class="hp-row"><span class="hp-k">Recent</span><span class="hp-v">Senior AI Engineer, PSP · through 28 Aug 2026</span></div>
-        <div class="hp-row"><span class="hp-k">Building</span><span class="hp-v"><a href="https://digithings.ai" target="_blank" rel="noopener">digithings.ai</a> · <a href="https://digiquant.io" target="_blank" rel="noopener">digiquant.io</a></span></div>
+        <div class="hp-row"><span class="hp-k">Focus</span><span class="hp-v">Agentic AI · open source · client apps</span></div>
+        <div class="hp-row"><span class="hp-k">Building</span><span class="hp-v"><a href="https://digithings.ai" target="_blank" rel="noopener">digithings</a> · <a href="https://digiquant.io" target="_blank" rel="noopener">Olympus</a></span></div>
+        <div class="hp-row"><span class="hp-k">Earlier</span><span class="hp-v">Senior AI Engineer, PSP Investments · through Aug 2026</span></div>
         <div class="hp-links">
           <a href="mailto:chris.stefan@proton.me" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
           <a href="https://linkedin.com/in/chris-stefan" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.44-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.55V9h3.57v11.45Z"/></svg></a>
-          <a href="https://github.com/chrizefan" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.7c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.55-1.14-4.55-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.36 9.36 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9l-.01 2.82c0 .27.18.59.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></a>
+          <a href="https://github.com/digithings-ai/digithings" target="_blank" rel="noopener" aria-label="digithings on GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.7c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.55-1.14-4.55-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.36 9.36 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9l-.01 2.82c0 .27.18.59.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></a>
         </div>
       </aside>
     </div>
     <dl class="hero-stats">
-      <div><dt>5 yrs</dt><dd>building AI in production</dd></div>
-      <div><dt>PSP</dt><dd>Sep 2022 – 28 Aug 2026</dd></div>
-      <div><dt>digithings</dt><dd>custom applications, owned infra</dd></div>
-      <div><dt>Italy</dt><dd>EU · remote · open to contract</dd></div>
+      <div><dt>digithings</dt><dd>open-source AI infra</dd></div>
+      <div><dt>Olympus</dt><dd>quant research book &amp; dash</dd></div>
+      <div><dt>DigiChat</dt><dd>releases &amp; client embeds</dd></div>
+      <div><dt>PSP Investments</dt><dd>production AI · through Aug 2026</dd></div>
     </dl>
   </div>
 </section>
@@ -530,42 +635,165 @@ ul { list-style: none; padding: 0; }
     </div>
     <div class="about-prose">
       <p>
-        I started in <strong>Computer Science</strong>, moved into <strong>Finance &amp; Business Analytics at McGill</strong>,
-        and found my edge where the two converge. I joined <strong>PSP Investments</strong> (first in information security,
-        then digital innovation), where I quickly moved from evaluating alternative data and cyber risk to actually building
-        the AI systems investment teams depend on. The team evolved from Digital Innovation into <strong>Alpha Science</strong>,
-        and I converted to full-time AI Engineer in 2023.
+        I'm a <strong>Senior AI Engineer</strong> at the intersection of computer science and finance.
+        I ramp up quickly, listen for what clients actually need, and work full stack, from architecture and agents through UI and shipping.
+        I move fast, stay close to the people who use the product, and keep systems trustworthy in production.
       </p>
       <p>
-        At PSP I owned the <strong>Virtual Analyst Platform</strong>,
-        the company-wide agentic AI system used across the corporation. I designed the entire stack from scratch:
-        a custom UI with full agentic transparency and source traceability, a workflow launcher for named structured analyses,
-        and the underlying <strong>Alpha Science SDK</strong> that powered every AI workflow, RAG index, and dashboard the team shipped (Sep 2022 – 28 Aug 2026).
+        Most of my time now goes into <a href="https://digithings.ai" target="_blank" rel="noopener">digithings</a>,
+        an open-source AI infrastructure stack, and the tools I build on it: <a href="https://digiquant.io" target="_blank" rel="noopener">Olympus</a> on digiquant,
+        DigiChat releases, client embeds like DataTap Stream Chat, and freelance desk applications.
       </p>
       <p>
-        Outside of work, I'm a <strong>builder</strong>. I'm developing
-        <a href="https://digithings.ai" target="_blank" rel="noopener">digithings.ai</a> and
-        <a href="https://digiquant.io" target="_blank" rel="noopener">digiquant.io</a> —
-        custom digithings applications and open-source infra with no vendor lock-in.
-        For client desks I sit with the team, ship on their stack, and leave them the code.
-        Based in Italy; open to contract. I want to keep building things that genuinely matter.
+        Before that, at <strong>PSP Investments</strong>, a large Canadian pension fund, I owned the <strong>Virtual Analyst Platform</strong>
+        and the <strong>Alpha Science SDK</strong>. Late work included rebuilding the frontend on React, NestJS, and FastAPI so the platform
+        could serve as the shared shell for company AI tools. I took that work through the full cycle, from proof of concept to deployment
+        to years of production use with active users across the organization (Sep 2022 – Aug 2026).
       </p>
     </div>
   </div>
 </section>
 
+<!-- ═══════ WORK — PROJECTS & FREELANCE ═══════ -->
+<section class="section reveal" id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker"><span class="kn">02</span> Work</span>
+      <h2>What I'm building now</h2>
+      <p>Open-source infra, product apps, DigiChat releases, and freelance builds. This is where I spend most of my time.</p>
+    </div>
+
+    <div class="repo-activity reveal" id="repo-activity" aria-live="polite"
+         data-snapshot-commits="1567" data-snapshot-prs="983" data-snapshot-issues="388"
+         data-snapshot-release="digichat-v1.3.2 · 2026-08-25">
+      <div>
+        <div class="ra-kicker">digithings · last 30 days on main <span class="ra-live" data-stat="freshness">· updating…</span></div>
+        <div class="ra-stats">
+          <div class="ra-stat"><span class="ra-n" data-stat="commits">1,567</span><span class="ra-l">commits</span></div>
+          <div class="ra-stat"><span class="ra-n" data-stat="prs">983</span><span class="ra-l">PRs merged</span></div>
+          <div class="ra-stat"><span class="ra-n" data-stat="issues">388</span><span class="ra-l">issues closed</span></div>
+        </div>
+      </div>
+      <div class="ra-side">
+        <div class="ra-release">Latest release · <strong data-stat="release">digichat-v1.3.2 · 2026-08-25</strong></div>
+        <a class="ra-link" href="https://github.com/digithings-ai/digithings" target="_blank" rel="noopener">Browse the repo →</a>
+      </div>
+      <div class="ra-recent">
+        <div class="ra-recent-label">Shipped recently</div>
+        <ul class="ra-pr-list" data-stat="recent">
+          <li><a href="https://github.com/digithings-ai/digithings/pull/3187" target="_blank" rel="noopener">#3187 feat(digiquant): GET profile + Settings profile hydrate</a><span class="ra-pr-meta">2026-08-30</span></li>
+          <li><a href="https://github.com/digithings-ai/digithings/pull/3190" target="_blank" rel="noopener">#3190 chore(sync): module/digichat &lt;- develop</a><span class="ra-pr-meta">2026-08-30</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="product-grid">
+
+      <div class="product-card span-2">
+        <div class="pc-top">
+          <span class="pc-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3 21 8 12 13 3 8 12 3Z"/><path d="M3 16 12 21 21 16"/><path d="M3 12 12 17 21 12"/></svg></span>
+          <div>
+            <div class="pc-title">digithings</div>
+          </div>
+          <span class="pc-tier">Open Source</span>
+        </div>
+        <div class="pc-meta">
+          <a href="https://digithings.ai" target="_blank" rel="noopener">digithings.ai</a>
+          ·
+          <a href="https://github.com/digithings-ai/digithings" target="_blank" rel="noopener">github.com/digithings-ai/digithings</a>
+        </div>
+        <p class="pc-desc">
+          Open-source AI library and infrastructure stack. It is the canvas I use for agentic ideas and the layer underneath the apps I ship.
+          Composable modules for orchestration, RAG and retrieval, DigiChat, auth, and observability. Self-hosted by default, BYOK, MIT-licensed.
+        </p>
+        <ul class="pc-features">
+          <li><strong>Infra for apps</strong>: modules you can compose into production agentic systems</li>
+          <li><strong>Maintained in the open</strong>: public monorepo with ongoing commits, PRs, and DigiChat releases</li>
+          <li><strong>Client work on the same stack</strong>: private tools and embeds built on digithings, not a locked SaaS seat</li>
+        </ul>
+        <a href="https://digithings.ai" target="_blank" rel="noopener" class="pc-link">Visit digithings.ai ↗</a>
+      </div>
+
+      <div class="product-card span-2">
+        <div class="pc-top">
+          <span class="pc-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M3 3v18h18"/><path d="M7 14l3.5-4 3 3L21 6"/></svg></span>
+          <div><div class="pc-title">Olympus</div></div>
+          <span class="pc-tier">Product · digiquant</span>
+        </div>
+        <div class="pc-meta">
+          <a href="https://digiquant.io" target="_blank" rel="noopener">digiquant.io</a>
+        </div>
+        <p class="pc-desc">
+          Olympus is the digiquant research book and dashboard, built on digithings.
+          Agentic research produces ranked, sourced theses; multi-agent deliberation shapes portfolio direction and risk sizing;
+          then indicators, strategy specs, Optuna search, and reproducible NautilusTrader backtests with trade ledgers and tearsheets.
+          Research book and paper portfolio ship today; live broker execution is not built.
+        </p>
+        <ul class="pc-features">
+          <li><strong>Research book &amp; dash</strong>: paper book, tearsheets, and a front end for reading the research</li>
+          <li><strong>FX Hub</strong>: FX research with traders on bank and broker consensus and trade ideas</li>
+          <li><strong>Honest scope</strong>: paper workflows and backtests; broker adapters are stubs, not live trading</li>
+        </ul>
+        <a href="https://digiquant.io" target="_blank" rel="noopener" class="pc-link">Visit digiquant.io ↗</a>
+      </div>
+
+      <div class="product-card span-2">
+        <div class="pc-top">
+          <span class="pc-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+          <div><div class="pc-title">DigiChat</div></div>
+          <span class="pc-tier">Releases · embeds</span>
+        </div>
+        <div class="pc-meta">
+          digithings chat surface ·
+          <a href="https://datatap.stream/chat" target="_blank" rel="noopener">datatap.stream/chat</a>
+        </div>
+        <p class="pc-desc">
+          DigiChat is the production chat surface on digithings: Next.js BFF, BYOK, retrieval against live docs.
+          Releases ship on a regular cadence. DataTap Stream Chat is a DigiChat embed on a client’s product documentation,
+          with support chat and developer chat in place.
+        </p>
+        <ul class="pc-features">
+          <li><strong>Versioned releases</strong>: DigiChat tags land on the public digithings repo</li>
+          <li><strong>DataTap Stream Chat</strong>: embedded on live product docs for support and developer questions</li>
+          <li><strong>Same stack</strong>: orchestration, retrieval, and observability from digithings underneath</li>
+        </ul>
+        <a href="https://datatap.stream/chat" target="_blank" rel="noopener" class="pc-link">Open DataTap Stream Chat ↗</a>
+      </div>
+
+      <div class="product-card span-2">
+        <div class="pc-top">
+          <span class="pc-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 12h18"/></svg></span>
+          <div><div class="pc-title">Freelance desk AI</div></div>
+          <span class="pc-tier">Client work</span>
+        </div>
+        <div class="pc-meta">Forward deployed · digithings applications</div>
+        <p class="pc-desc">
+          For private clients I sit with the desk, ship on their stack, and build digithings applications they can run and own.
+          Source-traced answers, named analyses, and workflow layers wired into the terminals and research systems they already use.
+        </p>
+        <ul class="pc-features">
+          <li><strong>On their stack</strong>: agents and RAG against the data and tools the desk already runs</li>
+          <li><strong>Source-traced answers</strong>: claims link back so people can verify without leaving the product</li>
+          <li><strong>Owned code</strong>: applications the client keeps, not a locked vendor seat</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ═══════ EXPERIENCE ═══════ -->
-<section class="section reveal" id="experience">
+<section class="section section-alt reveal" id="experience">
   <div class="wrap">
     <div class="section-head" style="max-width:none;">
       <div class="head-row">
         <div>
-          <span class="kicker"><span class="kn">02</span> Experience</span>
+          <span class="kicker"><span class="kn">03</span> Experience</span>
           <h2>Where I've worked</h2>
         </div>
         <a href="Chris_Stefan_CV.pdf" download="Chris_Stefan_CV.pdf" class="btn btn-ghost btn-sm">For more detail, see the CV <span aria-hidden="true">→</span></a>
       </div>
-      <p>5 years building AI in production — forward deployed with the desks that use it. EU citizen with right to work in the EU; no sponsorship required. Based in Italy · open to contract.</p>
+      <p>Corporate production tenure before the open-source and freelance work above. EU citizen with right to work in the EU; no sponsorship required.</p>
     </div>
 
     <div class="timeline stagger">
@@ -573,17 +801,17 @@ ul { list-style: none; padding: 0; }
         <div class="tl-head">
           <span class="tl-title">Senior AI Engineer</span>
           <span class="tl-company">· Alpha Science · PSP Investments · Montreal, QC</span>
-          <span class="tl-date">Sep 2022 – 28 Aug 2026</span>
+          <span class="tl-date">Sep 2022 – Aug 2026</span>
         </div>
         <ul class="tl-bullets">
-          <li><strong>Virtual Analyst Platform:</strong> owned production agentic AI for analysts and PMs — chatbot UI, step-level tracing, source traceability, workflow launcher</li>
-          <li><strong>Alpha Science SDK:</strong> full-stack base-class framework on the firm’s Databricks, Azure, and OpenAI stack; one-liner for agents &amp; vector indexes</li>
-          <li><strong>Agile roadmap:</strong> shipped weekly; rapid integration of bleeding-edge AI into production; mentored interns</li>
-          <li><strong>On their stack:</strong> agents and RAG on the desk’s existing terminals and research systems. Platform demoed at the Databricks Data &amp; AI Summit</li>
+          <li><strong>Virtual Analyst Platform:</strong> owned the company AI frontend on React, NestJS, and FastAPI (moved off Gradio). Custom chat UI with a side panel for source citation and artifact viewing; other AI tools and dashboards linked through this shell</li>
+          <li><strong>Workflows and task manager:</strong> launcher for long-running research workflows, plus a subscription-style task manager for pre-written prompts such as digests</li>
+          <li><strong>Document rebuild pipeline:</strong> from messy indexed text, parallel LLM reformatting into Markdown/PDF reconstructions of filings, transcripts, and broker research so users can read full sourced documents; original text kept as source of truth</li>
+          <li><strong>Alpha Science SDK:</strong> full-stack framework on the firm’s Databricks, Azure, and OpenAI stack for agents and vector indexes. Demoed at the Databricks Data &amp; AI Summit</li>
         </ul>
         <div class="badges">
-          <span class="badge">Agentic AI</span><span class="badge">RAG</span><span class="badge">Orchestration</span>
-          <span class="badge">Azure AI</span><span class="badge">Evals</span><span class="badge">Observability</span>
+          <span class="badge">React</span><span class="badge">NestJS</span><span class="badge">FastAPI</span>
+          <span class="badge">Agentic AI</span><span class="badge">RAG</span><span class="badge">Observability</span>
         </div>
       </div>
 
@@ -595,7 +823,7 @@ ul { list-style: none; padding: 0; }
         </div>
         <ul class="tl-bullets">
           <li><strong>Earnings Prediction Engine:</strong> ML beat/miss pipeline, point-in-time data, Power BI</li>
-          <li><strong>Alt-data pipeline:</strong> feature engineering; stakeholder buy-in across asset classes</li>
+          <li><strong>Alt-data pipeline:</strong> feature engineering and stakeholder buy-in across asset classes</li>
         </ul>
         <div class="badges">
           <span class="badge">Quant Strategy</span><span class="badge">Alt Data</span><span class="badge">ML Pipelines</span>
@@ -624,7 +852,7 @@ ul { list-style: none; padding: 0; }
           <span class="tl-date">Jun 2020 – Jun 2021</span>
         </div>
         <ul class="tl-bullets">
-          <li>SEO &amp; A/B testing (2× conversion); inventory analytics for merchandising</li>
+          <li>SEO and A/B testing; inventory analytics for merchandising</li>
         </ul>
         <div class="badges">
           <span class="badge">SEO</span><span class="badge">A/B Testing</span><span class="badge">Shopify</span>
@@ -635,147 +863,46 @@ ul { list-style: none; padding: 0; }
   </div>
 </section>
 
-<!-- ═══════ FLAGSHIP — VIRTUAL ANALYST PLATFORM ═══════ -->
-<section class="section section-alt reveal" id="platform">
+<!-- ═══════ VIRTUAL ANALYST PLATFORM (corporate deep dive) ═══════ -->
+<section class="section reveal" id="platform">
   <div class="wrap">
     <div class="section-head">
-      <span class="kicker"><span class="kn">03</span> Flagship</span>
+      <span class="kicker"><span class="kn">04</span> At PSP Investments</span>
       <h2>Virtual Analyst Platform</h2>
-      <p>PSP Investments · Company-wide · Showcased at the Databricks Data &amp; AI Summit</p>
+      <p>PSP Investments · Company-wide agentic AI · Demoed at the Databricks Data &amp; AI Summit</p>
     </div>
     <div class="flagship">
       <div>
         <p class="flagship-desc">
-          PSP's company-wide flagship agentic AI platform, embedded in analyst–PM
-          daily workflows across the corporation. AI findings flow directly to PMs who audit &amp; red-team theses
-          in the same session, all powered by the proprietary <strong>Alpha Science SDK</strong>.
+          The company-wide agentic AI platform for investment teams.
+          Late in the tenure I rebuilt the frontend off Gradio onto <strong>React</strong>, <strong>NestJS</strong>, and <strong>FastAPI</strong>,
+          so the Virtual Analyst became the shared shell for company AI tools and dashboards: chat, workflows, citations, and artifacts in one place.
+          Powered by the <strong>Alpha Science SDK</strong>.
         </p>
         <div class="stat-tiles">
-          <div class="stat-tile"><div class="sv">Owned</div><div class="sl">Production agentic AI</div></div>
-          <div class="stat-tile"><div class="sv">Source</div><div class="sl">Traceability in the UI</div></div>
+          <div class="stat-tile"><div class="sv">React</div><div class="sl">Custom company frontend</div></div>
+          <div class="stat-tile"><div class="sv">Shell</div><div class="sl">Tools &amp; dashboards linked in</div></div>
           <div class="stat-tile"><div class="sv">Demoed</div><div class="sl">Databricks Data &amp; AI Summit</div></div>
         </div>
         <div class="flagship-badges badges">
+          <span class="badge">React</span><span class="badge">NestJS</span><span class="badge">FastAPI</span>
           <span class="badge">Agentic AI SDK</span><span class="badge">RAG</span><span class="badge">OpenAI</span>
-          <span class="badge">Azure AI Search</span><span class="badge">Gradio</span><span class="badge">Databricks</span>
+          <span class="badge">Azure AI Search</span><span class="badge">Databricks</span>
         </div>
       </div>
       <div>
         <ul class="feature-list">
-          <li><strong>Custom dual-panel UI</strong> built from scratch: chat with full agentic step transparency plus a workflow launcher for named structured analyses</li>
-          <li><strong>Workflow launcher</strong>: company overviews, deep research, thesis memos, bull/bear reviews, buy-side research review</li>
-          <li><strong>Source traceability</strong>: every claim links to its exact document, page, and passage, surfaced in the UI so analysts never leave to verify</li>
-          <li><strong>Structured data</strong>: data retrieval &amp; manipulation in-chat, live charting (Plotly, Dash, ECharts), and interactive exportable dashboards</li>
-          <li><strong>Artifact builder</strong>: export research to Microsoft Office documents and custom web pages</li>
-          <li><strong>Sub-agent delegation</strong>: to-do list planning to organize tasks and research plans, with parallel tool execution</li>
-          <li><strong>Multi-source RAG</strong>: broker research, financial filings, earnings call transcripts, and custom financial data indexes</li>
+          <li><strong>Custom frontend</strong>: React, NestJS, and FastAPI release replacing Gradio; foundation UI for the firm’s AI platform tools</li>
+          <li><strong>Side panel chat UI</strong>: source citation and artifact viewing alongside the conversation, in the style of a modern research chat</li>
+          <li><strong>Linked tools</strong>: other AI tools and dashboards reachable from the same frontend shell</li>
+          <li><strong>Workflow launcher</strong>: start long-running research workflows and named analyses (overviews, deep research, thesis memos, bull/bear reviews)</li>
+          <li><strong>Task manager</strong>: subscription-style runs of pre-written prompts such as digests</li>
+          <li><strong>Source traceability</strong>: every claim links to its document, page, and passage in the UI</li>
+          <li><strong>Document rebuild pipeline</strong>: reverse-reconstructs filings, transcripts, and broker research from messy retrieval-index text into Markdown/PDF so users can read full context; parallel LLM reformatting with the original text as source of truth</li>
+          <li><strong>Structured data &amp; artifacts</strong>: in-chat analysis, live charting, and export to Office docs and web pages</li>
+          <li><strong>Multi-source RAG</strong>: broker research, filings, earnings transcripts, and custom financial indexes</li>
         </ul>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════ PRODUCTS & FREELANCE ═══════ -->
-<section class="section reveal" id="products">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="kicker"><span class="kn">04</span> Products &amp; Freelance</span>
-      <h2>What I build on my own time</h2>
-      <p>Production knowledge from institutional AI, distilled into open-source digithings infra, public Olympus proof, and custom desk AI.</p>
-    </div>
-    <div class="product-grid">
-
-      <div class="product-card span-2">
-        <div class="pc-top">
-          <span class="pc-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3 21 8 12 13 3 8 12 3Z"/><path d="M3 16 12 21 21 16"/><path d="M3 12 12 17 21 12"/></svg></span>
-          <div>
-            <div class="pc-title">digithings</div>
-          </div>
-          <span class="pc-tier">Open Source</span>
-        </div>
-        <div class="pc-meta">
-          <a href="https://digithings.ai" target="_blank" rel="noopener">digithings.ai</a> ·
-          <a href="https://github.com/digithings-ai" target="_blank" rel="noopener">github.com/digithings-ai</a>
-        </div>
-        <p class="pc-desc">
-          Fully modular multi-agent AI toolkit — the infra you deploy and own. LangGraph orchestration, LiteLLM universal LLM wrapper, pluggable RAG
-          backends, built-in evals, Docker deployment, MCP &amp; Open WebUI integration, OpenClaw layer for autonomous
-          agent deployment. Custom digithings applications on top; MIT; no vendor lock-in.
-        </p>
-        <ul class="pc-features">
-          <li><strong>LangGraph orchestration</strong>: reusable agent graph patterns for multi-step reasoning and workflow automation</li>
-          <li><strong>Pluggable search</strong>: Azure AI Search, local search, and OpenAI vector search behind one interface</li>
-          <li><strong>Universal LLM wrapper</strong> via LiteLLM: OpenAI, Anthropic, Gemini, xAI, Llama, and any local or API model</li>
-          <li><strong>Config-based Docker deployment</strong>: spin up the full stack from a single config file</li>
-          <li><strong>MCP + Open WebUI</strong>: connect to any compatible client; open-source UI for testing and demos</li>
-        </ul>
-        <a href="https://github.com/digithings-ai" target="_blank" rel="noopener" class="pc-link">View on GitHub ↗</a>
-      </div>
-
-      <div class="product-card span-2">
-        <div class="pc-top">
-          <span class="pc-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M3 3v18h18"/><path d="M7 14l3.5-4 3 3L21 6"/></svg></span>
-          <div><div class="pc-title">Olympus / digiquant</div></div>
-          <span class="pc-tier">Product</span>
-        </div>
-        <div class="pc-meta">
-          <a href="https://digiquant.io" target="_blank" rel="noopener">digiquant.io</a> ·
-          <a href="https://github.com/digithings-ai" target="_blank" rel="noopener">github.com/digithings-ai</a>
-        </div>
-        <p class="pc-desc">
-          Public proof of digithings in finance. Quant-native research desk in a glass box you own:
-          <strong>research → thesis → paper book</strong>, every run reproducible and audited.
-          <strong>Olympus</strong> is the live-valued research book. Paper and live execution are not claimed; broker adapters are stubs.
-        </p>
-        <ul class="pc-features">
-          <li><strong>Olympus</strong>: live-valued research book; Supabase as canonical state, Next.js front end, JSON artifacts as source of truth</li>
-          <li><strong>Atlas (research)</strong>: scheduled macro &amp; market research cycles across equities, crypto, and futures; structured, versioned views from open data (FRED, Treasury, CoinGecko, SEC/EDGAR, FX)</li>
-          <li><strong>Hermes (signals)</strong>: timestamped, attributed, fully replayable signals and thesis views</li>
-          <li><strong>Pipeline</strong>: research → thesis → paper book — deterministic backtests; paper and live execution are not claimed</li>
-          <li><strong>Strategy building &amp; backtesting</strong>: deterministic validate → backtest → optimize → export workflow; reproducible performance, no unaudited claims</li>
-        </ul>
-        <a href="https://digiquant.io" target="_blank" rel="noopener" class="pc-link">Visit digiquant.io ↗</a>
-      </div>
-
-      <div class="product-card span-2">
-        <div class="pc-top">
-          <span class="pc-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
-          <div><div class="pc-title">DataTap</div></div>
-          <span class="pc-tier">digichat in the wild</span>
-        </div>
-        <div class="pc-meta">
-          <a href="https://datatap.stream" target="_blank" rel="noopener">datatap.stream</a> ·
-          <a href="https://datatap.stream/chat" target="_blank" rel="noopener">datatap.stream/chat</a>
-        </div>
-        <p class="pc-desc">
-          Live digichat embed on the product docs so users can chat the solutions documentation.
-          Public proof of digichat in the wild — not a locked SaaS seat, not a named private finance client.
-        </p>
-        <ul class="pc-features">
-          <li><strong>Docs you can talk to</strong>: chat the solutions documentation in place</li>
-          <li><strong>digichat proof</strong>: the same stack, shipped on a real product surface</li>
-        </ul>
-        <a href="https://datatap.stream/chat" target="_blank" rel="noopener" class="pc-link">Open datatap.stream/chat ↗</a>
-      </div>
-
-      <div class="product-card span-2">
-        <div class="pc-top">
-          <span class="pc-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 12h18"/></svg></span>
-          <div><div class="pc-title">Custom desk AI</div></div>
-          <span class="pc-tier">digithings apps</span>
-        </div>
-        <div class="pc-meta">Forward deployed · Agentic research · Owned code</div>
-        <p class="pc-desc">
-          Forward-deployed agentic research and workflow layers on a desk’s existing terminals and research stack.
-          Source-traced answers, named analyses; they keep the code. Built as digithings applications, not a locked SaaS seat.
-        </p>
-        <ul class="pc-features">
-          <li><strong>On their stack</strong>: sit with the desk; wire agents into the terminals and data they already run</li>
-          <li><strong>Source-traced answers</strong>: every claim links back; named analyses the desk can launch and audit</li>
-          <li><strong>Owned code</strong>: digithings applications the client owns — no vendor lock-in</li>
-        </ul>
-      </div>
-
     </div>
   </div>
 </section>
@@ -786,17 +913,19 @@ ul { list-style: none; padding: 0; }
     <div class="section-head">
       <span class="kicker"><span class="kn">05</span> Skills</span>
       <h2>What I work with</h2>
-      <p>Complete skill set across AI in production, data, and finance.</p>
+      <p>Tools and platforms I use across agentic AI, data, and finance.</p>
     </div>
     <div class="skills-spec stagger">
       <div class="skill-row">
         <div class="skill-row-label"><span class="skill-row-num">01</span><span class="skill-row-name">Gen AI &amp; LLMs</span></div>
         <div class="skill-tags">
           <span class="skill-tag">OpenAI API</span><span class="skill-tag">Gemini API</span><span class="skill-tag">Claude API</span>
-          <span class="skill-tag">Hugging Face</span><span class="skill-tag">Prompt Engineering</span><span class="skill-tag">Vector DBs</span>
-          <span class="skill-tag">Agentic AI</span><span class="skill-tag">RAG</span><span class="skill-tag">Orchestration</span>
-          <span class="skill-tag">Evals</span><span class="skill-tag">Observability</span><span class="skill-tag">LangGraph</span>
-          <span class="skill-tag">LiteLLM</span><span class="skill-tag">MCP</span><span class="skill-tag">OpenClaw</span>
+          <span class="skill-tag">LangChain</span><span class="skill-tag">LangGraph</span><span class="skill-tag">LiteLLM</span>
+          <span class="skill-tag">RAG</span><span class="skill-tag">MCP</span><span class="skill-tag">Gradio</span>
+          <span class="skill-tag">Azure AI Search</span><span class="skill-tag">Azure AI Foundry</span>
+          <span class="skill-tag">Prompt Engineering</span><span class="skill-tag">Vector DBs</span>
+          <span class="skill-tag">Agentic AI</span><span class="skill-tag">Orchestration</span>
+          <span class="skill-tag">Evals</span><span class="skill-tag">Observability</span>
         </div>
       </div>
       <div class="skill-row">
@@ -804,15 +933,17 @@ ul { list-style: none; padding: 0; }
         <div class="skill-tags">
           <span class="skill-tag">Azure</span><span class="skill-tag">GCP</span><span class="skill-tag">Databricks</span>
           <span class="skill-tag">Spark</span><span class="skill-tag">Delta Lake</span><span class="skill-tag">PostgreSQL</span>
-          <span class="skill-tag">SQL</span><span class="skill-tag">Supabase</span><span class="skill-tag">MLOps</span>
-          <span class="skill-tag">CI/CD</span><span class="skill-tag">Docker</span><span class="skill-tag">ML Pipelines</span><span class="skill-tag">Power BI</span>
+          <span class="skill-tag">SQL</span><span class="skill-tag">Supabase</span><span class="skill-tag">Docker</span>
+          <span class="skill-tag">MLOps</span><span class="skill-tag">CI/CD</span><span class="skill-tag">ML Pipelines</span>
         </div>
       </div>
       <div class="skill-row">
         <div class="skill-row-label"><span class="skill-row-num">03</span><span class="skill-row-name">Programming</span></div>
         <div class="skill-tags">
-          <span class="skill-tag">Python</span><span class="skill-tag">JavaScript</span><span class="skill-tag">HTML</span>
+          <span class="skill-tag">Python</span><span class="skill-tag">TypeScript</span><span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">React</span><span class="skill-tag">NestJS</span><span class="skill-tag">Next.js</span><span class="skill-tag">HTML</span>
           <span class="skill-tag">CSS</span><span class="skill-tag">FastAPI</span><span class="skill-tag">Pydantic</span>
+          <span class="skill-tag">pandas</span><span class="skill-tag">NumPy</span>
           <span class="skill-tag">REST APIs</span><span class="skill-tag">SDK Design</span><span class="skill-tag">Git</span>
         </div>
       </div>
@@ -820,28 +951,30 @@ ul { list-style: none; padding: 0; }
         <div class="skill-row-label"><span class="skill-row-num">04</span><span class="skill-row-name">Visualization</span></div>
         <div class="skill-tags">
           <span class="skill-tag">Plotly</span><span class="skill-tag">Dash</span><span class="skill-tag">Matplotlib</span>
-          <span class="skill-tag">ECharts</span><span class="skill-tag">Mermaid</span><span class="skill-tag">Tableau</span>
+          <span class="skill-tag">ECharts</span><span class="skill-tag">Power BI</span><span class="skill-tag">Tableau</span>
         </div>
       </div>
       <div class="skill-row">
         <div class="skill-row-label"><span class="skill-row-num">05</span><span class="skill-row-name">AI Dev Tools</span></div>
         <div class="skill-tags">
-          <span class="skill-tag">Cursor</span><span class="skill-tag">Antigravity</span><span class="skill-tag">GitHub Copilot</span>
-          <span class="skill-tag">Claude Code</span><span class="skill-tag">Bolt.new</span><span class="skill-tag">Open WebUI</span><span class="skill-tag">Ollama</span>
+          <span class="skill-tag">Cursor</span><span class="skill-tag">GitHub Copilot</span>
+          <span class="skill-tag">Claude Code</span><span class="skill-tag">Codex</span><span class="skill-tag">OpenCode</span>
+          <span class="skill-tag">LM Studio</span><span class="skill-tag">Open WebUI</span><span class="skill-tag">Ollama</span>
         </div>
       </div>
       <div class="skill-row">
         <div class="skill-row-label"><span class="skill-row-num">06</span><span class="skill-row-name">Quant Trading</span></div>
         <div class="skill-tags">
-          <span class="skill-tag">QuantConnect</span><span class="skill-tag">IBKR API</span><span class="skill-tag">Nautilus Trader</span>
-          <span class="skill-tag">TA-Lib</span><span class="skill-tag">Quant Strategy</span><span class="skill-tag">Alt Data</span>
+          <span class="skill-tag">QuantConnect</span><span class="skill-tag">IBKR API</span><span class="skill-tag">Alpaca API</span>
+          <span class="skill-tag">Quant Strategy</span><span class="skill-tag">Alt Data</span>
         </div>
       </div>
       <div class="skill-row">
         <div class="skill-row-label"><span class="skill-row-num">07</span><span class="skill-row-name">Data &amp; Research</span></div>
         <div class="skill-tags">
-          <span class="skill-tag">LSEG</span><span class="skill-tag">Worldscope</span><span class="skill-tag">IBES</span>
-          <span class="skill-tag">SEC Filings</span><span class="skill-tag">Broker Research</span><span class="skill-tag">Transcripts</span>
+          <span class="skill-tag">LSEG</span>
+          <span class="skill-tag">SEC Filings</span><span class="skill-tag">Broker Research</span>
+          <span class="skill-tag">Earnings Transcripts</span><span class="skill-tag">Third Bridge</span>
           <span class="skill-tag">scikit-learn</span><span class="skill-tag">Cybersecurity</span><span class="skill-tag">Risk Analysis</span>
         </div>
       </div>
@@ -860,24 +993,24 @@ ul { list-style: none; padding: 0; }
 <section class="section reveal" id="qa">
   <div class="wrap">
     <div class="section-head">
-      <span class="kicker"><span class="kn">06</span> In My Own Words</span>
+      <span class="kicker"><span class="kn">06</span> In my own words</span>
       <h2>Interview Q&amp;A</h2>
     </div>
     <div class="qa-grid stagger">
       <div class="qa-card">
         <div class="qa-q"><span class="qi">Q</span><span>&ldquo;Tell me about yourself.&rdquo;</span></div>
         <div class="qa-a">
-          <p>I'm a Senior AI Engineer with a background in CS and finance. At PSP Investments (Sep 2022 – 28 Aug 2026) I owned production agentic AI for institutional investment teams — the Virtual Analyst Platform from POC to production. Full-stack ownership: SDK, UI, onboarding, and roadmap. I also ship custom digithings applications for desks: sit with the team, ship on their stack, leave them the code. Based in Italy; open to contract.</p>
+          <p>I'm a Senior AI Engineer at the intersection of computer science and finance. I ramp up quickly, understand what clients need, and work full stack with agents throughout. Most of my time now goes into digithings, Olympus on digiquant, DigiChat releases, and freelance builds on that stack. Before that, at PSP Investments, a large Canadian pension fund, I owned the Virtual Analyst Platform through proof of concept, deployment, and years of production use, including a React, NestJS, and FastAPI frontend that became the shell for company AI tools.</p>
         </div>
       </div>
       <div class="qa-card">
         <div class="qa-q"><span class="qi">Q</span><span>&ldquo;Why AI? Why finance + AI specifically?&rdquo;</span></div>
         <div class="qa-a">
-          <p>I came at it from both sides. CS gave me the engineering foundation; finance gave me the domain context to understand what analysts actually need. That mix has been useful for building tools people trust and use day to day.</p>
+          <p>I've spent years building AI where the stakes are high and the users are sophisticated. They need to verify everything. That environment shaped how I work: reliability, source traceability, and tools people actually trust day to day.</p>
           <ul>
-            <li>Finance is demanding for AI: high stakes, messy data, sophisticated users who need to verify everything</li>
-            <li>That environment pushed me to focus on reliability, traceability, and making outputs verifiable</li>
-            <li>I'm interested in applying those patterns to other industries where the stakes and impact are high</li>
+            <li>Finance is demanding for AI: messy data, regulated workflows, users who won't accept black-box answers</li>
+            <li>That pushed me to focus on production systems: observability, grounding, and shipping under real constraints</li>
+            <li>I'm interested in applying those patterns anywhere the stakes and impact are high</li>
           </ul>
         </div>
       </div>
@@ -885,13 +1018,14 @@ ul { list-style: none; padding: 0; }
         <div class="qa-q"><span class="qi">Q</span><span>&ldquo;Biggest technical challenge you've solved?&rdquo;</span></div>
         <div class="qa-a">
           <p><strong>Source traceability.</strong> Analysts can't take an AI's word for something. I built a system that links every claim back to its exact document, page, and passage, surfaced in the UI so they can verify without leaving the platform. Without that trust layer, the tool wouldn't get used at all.</p>
+          <p><strong>Document rebuild from index text.</strong> A lot of what RAG retrieves is messy machine-readable text, not a clean PDF. Over the summer I built a pipeline that takes that indexed text and reverse-reconstructs readable Markdown/PDF approximations of filings, transcripts, and broker research, using parallel LLM reformatting while keeping the original text as source of truth, so users can both check citations and read the full document in context.</p>
           <p><strong>Structured data integration.</strong> Financial datasets are too large for context windows. I built a backend that lets the model reference tables by path, work with compact summaries, and run ML analysis on that layer. The same pain points exist in healthcare, legal, and other data-heavy domains.</p>
         </div>
       </div>
       <div class="qa-card">
         <div class="qa-q"><span class="qi">Q</span><span>&ldquo;Where do you see yourself in 5 years?&rdquo;</span></div>
         <div class="qa-a">
-          <p>I'm passionate about building AI systems in production that matter, and I want to keep learning and growing my expertise in the field. I'm open to any form of remote work; what matters to me is the work itself, the team, the value we ship, and the impact it has on clients.</p>
+          <p>I want to keep owning production AI systems that matter: harder domains, deeper technical work, and teams that care about shipping something people actually use. Contract and remote are fine when the work is right.</p>
         </div>
       </div>
     </div>
@@ -903,7 +1037,7 @@ ul { list-style: none; padding: 0; }
   <div class="wrap">
     <div class="section-head">
       <span class="kicker"><span class="kn">07</span> Education</span>
-      <h2>Background</h2>
+      <h2>School and languages</h2>
     </div>
     <div class="edu-grid stagger">
       <div class="edu-card">
@@ -925,7 +1059,7 @@ ul { list-style: none; padding: 0; }
       </div>
     </div>
     <div class="lang-row stagger">
-      <div class="lang-chip"><div class="ln">English</div><div class="ll">Mother tongue</div></div>
+      <div class="lang-chip"><div class="ln">English</div><div class="ll">Native</div></div>
       <div class="lang-chip"><div class="ln">French</div><div class="ll">Native</div></div>
       <div class="lang-chip"><div class="ln">Romanian</div><div class="ll">Native</div></div>
       <div class="lang-chip"><div class="ln">Italian</div><div class="ll">Basic</div></div>
@@ -938,25 +1072,25 @@ ul { list-style: none; padding: 0; }
 <section class="section reveal" id="beyond">
   <div class="wrap">
     <div class="section-head">
-      <span class="kicker"><span class="kn">08</span> Beyond Work</span>
-      <h2>What drives me outside the office</h2>
-      <p>The passions, interests, and projects that shape who I am beyond the code.</p>
+      <span class="kicker"><span class="kn">08</span> Beyond work</span>
+      <h2>Outside the day job</h2>
+      <p>What I spend time on when I am not on a client engagement.</p>
     </div>
     <div class="beyond-grid stagger">
       <div class="beyond-card">
         <div class="bi">01</div>
-        <div class="bt">Builder mentality</div>
-        <div class="bd">I don't just tinker; I ship. From AI toolkits to open-source components to full product builds, every interest becomes a project. I use AI to accelerate everything I make.</div>
+        <div class="bt">Building in public</div>
+        <div class="bd">Most free cycles go into digithings and digiquant: shipping modules, DigiChat releases, and the Olympus research book rather than demos that never leave the laptop.</div>
       </div>
       <div class="beyond-card">
         <div class="bi">02</div>
         <div class="bt">Markets &amp; finance</div>
-        <div class="bd">Actively follow tech, AI, equities, and crypto. My finance background keeps me close to the markets, and my engineering instinct makes me want to automate every thesis and strategy I come across.</div>
+        <div class="bd">I still follow tech, equities, and crypto closely. Finance is the domain I know best, and it is usually where I try new agent workflows first.</div>
       </div>
       <div class="beyond-card">
         <div class="bi">03</div>
-        <div class="bt">The AI frontier</div>
-        <div class="bd">Closely following the frontier: new model releases from OpenAI and Anthropic, the evolution of agentic frameworks, and what's actually shifting in how AI systems are built and deployed at scale.</div>
+        <div class="bt">Models and tooling</div>
+        <div class="bd">I keep up with new model releases and agent tooling, then fold what actually works into digithings and client builds.</div>
       </div>
     </div>
   </div>
@@ -965,8 +1099,8 @@ ul { list-style: none; padding: 0; }
 <!-- ═══════ CONTACT ═══════ -->
 <section class="section reveal contact" id="contact">
   <div class="wrap">
-    <span class="kicker" style="justify-content:center;"><span class="kn">09</span> Get in Touch</span>
-    <h2>Let's talk.</h2>
+    <span class="kicker" style="justify-content:center;"><span class="kn">09</span> Contact</span>
+    <h2>Get in touch</h2>
     <p class="tagline">Italy · EU citizen · remote-ready · Open to contract.</p>
     <div class="contact-links">
       <a href="mailto:chris.stefan@proton.me" class="contact-pill"><span class="pi" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span> chris.stefan@proton.me</a>
@@ -982,16 +1116,16 @@ ul { list-style: none; padding: 0; }
 
 <footer class="footer">
   <div class="wrap footer-inner">
-    <a class="brand" href="#top" aria-label="Chris Stefan — home">
+    <a class="brand" href="#top" aria-label="Chris Stefan home">
       <span class="brand-mark" aria-hidden="true"></span>
       <span>Chris Stefan</span>
     </a>
     <nav class="footer-links" aria-label="Footer">
+      <a href="#work">Work</a>
       <a href="#experience">Experience</a>
-      <a href="#platform">Platform</a>
       <a href="https://digithings.ai" target="_blank" rel="noopener">digithings.ai</a>
       <a href="https://digiquant.io" target="_blank" rel="noopener">digiquant.io</a>
-      <a href="https://github.com/chrizefan" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/digithings-ai/digithings" target="_blank" rel="noopener">Repo</a>
     </nav>
     <p class="footer-meta">Italy · EU Citizen · Remote-ready · © 2026 Chris Stefan</p>
   </div>
@@ -1067,6 +1201,87 @@ ul { list-style: none; padding: 0; }
       if (!running && raf) { cancelAnimationFrame(raf); raf = null; }
     });
     draw();
+  })();
+
+
+  // Live digithings repo activity (GitHub Search API, last 30 days)
+  (function () {
+    var root = document.getElementById('repo-activity');
+    if (!root) return;
+    var fmt = function (n) {
+      if (n == null || isNaN(n)) return '—';
+      try { return Number(n).toLocaleString('en-US'); } catch (e) { return String(n); }
+    };
+    var clean = function (s) {
+      return String(s || '').replace(/\u2014|\u2013/g, '-');
+    };
+    var setText = function (key, value) {
+      var nodes = root.querySelectorAll('[data-stat="' + key + '"]');
+      nodes.forEach(function (el) {
+        if (key === 'recent') return;
+        el.textContent = value;
+        el.classList.remove('is-loading');
+      });
+    };
+    var renderRecent = function (items) {
+      var list = root.querySelector('[data-stat="recent"]');
+      if (!list || !items || !items.length) return;
+      var filtered = items.filter(function (item) {
+        return !/\bkairos\b/i.test(item.title || '');
+      });
+      if (!filtered.length) filtered = items.slice(0, 5);
+      list.innerHTML = '';
+      filtered.slice(0, 5).forEach(function (item) {
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+        a.href = item.html_url;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        a.textContent = '#' + item.number + ' ' + clean(item.title);
+        var meta = document.createElement('span');
+        meta.className = 'ra-pr-meta';
+        meta.textContent = (item.closed_at || item.updated_at || '').slice(0, 10);
+        li.appendChild(a);
+        li.appendChild(meta);
+        list.appendChild(li);
+      });
+    };
+    var since = new Date();
+    since.setUTCDate(since.getUTCDate() - 30);
+    var sinceDay = since.toISOString().slice(0, 10);
+    var headers = { 'Accept': 'application/vnd.github+json' };
+
+    var fetchJson = function (url, extraHeaders) {
+      var h = Object.assign({}, headers, extraHeaders || {});
+      return fetch(url, { headers: h }).then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      });
+    };
+
+    Promise.all([
+      fetchJson('https://api.github.com/search/commits?q=repo:digithings-ai/digithings+committer-date:>=' + sinceDay + '&per_page=1', { 'Accept': 'application/vnd.github.cloak-preview+json' }),
+      fetchJson('https://api.github.com/search/issues?q=repo:digithings-ai/digithings+is:pr+is:merged+merged:>=' + sinceDay + '&per_page=10&sort=updated'),
+      fetchJson('https://api.github.com/search/issues?q=repo:digithings-ai/digithings+is:issue+is:closed+closed:>=' + sinceDay + '&per_page=1'),
+      fetchJson('https://api.github.com/repos/digithings-ai/digithings/releases/latest')
+    ]).then(function (results) {
+      var commits = results[0];
+      var prs = results[1];
+      var issues = results[2];
+      var release = results[3];
+      setText('commits', fmt(commits && commits.total_count));
+      setText('prs', fmt(prs && prs.total_count));
+      setText('issues', fmt(issues && issues.total_count));
+      if (release && release.tag_name) {
+        var when = (release.published_at || '').slice(0, 10);
+        setText('release', release.tag_name + (when ? ' · ' + when : ''));
+      }
+      renderRecent(prs && prs.items);
+      setText('freshness', '· live');
+    }).catch(function () {
+      // Keep snapshot numbers already in the HTML; mark freshness.
+      setText('freshness', '· snapshot');
+    });
   })();
 
   // reveal on scroll
