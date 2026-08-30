@@ -36,7 +36,7 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'JetBrains Mono', ui-monospace, monospace;
-      font-size: 7.6pt;
+      font-size: 8pt;
       line-height: 1.42;
       letter-spacing: -0.012em;
       color: #14181B;
@@ -46,195 +46,63 @@
       padding: 0.48in 0.58in;
     }
 
-    /* Two-column visual; DOM is main then sidebar so PDF/HTML
-       extractors get identity, jobs, then skills — not row-interleaved pills. */
-    .cv-layout {
-      display: grid;
-      grid-template-columns: 2.05fr 1fr;
-      gap: 1.45rem;
-      align-items: start;
-    }
-
-    .main { min-width: 0; }
-    .sidebar {
-      min-width: 0;
-      background: #FFFFFF;
-      border: 1px solid rgba(10, 15, 20, 0.10);
-      border-radius: 0;
-      padding: 0.95rem 1rem;
-    }
-
-    /* Header */
     .header {
       margin-bottom: 0.78rem;
-      padding-bottom: 0.55rem;
+      padding-bottom: 0.5rem;
       border-bottom: 1px solid rgba(10, 15, 20, 0.10);
     }
     .header h1 {
-      font-size: 1.12rem;
+      font-size: 1.18rem;
       font-weight: 600;
       letter-spacing: -0.03em;
       margin-bottom: 0.18rem;
     }
     .header .tagline {
-      font-size: 0.68rem;
+      font-size: 0.7rem;
       color: #5C636A;
       font-weight: 500;
       margin-bottom: 0.28rem;
     }
     .header .contact-bar {
-      font-size: 0.58rem;
+      font-size: 0.62rem;
       line-height: 1.5;
       color: #14181B;
     }
     .header .contact-bar a { color: inherit; text-decoration: none; }
 
-    /* Section blocks */
     .section {
-      margin-bottom: 1rem;
+      margin-bottom: 0.85rem;
+      padding-top: 0.55rem;
+      border-top: 1px solid rgba(10, 15, 20, 0.10);
     }
-    h2.section-title, .section-title {
-      font-size: 0.58rem;
+    .section:first-of-type {
+      padding-top: 0;
+      border-top: 0;
+    }
+    h2.section-title {
+      font-size: 0.6rem;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.12em;
       color: #0C7C71;
-      margin-bottom: 0.62rem;
+      margin-bottom: 0.38rem;
     }
 
-    /* Skills — comma lists parse as tokens; less chrome than pills */
-    .skill-categories {
-      display: flex;
-      flex-direction: column;
-      gap: 0.48rem;
-    }
-    .skill-category { margin-bottom: 0; }
-    h3.skill-cat-title, .skill-cat-title {
-      font-size: 0.58rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: #14181B;
-      margin-bottom: 0.28rem;
-    }
-    .skill-line {
-      font-size: 0.56rem;
-      line-height: 1.52;
-      color: #5C636A;
-    }
-
-    /* Education, Certifications, Languages */
-    .sidebar-footer {
-      display: flex;
-      flex-direction: column;
-      gap: 0.7rem;
-      margin-top: 0.55rem;
-    }
-    .sidebar-footer .section { margin-bottom: 0; }
-    .sidebar .section + .section,
-    .sidebar .skills { margin-top: 0.2rem; }
-    .edu-item, .cert-item {
-      margin-bottom: 0.35rem;
-      font-size: 0.7rem;
-    }
-    .edu-item .school, .cert-item .name {
-      font-size: 1em;
-      font-weight: 600;
-      color: #14181B;
-    }
-    .edu-item .meta, .cert-item .meta {
-      font-size: 0.6rem;
-      color: #706D68;
-    }
-    .edu-item .location {
-      font-size: 0.6rem;
-      color: #706D68;
-      margin-top: 0.05rem;
-    }
-    .lang-item {
-      font-size: 0.65rem;
-      margin-bottom: 0.12rem;
-      color: #14181B;
-    }
-
-    /* Main column — Experience */
-    .main .section-title {
-      margin-bottom: 0.35rem;
-    }
-    .exp-section {
-      border-top: 1px solid rgba(10, 15, 20, 0.10);
-      padding-top: 0.5rem;
-      margin-top: 0;
-    }
-
-    /* Experience items */
-    .exp-item {
-      padding-top: 0;
-      margin-top: 0.5rem;
-    }
-    .exp-item:first-of-type { margin-top: 0; }
-
-    .exp-header {
-      margin-bottom: 0.2rem;
-    }
-    .exp-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: #14181B;
-      margin-bottom: 0.05rem;
-    }
-    .exp-meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
-    .exp-company {
-      font-size: 0.68rem;
-      color: #8A8782;
-      font-weight: 500;
-    }
-    .exp-date {
-      font-size: 0.6rem;
-      color: #8A8782;
-    }
-    .exp-bullets {
-      list-style: none;
-      margin-bottom: 0.35rem;
-    }
-    .exp-bullets li {
-      padding-left: 0.7rem;
-      text-indent: -0.7rem;
-      margin-bottom: 0.2rem;
-      font-size: 0.72rem;
-      line-height: 1.38;
-      color: #14181B;
-    }
-    .exp-bullets li::before {
-      content: '• ';
-      color: #0C7C71;
-      font-weight: 700;
-    }
-    .exp-bullets li strong { color: #14181B; }
-    h3.exp-title { font-size: inherit; }
-
-    /* Summary */
     .summary-text {
-      font-size: 0.66rem;
+      font-size: 0.72rem;
       line-height: 1.48;
       color: #14181B;
-      margin-bottom: 0.45rem;
-      font-style: normal;
     }
 
-    /* Personal project */
+    .project-block { margin-bottom: 0.42rem; }
+    .project-block:last-child { margin-bottom: 0; }
     .project-title {
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       font-weight: 700;
       color: #14181B;
-      margin-bottom: 0.15rem;
+      margin-bottom: 0.12rem;
     }
+    h3.project-title { font-size: inherit; }
     .project-title a {
       color: inherit;
       text-decoration: underline;
@@ -242,29 +110,29 @@
       text-decoration-color: rgba(12, 124, 113, 0.55);
     }
     .project-title a:hover { text-decoration-color: #0C7C71; }
-    .project-block { margin-bottom: 0.45rem; }
-    .project-block:last-child { margin-bottom: 0; }
     .project-desc {
       font-size: 0.72rem;
       line-height: 1.42;
       color: #14181B;
-      margin-bottom: 0.2rem;
+      margin-bottom: 0.16rem;
     }
-    .project-bullets {
+    .project-bullets, .exp-bullets {
       list-style: none;
       margin: 0;
       padding: 0;
     }
-    .project-bullets li {
+    .project-bullets li, .exp-bullets li {
       padding-left: 0.7rem;
       text-indent: -0.7rem;
-      margin-bottom: 0.15rem;
+      margin-bottom: 0.14rem;
       font-size: 0.7rem;
-      line-height: 1.38;
+      line-height: 1.4;
       color: #14181B;
     }
-    .project-bullets li:last-child { margin-bottom: 0; }
-    .project-bullets li::before {
+    .project-bullets li:last-child,
+    .exp-bullets li:last-child { margin-bottom: 0; }
+    .project-bullets li::before,
+    .exp-bullets li::before {
       content: '• ';
       color: #0C7C71;
       font-weight: 700;
@@ -276,133 +144,102 @@
       text-underline-offset: 0.12em;
       text-decoration-color: rgba(12, 124, 113, 0.45);
     }
-    .project-section {
-      margin-top: 0;
-      padding-top: 0.5rem;
-      border-top: 1px solid rgba(10, 15, 20, 0.10);
+
+    .exp-item { margin-top: 0.48rem; }
+    .exp-item:first-of-type { margin-top: 0; }
+    .exp-header { margin-bottom: 0.16rem; }
+    .exp-title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #14181B;
+      margin-bottom: 0.04rem;
+    }
+    h3.exp-title { font-size: inherit; }
+    .exp-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .exp-company, .exp-date {
+      font-size: 0.64rem;
+      color: #5C636A;
+      font-weight: 500;
+    }
+    .exp-bullets { margin-bottom: 0.08rem; }
+    .exp-bullets li { font-size: 0.7rem; }
+    .exp-bullets li strong { color: #14181B; }
+
+    /* Full-width labeled rows: one category per line, tokens stay plain text */
+    .skill-row {
+      font-size: 0.66rem;
+      line-height: 1.42;
+      color: #5C636A;
+      margin-bottom: 0.2rem;
+    }
+    .skill-row:last-child { margin-bottom: 0; }
+    .skill-label {
+      font-weight: 600;
+      color: #14181B;
+      margin-right: 0.4rem;
     }
 
-    /* Print — single letter page; one spacing scale everywhere */
+    .meta-line {
+      font-size: 0.66rem;
+      line-height: 1.42;
+      color: #14181B;
+      margin-bottom: 0.14rem;
+    }
+    .meta-line:last-child { margin-bottom: 0; }
+    .meta-line .name {
+      font-weight: 600;
+    }
+    .meta-line .detail {
+      color: #5C636A;
+    }
+
     @media print {
-      @page { size: letter; margin: 0.24in 0.44in; }
+      @page { size: letter; margin: 0.28in 0.46in; }
       body {
         padding: 0;
         margin: 0;
         max-width: none;
-        font-size: 6.8pt;
-        line-height: 1.36;
-        letter-spacing: -0.012em;
-        --gap-title: 0.26rem;
-        --gap-block: 0.32rem;
-        --gap-item: 0.16rem;
-        --gap-inline: 0.1rem 0.16rem;
+        font-size: 7.18pt;
+        line-height: 1.35;
       }
       .header {
-        margin-bottom: 0.28rem;
-        padding-bottom: 0.24rem;
-        page-break-after: avoid;
+        margin-bottom: 0.26rem;
+        padding-bottom: 0.22rem;
       }
-      .header h1 { font-size: 0.92rem; margin-bottom: 0.08rem; }
-      .header .tagline { font-size: 0.5rem; margin-bottom: 0.14rem; }
-      .header .contact-bar { font-size: 0.48rem; }
-      .cv-layout {
-        gap: 0.72rem;
-        align-items: start;
-        grid-template-columns: 2.05fr 1fr;
+      .header h1 { font-size: 0.98rem; margin-bottom: 0.06rem; }
+      .header .tagline { font-size: 0.52rem; margin-bottom: 0.1rem; }
+      .header .contact-bar { font-size: 0.5rem; }
+      .section {
+        margin-bottom: 0.3rem;
+        padding-top: 0.26rem;
       }
-      .section { margin-bottom: var(--gap-block); }
-      h2.section-title, .section-title { margin-bottom: var(--gap-title); }
-      .sidebar {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-        padding: 0.58rem 0.62rem;
-        display: flex;
-        flex-direction: column;
-        align-self: start;
-        min-height: 0;
-        height: auto;
-        gap: 0.45rem;
-        justify-content: flex-start;
-      }
-      .sidebar .section { margin-bottom: 0; }
-      .skills {
-        flex: 0 0 auto;
-        display: flex;
-        flex-direction: column;
-        min-height: 0;
-      }
-      .skills .section-title {
-        margin-bottom: 0.28rem;
-        flex-shrink: 0;
-      }
-      .skill-cat-title { margin-bottom: 0.12rem; }
-      .skill-line { font-size: 0.5rem; line-height: 1.4; }
-      .skill-categories {
-        flex: 0 0 auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        gap: 0.34rem;
-        min-height: 0;
-      }
-      .skill-category { margin-bottom: 0; flex-shrink: 0; }
-      .sidebar-footer {
-        flex: 0 0 auto;
-        display: flex;
-        flex-direction: column;
-        gap: 0.52rem;
-        margin-top: 0.48rem;
-      }
-      .sidebar-footer .section-title { margin-bottom: 0.26rem; }
-      .sidebar-footer .section:last-child { margin-bottom: 0; }
-      .edu-item, .cert-item { margin-bottom: 0.28rem; font-size: 0.6rem; }
-      .edu-item .meta, .cert-item .meta, .edu-item .location { font-size: 0.52rem; }
-      .lang-item { margin-bottom: 0.08rem; font-size: 0.56rem; }
-      .main {
-        display: flex;
-        flex-direction: column;
-        min-height: 0;
-        justify-content: flex-start;
-        gap: var(--gap-block);
-      }
-      .main > .section { margin-bottom: 0; }
-      .main .project-section {
-        margin-top: 0;
-        flex-shrink: 0;
-      }
-      .main h2.section-title, .main .section-title { margin-bottom: var(--gap-title); }
-      .exp-section {
-        padding-top: 0.36rem;
-        flex: 0 0 auto;
-        display: flex;
-        flex-direction: column;
-        min-height: 0;
-      }
-      .exp-section .section-title { flex-shrink: 0; }
-      .exp-item { margin-top: 0.26rem; }
-      .exp-item:first-of-type { margin-top: 0.12rem; }
-      .exp-header { margin-bottom: 0.14rem; }
-      .exp-title { font-size: 0.72rem; margin-bottom: 0.04rem; }
-      .exp-meta { display: flex; justify-content: space-between; align-items: baseline; }
-      .exp-company { font-size: 0.55rem; color: #5C636A; }
-      .exp-date { font-size: 0.55rem; color: #5C636A; }
-      .exp-bullets { margin-bottom: 0.12rem; }
-      .exp-bullets li {
-        margin-bottom: 0.11rem;
-        font-size: 0.57rem;
-        line-height: 1.37;
-      }
-      .summary-text { font-size: 0.62rem; line-height: 1.42; margin-bottom: var(--gap-item); }
-      .project-section { padding-top: 0.26rem; }
-      .project-section .section-title { margin-bottom: var(--gap-title); }
-      .project-block { margin-bottom: 0.3rem; }
-      .project-title { font-size: 0.68rem; margin-bottom: 0.08rem; }
-      .project-desc { font-size: 0.58rem; line-height: 1.4; margin-bottom: 0.1rem; }
+      h2.section-title { margin-bottom: 0.18rem; font-size: 0.52rem; }
+      .summary-text { font-size: 0.62rem; line-height: 1.38; }
+      .project-block { margin-bottom: 0.24rem; }
+      .project-title { font-size: 0.68rem; margin-bottom: 0.05rem; }
+      .project-desc { font-size: 0.58rem; line-height: 1.34; margin-bottom: 0.07rem; }
       .project-bullets li {
-        margin-bottom: 0.09rem;
+        margin-bottom: 0.07rem;
         font-size: 0.56rem;
-        line-height: 1.38;
+        line-height: 1.33;
       }
+      .exp-item { margin-top: 0.24rem; }
+      .exp-header { margin-bottom: 0.09rem; }
+      .exp-title { font-size: 0.68rem; }
+      .exp-company, .exp-date { font-size: 0.52rem; }
+      .exp-bullets li {
+        margin-bottom: 0.07rem;
+        font-size: 0.56rem;
+        line-height: 1.33;
+      }
+      .skill-row { font-size: 0.54rem; line-height: 1.36; margin-bottom: 0.09rem; }
+      .meta-line { font-size: 0.54rem; line-height: 1.36; margin-bottom: 0.07rem; }
     }
   </style>
 </head>
@@ -420,161 +257,118 @@
     </p>
   </header>
 
-  <div class="cv-layout">
-    <main class="main">
-      <section class="section">
-        <h2 class="section-title">Professional Summary</h2>
-        <p class="summary-text">
-          Senior AI Engineer at the intersection of computer science and finance. I ramp up quickly, listen for what clients actually need, and work full stack, from architecture and agents through UI and shipping. I move fast, stay close to the people who use the product, and keep systems trustworthy in production. At a large Canadian pension fund I owned an agentic AI platform through the full cycle, from proof of concept to deployment to years of production use with active users across the organization. Outside that corporate work I maintain digithings, an open-source AI infrastructure stack, and build tools on top of it for private clients.
+  <main>
+    <section class="section">
+      <h2 class="section-title">Professional Summary</h2>
+      <p class="summary-text">
+        Senior AI Engineer at the intersection of computer science and finance. I ramp up quickly, listen for what clients actually need, and work full stack, from architecture and agents through UI and shipping. I move fast, stay close to the people who use the product, and keep systems trustworthy in production. At a large Canadian pension fund I owned an agentic AI platform through the full cycle, from proof of concept to deployment to years of production use with active users across the organization. Outside that corporate work I maintain digithings, an open-source AI infrastructure stack, and build tools on top of it for private clients.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Projects</h2>
+      <div class="project-block">
+        <h3 class="project-title"><a href="https://digithings.ai" target="_blank" rel="noopener">digithings.ai</a></h3>
+        <p class="project-desc">
+          Open-source AI library and toolkit. It is a canvas for agentic ideas and the layer I use to build production applications. Composable modules for orchestration, RAG/retrieval, DigiChat surfaces, auth, and observability; self-hosted by default (MIT), BYOK, swappable vector backends.
         </p>
-      </section>
-
-      <section class="section project-section">
-        <h2 class="section-title">Projects</h2>
-
-        <div class="project-block">
-          <h3 class="project-title"><a href="https://digithings.ai" target="_blank" rel="noopener">digithings.ai</a></h3>
-          <p class="project-desc">
-            Open-source AI library and toolkit. It is a canvas for agentic ideas and the layer I use to build production applications. Composable modules for orchestration, RAG/retrieval, DigiChat surfaces, auth, and observability; self-hosted by default (MIT), BYOK, swappable vector backends.
-          </p>
-          <ul class="project-bullets">
-            <li><a href="https://datatap.stream/chat" target="_blank" rel="noopener">DataTap Stream Chat</a>: DigiChat release embedded on a client’s product documentation, with support chat and developer/docs chat in place and retrieval against the live docs.</li>
-          </ul>
-        </div>
-
-        <div class="project-block">
-          <h3 class="project-title"><a href="https://digiquant.io" target="_blank" rel="noopener">digiquant.io</a></h3>
-          <p class="project-desc">
-            Automated quant finance application built on digithings. Agentic research produces ranked, sourced theses; multi-agent deliberation shapes portfolio direction and risk sizing; then indicators, strategy specs, Optuna search, and reproducible NautilusTrader backtests with trade ledgers and tearsheets. Research book and paper portfolio ship today; live broker execution is not built.
-          </p>
-          <ul class="project-bullets">
-            <li><strong>FX Hub</strong>: FX research with traders on bank and broker consensus and trade ideas.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="section exp-section">
-        <h2 class="section-title">Experience</h2>
-
-        <article class="exp-item">
-          <div class="exp-header">
-            <h3 class="exp-title">Senior AI Engineer</h3>
-            <div class="exp-meta">
-              <div class="exp-company">PSP Investments, Alpha Science, Montreal, QC</div>
-              <div class="exp-date"><time datetime="2022-09">Sep 2022</time> - <time datetime="2026-08">Aug 2026</time></div>
-            </div>
-          </div>
-          <ul class="exp-bullets">
-            <li>Owned the full stack of PSP Investments' company-wide agentic AI platform for analysts and PMs: architecture, design documentation, and UI/UX from concept to deployment; feature development, SDK packaging &amp; distribution, PR reviews, and ongoing maintenance. Source-traced answers land in daily research workflows.</li>
-            <li><strong>Alpha Science SDK:</strong> wraps Databricks (Vector Search, SQL Warehouses, Genie Agents) &amp; OpenAI (Responses + Files API), auto-auth via Databricks CLI &amp; Azure Key Vault. Composable agent/workflow base-class framework on the firm’s existing stack, proprietary tracing, inter-agent persistence, pre-built financial utility agents &amp; skills; artifact export (Office docs &amp; web pages), sub-agent delegation with to-do planning, and parallel tool execution.</li>
-            <li><strong>Virtual Analyst Platform:</strong> custom React, NestJS, and FastAPI frontend (refactored from Gradio) that became the shell for company AI tools and dashboards. Modern chat UI with a side panel for source citation and artifact viewing; workflow launcher for long-running research tasks; task manager with subscription-style pre-written prompts (e.g. digests). Step-level tracing, source traceability, structured data analysis, and live charting (Plotly/Dash/ECharts).</li>
-            <li><strong>Document rebuild pipeline:</strong> from messy retrieval-index text, parallel LLM reformatting into Markdown/PDF reconstructions of filings, transcripts, and broker research so users can read full sourced documents in context, with the original text kept as source of truth.</li>
-            <li><strong>Agile roadmap:</strong> weekly-evolving priorities with rapid integration of emerging model and tooling capabilities into production. Each feature independently scoped, designed as an SDK tool, and surfaced through the platform from concept to deployment.</li>
-            <li><strong>Leadership:</strong> direct collaboration with C-suite across all asset classes; mentored interns and juniors to ship production features independently; coached Alpha Science SDK users; platform demoed at the Databricks Data &amp; AI Summit.</li>
-          </ul>
-        </article>
-
-        <article class="exp-item">
-          <div class="exp-header">
-            <h3 class="exp-title">Analyst</h3>
-            <div class="exp-meta">
-              <div class="exp-company">PSP Investments, Digital Innovation, Montreal, QC</div>
-              <div class="exp-date"><time datetime="2021-09">Sep 2021</time> - <time datetime="2022-08">Aug 2022</time></div>
-            </div>
-          </div>
-          <ul class="exp-bullets">
-            <li>Co-developed <strong>Earnings Prediction Engine</strong> (ML beat/miss pipeline, point-in-time data, Power BI); built alt-data pipeline with data profiling, cleaning &amp; feature engineering for equity factor research; delivered POC analyses to drive stakeholder buy-in across asset class teams</li>
-          </ul>
-        </article>
-
-        <article class="exp-item">
-          <div class="exp-header">
-            <h3 class="exp-title">Intern</h3>
-            <div class="exp-meta">
-              <div class="exp-company">PSP Investments, Information Security, Montreal, QC</div>
-              <div class="exp-date"><time datetime="2021-05">May 2021</time> - <time datetime="2021-08">Aug 2021</time></div>
-            </div>
-          </div>
-          <ul class="exp-bullets">
-            <li>Enterprise risk framework implementation; automated risk assessment repository updates, improving data currency and reporting efficiency</li>
-          </ul>
-        </article>
-
-        <article class="exp-item">
-          <div class="exp-header">
-            <h3 class="exp-title">Business Analyst</h3>
-            <div class="exp-meta">
-              <div class="exp-company">Lunch à Porter, Montreal, QC</div>
-              <div class="exp-date"><time datetime="2020-06">Jun 2020</time> - <time datetime="2021-06">Jun 2021</time></div>
-            </div>
-          </div>
-          <ul class="exp-bullets">
-            <li>SEO &amp; A/B testing drove 2&times; online conversion rate; inventory analysis for data-informed merchandising decisions</li>
-          </ul>
-        </article>
-      </section>
-    </main>
-
-    <aside class="sidebar">
-      <section class="section skills">
-        <h2 class="section-title">Skills</h2>
-        <div class="skill-categories">
-          <div class="skill-category">
-            <h3 class="skill-cat-title">Gen AI &amp; LLMs</h3>
-            <p class="skill-line">LangGraph, LangChain, LiteLLM, RAG, OpenAI API, Gemini API, Claude API, MCP, Gradio, Azure AI Search, Azure AI Foundry, Prompt Engineering, Vector DBs</p>
-          </div>
-          <div class="skill-category">
-            <h3 class="skill-cat-title">AI Dev Tools</h3>
-            <p class="skill-line">Cursor, GitHub Copilot, Claude Code, Codex, OpenCode, LM Studio, Open WebUI, Ollama</p>
-          </div>
-          <div class="skill-category">
-            <h3 class="skill-cat-title">Data &amp; Cloud</h3>
-            <p class="skill-line">Azure, GCP, Databricks, Spark, Delta Lake, PostgreSQL, SQL, Supabase, Docker, MLOps, CI/CD</p>
-          </div>
-          <div class="skill-category">
-            <h3 class="skill-cat-title">Programming</h3>
-            <p class="skill-line">Python, TypeScript, JavaScript, React, NestJS, Next.js, HTML, CSS, FastAPI, Pydantic, pandas, NumPy, REST APIs, SDK Design, Git</p>
-          </div>
-          <div class="skill-category">
-            <h3 class="skill-cat-title">Visualization</h3>
-            <p class="skill-line">Power BI, Plotly, Dash, Matplotlib, ECharts, Tableau</p>
-          </div>
-          <div class="skill-category">
-            <h3 class="skill-cat-title">Markets &amp; Data</h3>
-            <p class="skill-line">QuantConnect, IBKR API, Alpaca API, LSEG, SEC Filings, Broker Research, Earnings Transcripts, Third Bridge</p>
-          </div>
-        </div>
-      </section>
-
-      <div class="sidebar-footer">
-        <section class="section">
-          <h2 class="section-title">Education</h2>
-          <div class="edu-item">
-            <h3 class="school">McGill University</h3>
-            <div class="degree">B.Com Finance &amp; Business Analytics</div>
-            <div class="meta">Desautels · Montreal, QC · 2019 - 2022</div>
-          </div>
-          <div class="edu-item">
-            <h3 class="school">Champlain College</h3>
-            <div class="degree">DEC Computer Science &amp; Mathematics</div>
-            <div class="meta">Montreal, QC · 2017 - 2019 · Honor Roll</div>
-          </div>
-        </section>
-
-        <section class="section">
-          <h2 class="section-title">Certifications</h2>
-          <div class="cert-item">
-            <div class="name">Azure AI Fundamentals</div>
-            <div class="meta">Microsoft · Sep 2023</div>
-          </div>
-        </section>
-
-        <section class="section">
-          <h2 class="section-title">Languages</h2>
-          <div class="lang-item">English (Native), French (Native), Romanian (Native), Spanish (Basic), Italian (Basic)</div>
-        </section>
+        <ul class="project-bullets">
+          <li><a href="https://datatap.stream/chat" target="_blank" rel="noopener">DataTap Stream Chat</a>: DigiChat release embedded on a client’s product documentation, with support chat and developer/docs chat in place and retrieval against the live docs.</li>
+        </ul>
       </div>
-    </aside>
-  </div>
+      <div class="project-block">
+        <h3 class="project-title"><a href="https://digiquant.io" target="_blank" rel="noopener">digiquant.io</a></h3>
+        <p class="project-desc">
+          Automated quant finance application built on digithings. Agentic research produces ranked, sourced theses; multi-agent deliberation shapes portfolio direction and risk sizing; then indicators, strategy specs, Optuna search, and reproducible NautilusTrader backtests with trade ledgers and tearsheets. Research book and paper portfolio ship today; live broker execution is not built.
+        </p>
+        <ul class="project-bullets">
+          <li><strong>FX Hub</strong>: FX research with traders on bank and broker consensus and trade ideas.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Experience</h2>
+      <article class="exp-item">
+        <div class="exp-header">
+          <h3 class="exp-title">Senior AI Engineer</h3>
+          <div class="exp-meta">
+            <div class="exp-company">PSP Investments, Alpha Science, Montreal, QC</div>
+            <div class="exp-date"><time datetime="2022-09">Sep 2022</time> - <time datetime="2026-08">Aug 2026</time></div>
+          </div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Owned the full stack of PSP Investments' company-wide agentic AI platform for analysts and PMs: architecture, design documentation, and UI/UX from concept to deployment; feature development, SDK packaging &amp; distribution, PR reviews, and ongoing maintenance. Source-traced answers land in daily research workflows.</li>
+          <li><strong>Alpha Science SDK:</strong> wraps Databricks (Vector Search, SQL Warehouses, Genie Agents) &amp; OpenAI (Responses + Files API), auto-auth via Databricks CLI &amp; Azure Key Vault. Composable agent/workflow base-class framework on the firm’s existing stack, proprietary tracing, inter-agent persistence, pre-built financial utility agents &amp; skills; artifact export (Office docs &amp; web pages), sub-agent delegation with to-do planning, and parallel tool execution.</li>
+          <li><strong>Virtual Analyst Platform:</strong> custom React, NestJS, and FastAPI frontend (refactored from Gradio) that became the shell for company AI tools and dashboards. Modern chat UI with a side panel for source citation and artifact viewing; workflow launcher for long-running research tasks; task manager with subscription-style pre-written prompts (e.g. digests). Step-level tracing, source traceability, structured data analysis, and live charting (Plotly/Dash/ECharts).</li>
+          <li><strong>Document rebuild pipeline:</strong> from messy retrieval-index text, parallel LLM reformatting into Markdown/PDF reconstructions of filings, transcripts, and broker research so users can read full sourced documents in context, with the original text kept as source of truth.</li>
+          <li><strong>Agile roadmap:</strong> weekly-evolving priorities with rapid integration of emerging model and tooling capabilities into production. Each feature independently scoped, designed as an SDK tool, and surfaced through the platform from concept to deployment.</li>
+          <li><strong>Leadership:</strong> direct collaboration with C-suite across all asset classes; mentored interns and juniors to ship production features independently; coached Alpha Science SDK users; platform demoed at the Databricks Data &amp; AI Summit.</li>
+        </ul>
+      </article>
+      <article class="exp-item">
+        <div class="exp-header">
+          <h3 class="exp-title">Analyst</h3>
+          <div class="exp-meta">
+            <div class="exp-company">PSP Investments, Digital Innovation, Montreal, QC</div>
+            <div class="exp-date"><time datetime="2021-09">Sep 2021</time> - <time datetime="2022-08">Aug 2022</time></div>
+          </div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Co-developed <strong>Earnings Prediction Engine</strong> (ML beat/miss pipeline, point-in-time data, Power BI); built alt-data pipeline with data profiling, cleaning &amp; feature engineering for equity factor research; delivered POC analyses to drive stakeholder buy-in across asset class teams</li>
+        </ul>
+      </article>
+      <article class="exp-item">
+        <div class="exp-header">
+          <h3 class="exp-title">Intern</h3>
+          <div class="exp-meta">
+            <div class="exp-company">PSP Investments, Information Security, Montreal, QC</div>
+            <div class="exp-date"><time datetime="2021-05">May 2021</time> - <time datetime="2021-08">Aug 2021</time></div>
+          </div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Enterprise risk framework implementation; automated risk assessment repository updates, improving data currency and reporting efficiency</li>
+        </ul>
+      </article>
+      <article class="exp-item">
+        <div class="exp-header">
+          <h3 class="exp-title">Business Analyst</h3>
+          <div class="exp-meta">
+            <div class="exp-company">Lunch à Porter, Montreal, QC</div>
+            <div class="exp-date"><time datetime="2020-06">Jun 2020</time> - <time datetime="2021-06">Jun 2021</time></div>
+          </div>
+        </div>
+        <ul class="exp-bullets">
+          <li>SEO &amp; A/B testing drove 2&times; online conversion rate; inventory analysis for data-informed merchandising decisions</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Skills</h2>
+      <p class="skill-row"><span class="skill-label">Gen AI &amp; LLMs:</span> LangGraph, LangChain, LiteLLM, RAG, OpenAI API, Gemini API, Claude API, MCP, Gradio, Azure AI Search, Azure AI Foundry, Prompt Engineering, Vector DBs</p>
+      <p class="skill-row"><span class="skill-label">AI Dev Tools:</span> Cursor, GitHub Copilot, Claude Code, Codex, OpenCode, LM Studio, Open WebUI, Ollama</p>
+      <p class="skill-row"><span class="skill-label">Data &amp; Cloud:</span> Azure, GCP, Databricks, Spark, Delta Lake, PostgreSQL, SQL, Supabase, Docker, MLOps, CI/CD</p>
+      <p class="skill-row"><span class="skill-label">Programming:</span> Python, TypeScript, JavaScript, React, NestJS, Next.js, HTML, CSS, FastAPI, Pydantic, pandas, NumPy, REST APIs, SDK Design, Git</p>
+      <p class="skill-row"><span class="skill-label">Visualization:</span> Power BI, Plotly, Dash, Matplotlib, ECharts, Tableau</p>
+      <p class="skill-row"><span class="skill-label">Markets &amp; Data:</span> QuantConnect, IBKR API, Alpaca API, LSEG, SEC Filings, Broker Research, Earnings Transcripts, Third Bridge</p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Education</h2>
+      <p class="meta-line"><span class="name">McGill University</span> <span class="detail">· B.Com Finance &amp; Business Analytics · Desautels · Montreal, QC · 2019 - 2022</span></p>
+      <p class="meta-line"><span class="name">Champlain College</span> <span class="detail">· DEC Computer Science &amp; Mathematics · Montreal, QC · 2017 - 2019 · Honor Roll</span></p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Certifications</h2>
+      <p class="meta-line"><span class="name">Azure AI Fundamentals</span> <span class="detail">· Microsoft · Sep 2023</span></p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Languages</h2>
+      <p class="meta-line">English (Native), French (Native), Romanian (Native), Spanish (Basic), Italian (Basic)</p>
+    </section>
+  </main>
 </body>
 </html>
