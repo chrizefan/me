@@ -638,7 +638,8 @@ ul { list-style: none; padding: 0; }
       </p>
       <p>
         Before that, at <strong>PSP Investments</strong>, a large Canadian pension fund, I owned the <strong>Virtual Analyst Platform</strong>
-        and the <strong>Alpha Science SDK</strong>. I took that work through the full cycle, from proof of concept to deployment
+        and the <strong>Alpha Science SDK</strong>. Late work included rebuilding the frontend on React, NestJS, and FastAPI so the platform
+        could serve as the shared shell for company AI tools. I took that work through the full cycle, from proof of concept to deployment
         to years of production use with active users across the organization (Sep 2022 – Aug 2026).
       </p>
     </div>
@@ -795,14 +796,14 @@ ul { list-style: none; padding: 0; }
           <span class="tl-date">Sep 2022 – Aug 2026</span>
         </div>
         <ul class="tl-bullets">
-          <li><strong>Virtual Analyst Platform:</strong> owned production agentic AI for analysts and PMs, including chatbot UI, step-level tracing, source traceability, and a workflow launcher</li>
-          <li><strong>Alpha Science SDK:</strong> full-stack framework on the firm’s Databricks, Azure, and OpenAI stack for agents and vector indexes</li>
-          <li><strong>Shipping cadence:</strong> weekly releases, rapid integration of new model and tooling capabilities, and mentoring interns</li>
-          <li><strong>On their stack:</strong> agents and RAG on the desk’s existing terminals and research systems. Demoed at the Databricks Data &amp; AI Summit</li>
+          <li><strong>Virtual Analyst Platform:</strong> owned the company AI frontend on React, NestJS, and FastAPI (moved off Gradio). Custom chat UI with a side panel for source citation and artifact viewing; other AI tools and dashboards linked through this shell</li>
+          <li><strong>Workflows and task manager:</strong> launcher for long-running research workflows, plus a subscription-style task manager for pre-written prompts such as digests</li>
+          <li><strong>Document rebuild pipeline:</strong> from messy indexed text, parallel LLM reformatting into Markdown/PDF reconstructions of filings, transcripts, and broker research so users can read full sourced documents; original text kept as source of truth</li>
+          <li><strong>Alpha Science SDK:</strong> full-stack framework on the firm’s Databricks, Azure, and OpenAI stack for agents and vector indexes. Demoed at the Databricks Data &amp; AI Summit</li>
         </ul>
         <div class="badges">
-          <span class="badge">Agentic AI</span><span class="badge">RAG</span><span class="badge">Orchestration</span>
-          <span class="badge">Azure AI</span><span class="badge">Evals</span><span class="badge">Observability</span>
+          <span class="badge">React</span><span class="badge">NestJS</span><span class="badge">FastAPI</span>
+          <span class="badge">Agentic AI</span><span class="badge">RAG</span><span class="badge">Observability</span>
         </div>
       </div>
 
@@ -865,28 +866,32 @@ ul { list-style: none; padding: 0; }
     <div class="flagship">
       <div>
         <p class="flagship-desc">
-          The company-wide agentic AI platform used across investment teams.
-          Analysts and portfolio managers could run research workflows, inspect agent steps, and verify claims
-          without leaving the tool. Powered by the <strong>Alpha Science SDK</strong>.
+          The company-wide agentic AI platform for investment teams.
+          Late in the tenure I rebuilt the frontend off Gradio onto <strong>React</strong>, <strong>NestJS</strong>, and <strong>FastAPI</strong>,
+          so the Virtual Analyst became the shared shell for company AI tools and dashboards: chat, workflows, citations, and artifacts in one place.
+          Powered by the <strong>Alpha Science SDK</strong>.
         </p>
         <div class="stat-tiles">
-          <div class="stat-tile"><div class="sv">Owned</div><div class="sl">End-to-end production AI</div></div>
-          <div class="stat-tile"><div class="sv">Traced</div><div class="sl">Sources in the UI</div></div>
+          <div class="stat-tile"><div class="sv">React</div><div class="sl">Custom company frontend</div></div>
+          <div class="stat-tile"><div class="sv">Shell</div><div class="sl">Tools &amp; dashboards linked in</div></div>
           <div class="stat-tile"><div class="sv">Demoed</div><div class="sl">Databricks Data &amp; AI Summit</div></div>
         </div>
         <div class="flagship-badges badges">
+          <span class="badge">React</span><span class="badge">NestJS</span><span class="badge">FastAPI</span>
           <span class="badge">Agentic AI SDK</span><span class="badge">RAG</span><span class="badge">OpenAI</span>
-          <span class="badge">Azure AI Search</span><span class="badge">Gradio</span><span class="badge">Databricks</span>
+          <span class="badge">Azure AI Search</span><span class="badge">Databricks</span>
         </div>
       </div>
       <div>
         <ul class="feature-list">
-          <li><strong>Custom dual-panel UI</strong>: chat with agentic step transparency plus a workflow launcher for named analyses</li>
-          <li><strong>Workflow launcher</strong>: company overviews, deep research, thesis memos, bull/bear reviews, buy-side research review</li>
+          <li><strong>Custom frontend</strong>: React, NestJS, and FastAPI release replacing Gradio; foundation UI for the firm’s AI platform tools</li>
+          <li><strong>Side panel chat UI</strong>: source citation and artifact viewing alongside the conversation, in the style of a modern research chat</li>
+          <li><strong>Linked tools</strong>: other AI tools and dashboards reachable from the same frontend shell</li>
+          <li><strong>Workflow launcher</strong>: start long-running research workflows and named analyses (overviews, deep research, thesis memos, bull/bear reviews)</li>
+          <li><strong>Task manager</strong>: subscription-style runs of pre-written prompts such as digests</li>
           <li><strong>Source traceability</strong>: every claim links to its document, page, and passage in the UI</li>
-          <li><strong>Structured data</strong>: retrieval and manipulation in-chat, live charting, and exportable dashboards</li>
-          <li><strong>Artifact builder</strong>: export research to Microsoft Office documents and custom web pages</li>
-          <li><strong>Sub-agent delegation</strong>: planning and parallel tool execution for longer research tasks</li>
+          <li><strong>Document rebuild pipeline</strong>: reverse-reconstructs filings, transcripts, and broker research from messy retrieval-index text into Markdown/PDF so users can read full context; parallel LLM reformatting with the original text as source of truth</li>
+          <li><strong>Structured data &amp; artifacts</strong>: in-chat analysis, live charting, and export to Office docs and web pages</li>
           <li><strong>Multi-source RAG</strong>: broker research, filings, earnings transcripts, and custom financial indexes</li>
         </ul>
       </div>
@@ -928,7 +933,7 @@ ul { list-style: none; padding: 0; }
         <div class="skill-row-label"><span class="skill-row-num">03</span><span class="skill-row-name">Programming</span></div>
         <div class="skill-tags">
           <span class="skill-tag">Python</span><span class="skill-tag">TypeScript</span><span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">React</span><span class="skill-tag">Next.js</span><span class="skill-tag">HTML</span>
+          <span class="skill-tag">React</span><span class="skill-tag">NestJS</span><span class="skill-tag">Next.js</span><span class="skill-tag">HTML</span>
           <span class="skill-tag">CSS</span><span class="skill-tag">FastAPI</span><span class="skill-tag">Pydantic</span>
           <span class="skill-tag">pandas</span><span class="skill-tag">NumPy</span>
           <span class="skill-tag">REST APIs</span><span class="skill-tag">SDK Design</span><span class="skill-tag">Git</span>
@@ -987,7 +992,7 @@ ul { list-style: none; padding: 0; }
       <div class="qa-card">
         <div class="qa-q"><span class="qi">Q</span><span>&ldquo;Tell me about yourself.&rdquo;</span></div>
         <div class="qa-a">
-          <p>I'm a Senior AI Engineer at the intersection of computer science and finance. I ramp up quickly, understand what clients need, and work full stack with agents throughout. Most of my time now goes into digithings, Olympus on digiquant, DigiChat releases, and freelance builds on that stack. Before that, at PSP Investments, a large Canadian pension fund, I owned the Virtual Analyst Platform through proof of concept, deployment, and years of production use with active users.</p>
+          <p>I'm a Senior AI Engineer at the intersection of computer science and finance. I ramp up quickly, understand what clients need, and work full stack with agents throughout. Most of my time now goes into digithings, Olympus on digiquant, DigiChat releases, and freelance builds on that stack. Before that, at PSP Investments, a large Canadian pension fund, I owned the Virtual Analyst Platform through proof of concept, deployment, and years of production use, including a React, NestJS, and FastAPI frontend that became the shell for company AI tools.</p>
         </div>
       </div>
       <div class="qa-card">
@@ -1005,6 +1010,7 @@ ul { list-style: none; padding: 0; }
         <div class="qa-q"><span class="qi">Q</span><span>&ldquo;Biggest technical challenge you've solved?&rdquo;</span></div>
         <div class="qa-a">
           <p><strong>Source traceability.</strong> Analysts can't take an AI's word for something. I built a system that links every claim back to its exact document, page, and passage, surfaced in the UI so they can verify without leaving the platform. Without that trust layer, the tool wouldn't get used at all.</p>
+          <p><strong>Document rebuild from index text.</strong> A lot of what RAG retrieves is messy machine-readable text, not a clean PDF. Over the summer I built a pipeline that takes that indexed text and reverse-reconstructs readable Markdown/PDF approximations of filings, transcripts, and broker research, using parallel LLM reformatting while keeping the original text as source of truth, so users can both check citations and read the full document in context.</p>
           <p><strong>Structured data integration.</strong> Financial datasets are too large for context windows. I built a backend that lets the model reference tables by path, work with compact summaries, and run ML analysis on that layer. The same pain points exist in healthcare, legal, and other data-heavy domains.</p>
         </div>
       </div>
