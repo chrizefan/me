@@ -4,7 +4,7 @@
 
 Personal portfolio and CV. Single-page site with experience, projects, skills, and interview Q&A. Deployed on [GitHub Pages](https://pages.github.com/).
 
-At PSP Investments (Sep 2022 – Aug 2026) I owned the Virtual Analyst Platform. I also ship custom digithings applications: sit with the desk, ship on their stack, and leave them ownership of the code. Public proof in finance: digiquant.
+Senior AI Engineer at the intersection of computer science and finance. At PSP Investments (Sep 2022 – Aug 2026) I owned the Virtual Analyst Platform through proof of concept to years of production use. I maintain digithings, an open-source AI infrastructure stack, and build tools on it for private clients. Public proof in finance: digiquant.
 
 ---
 
