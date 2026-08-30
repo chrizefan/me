@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chris Stefan · Senior AI Engineer | Production Agentic AI</title>
-<meta name="description" content="Chris Stefan · Senior AI Engineer building agentic AI in production for institutional finance. Owned the company-wide Virtual Analyst Platform at PSP Investments (Sep 2022 – Aug 2026). EU citizen, remote-ready. Open to contract.">
+<meta name="description" content="Chris Stefan · Senior AI Engineer. digithings open-source AI infra, Olympus on digiquant, DigiChat releases, and freelance desk AI. Previously owned the Virtual Analyst Platform at PSP Investments. Open to contract.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://chrizefan.github.io/me/">
 
@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://chrizefan.github.io/me/">
 <meta property="og:title" content="Chris Stefan · Senior AI Engineer | Production Agentic AI">
-<meta property="og:description" content="Senior AI Engineer at PSP Investments (Sep 2022 – Aug 2026). Owned the company-wide Virtual Analyst Platform. EU citizen, remote-ready. Open to contract.">
+<meta property="og:description" content="Senior AI Engineer building digithings, Olympus, DigiChat, and client apps. Previously Virtual Analyst Platform at PSP Investments. Open to contract.">
 <meta property="og:site_name" content="Chris Stefan">
 
 <!-- Twitter Card -->
@@ -309,6 +309,101 @@ ul { list-style: none; padding: 0; }
 .feature-list strong { color: var(--ink); font-weight: 600; }
 .flagship-badges { margin-top: 1.6rem; }
 
+
+/* ── repo activity (live digithings strip) ──────────────────────────── */
+.repo-activity {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.2rem 2rem;
+  align-items: end;
+  background: var(--surface);
+  border: 1px solid var(--hair);
+  border-radius: var(--r-md);
+  padding: 1.35rem 1.5rem;
+  margin-bottom: 1.4rem;
+}
+.repo-activity .ra-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin-bottom: 0.85rem;
+}
+.repo-activity .ra-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.2rem, 4vw, 2.4rem);
+}
+.repo-activity .ra-stat { display: flex; flex-direction: column; gap: 0.15rem; min-width: 5.5rem; }
+.repo-activity .ra-n {
+  font-family: var(--font-mono);
+  font-size: 1.55rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  line-height: 1.1;
+}
+.repo-activity .ra-n.is-loading { color: var(--ink-mute); }
+.repo-activity .ra-l { font-size: 0.74rem; color: var(--ink-mute); }
+.repo-activity .ra-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.55rem;
+  text-align: right;
+}
+.repo-activity .ra-release {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+.repo-activity .ra-release strong { color: var(--ink); font-weight: 600; }
+.repo-activity .ra-link {
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+.repo-activity .ra-link:hover { text-decoration: underline; }
+.repo-activity .ra-recent {
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--hair);
+  padding-top: 0.95rem;
+  margin-top: 0.2rem;
+}
+.repo-activity .ra-recent-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin-bottom: 0.55rem;
+}
+.repo-activity .ra-pr-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.repo-activity .ra-pr-list li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.7rem;
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+  line-height: 1.4;
+}
+.repo-activity .ra-pr-list a { color: var(--ink); }
+.repo-activity .ra-pr-list a:hover { color: var(--accent); }
+.repo-activity .ra-pr-meta {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--ink-mute);
+}
+@media (max-width: 700px) {
+  .repo-activity { grid-template-columns: 1fr; }
+  .repo-activity .ra-side { align-items: flex-start; text-align: left; }
+}
+
 /* ── products / freelance cards ─────────────────────────────────────── */
 .product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
 .product-card { position: relative; overflow: hidden; background: var(--surface); border: 1px solid var(--hair); border-radius: var(--r-md); padding: 1.7rem 1.6rem; display: flex; flex-direction: column; transition: transform 0.3s var(--ease), border-color 0.3s var(--ease); }
@@ -446,7 +541,7 @@ ul { list-style: none; padding: 0; }
 <div class="grain" aria-hidden="true"></div>
 <canvas id="starfield" aria-hidden="true"></canvas>
 <div class="glow" aria-hidden="true"></div>
-<a class="skip-link" href="#about">Skip to content</a>
+<a class="skip-link" href="#work">Skip to content</a>
 
 <!-- ═══════ NAV ═══════ -->
 <header class="site-nav" id="nav">
@@ -457,9 +552,9 @@ ul { list-style: none; padding: 0; }
     </a>
     <nav class="nav-links" id="nav-links" aria-label="Primary">
       <a href="#about">About</a>
+      <a href="#work">Work</a>
       <a href="#experience">Experience</a>
-      <a href="#platform">Platform</a>
-      <a href="#products">Products</a>
+      <a href="#education">Education</a>
       <a href="#contact">Contact</a>
       <a class="btn btn-sm btn-primary" href="Chris_Stefan_CV.pdf" download="Chris_Stefan_CV.pdf">Download CV</a>
     </nav>
@@ -480,15 +575,15 @@ ul { list-style: none; padding: 0; }
   <div class="wrap">
     <div class="hero-grid">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Senior AI Engineer · Forward deployed · Open to contract</p>
-        <h1 class="hero-title">I build <em>AI in production</em> for institutional finance.</h1>
+        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Senior AI Engineer · Open source · Open to contract</p>
+        <h1 class="hero-title">I build <em>AI tools</em> people use: open-source infra, product apps, and desk work.</h1>
         <p class="hero-lede">
-          At the intersection of computer science and finance: full-stack agentic AI, fast execution, and close attention to what clients need.
-          At PSP Investments I owned the company-wide Virtual Analyst Platform through years of production use.
-          I maintain digithings, an open-source AI infrastructure stack, and build tools on it for private clients.
+          Computer science and finance are where I work best. I ramp up quickly, stay close to what clients need, and ship full stack with agents in the loop.
+          Most of my time now goes into <a href="https://digithings.ai" target="_blank" rel="noopener">digithings</a>, <a href="https://digiquant.io" target="_blank" rel="noopener">digiquant</a> (Olympus), DigiChat releases, and freelance builds on that stack.
+          Before that I owned production agentic AI at PSP Investments, a large Canadian pension fund.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#platform">See what I've built <span aria-hidden="true">→</span></a>
+          <a class="btn btn-primary" href="#work">See what I'm building <span aria-hidden="true">→</span></a>
           <a class="btn btn-ghost" href="#contact">Get in touch</a>
           <a class="btn btn-ghost" href="Chris_Stefan_CV.pdf" download="Chris_Stefan_CV.pdf">Download CV</a>
         </div>
@@ -503,21 +598,21 @@ ul { list-style: none; padding: 0; }
         </div>
         <div class="hp-row"><span class="hp-k">Status</span><span class="hp-v hp-avail"><span class="eyebrow-dot" aria-hidden="true"></span> Open to contract</span></div>
         <div class="hp-row"><span class="hp-k">Based</span><span class="hp-v">Italy · EU citizen · remote-ready</span></div>
-        <div class="hp-row"><span class="hp-k">Focus</span><span class="hp-v">Agentic AI · RAG · production systems</span></div>
-        <div class="hp-row"><span class="hp-k">Recent</span><span class="hp-v">Senior AI Engineer, PSP · through Aug 2026</span></div>
-        <div class="hp-row"><span class="hp-k">Building</span><span class="hp-v"><a href="https://digithings.ai" target="_blank" rel="noopener">digithings.ai</a> · <a href="https://digiquant.io" target="_blank" rel="noopener">digiquant.io</a></span></div>
+        <div class="hp-row"><span class="hp-k">Focus</span><span class="hp-v">Agentic AI · open source · client apps</span></div>
+        <div class="hp-row"><span class="hp-k">Building</span><span class="hp-v"><a href="https://digithings.ai" target="_blank" rel="noopener">digithings</a> · <a href="https://digiquant.io" target="_blank" rel="noopener">Olympus</a></span></div>
+        <div class="hp-row"><span class="hp-k">Earlier</span><span class="hp-v">Senior AI Engineer, PSP · through Aug 2026</span></div>
         <div class="hp-links">
           <a href="mailto:chris.stefan@proton.me" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
           <a href="https://linkedin.com/in/chris-stefan" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.44-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.55V9h3.57v11.45Z"/></svg></a>
-          <a href="https://github.com/chrizefan" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.7c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.55-1.14-4.55-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.36 9.36 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9l-.01 2.82c0 .27.18.59.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></a>
+          <a href="https://github.com/digithings-ai/digithings" target="_blank" rel="noopener" aria-label="digithings on GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.7c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.55-1.14-4.55-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.36 9.36 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9l-.01 2.82c0 .27.18.59.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></a>
         </div>
       </aside>
     </div>
     <dl class="hero-stats">
-      <div><dt>5 yrs</dt><dd>building AI in production</dd></div>
-      <div><dt>PSP</dt><dd>Sep 2022 – Aug 2026</dd></div>
-      <div><dt>digithings</dt><dd>custom applications, owned infra</dd></div>
-      <div><dt>Italy</dt><dd>EU · remote · open to contract</dd></div>
+      <div><dt>digithings</dt><dd>open-source AI infra</dd></div>
+      <div><dt>Olympus</dt><dd>quant research book &amp; dash</dd></div>
+      <div><dt>DigiChat</dt><dd>releases &amp; client embeds</dd></div>
+      <div><dt>PSP</dt><dd>production AI · through Aug 2026</dd></div>
     </dl>
   </div>
 </section>
@@ -531,37 +626,161 @@ ul { list-style: none; padding: 0; }
     </div>
     <div class="about-prose">
       <p>
-        I'm a <strong>Senior AI Engineer</strong> who works at the intersection of computer science and finance.
-        I ramp up quickly, listen for what clients actually need, and work full stack: architecture, agents, SDK, UI, and shipping.
+        I'm a <strong>Senior AI Engineer</strong> at the intersection of computer science and finance.
+        I ramp up quickly, listen for what clients actually need, and work full stack, from architecture and agents through UI and shipping.
         I move fast, stay close to the people who use the product, and keep systems trustworthy in production.
       </p>
       <p>
-        At <strong>PSP Investments</strong>, a large Canadian pension fund, I owned the <strong>Virtual Analyst Platform</strong>
-        and the underlying <strong>Alpha Science SDK</strong>: the company-wide agentic AI stack used across the organization.
-        I took that work through the full cycle, from proof of concept to deployment to years of production use with active users
-        (Sep 2022 – Aug 2026).
+        Most of my time now goes into <a href="https://digithings.ai" target="_blank" rel="noopener">digithings</a>,
+        an open-source AI infrastructure stack, and the tools I build on it: <a href="https://digiquant.io" target="_blank" rel="noopener">Olympus</a> on digiquant,
+        DigiChat releases, client embeds like DataTap Stream Chat, and freelance desk applications.
       </p>
       <p>
-        Outside that corporate work I maintain <a href="https://digithings.ai" target="_blank" rel="noopener">digithings.ai</a>,
-        an open-source AI infrastructure stack, and build tools on top of it for private clients, including
-        <a href="https://digiquant.io" target="_blank" rel="noopener">digiquant.io</a>.
+        Before that, at <strong>PSP Investments</strong>, a large Canadian pension fund, I owned the <strong>Virtual Analyst Platform</strong>
+        and the <strong>Alpha Science SDK</strong>. I took that work through the full cycle, from proof of concept to deployment
+        to years of production use with active users across the organization (Sep 2022 – Aug 2026).
       </p>
     </div>
   </div>
 </section>
 
+<!-- ═══════ WORK — PROJECTS & FREELANCE ═══════ -->
+<section class="section reveal" id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker"><span class="kn">02</span> Work</span>
+      <h2>What I'm building now</h2>
+      <p>Open-source infra, product apps, DigiChat releases, and freelance builds. This is where I spend most of my time.</p>
+    </div>
+
+    <div class="repo-activity reveal" id="repo-activity" aria-live="polite">
+      <div>
+        <div class="ra-kicker">digithings · last 30 days on main</div>
+        <div class="ra-stats">
+          <div class="ra-stat"><span class="ra-n is-loading" data-stat="commits">—</span><span class="ra-l">commits</span></div>
+          <div class="ra-stat"><span class="ra-n is-loading" data-stat="prs">—</span><span class="ra-l">PRs merged</span></div>
+          <div class="ra-stat"><span class="ra-n is-loading" data-stat="issues">—</span><span class="ra-l">issues closed</span></div>
+        </div>
+      </div>
+      <div class="ra-side">
+        <div class="ra-release">Latest release · <strong data-stat="release">…</strong></div>
+        <a class="ra-link" href="https://github.com/digithings-ai/digithings" target="_blank" rel="noopener">Browse the repo →</a>
+      </div>
+      <div class="ra-recent">
+        <div class="ra-recent-label">Shipped recently</div>
+        <ul class="ra-pr-list" data-stat="recent">
+          <li class="ra-pr-meta">Loading recent merges…</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="product-grid">
+
+      <div class="product-card span-2">
+        <div class="pc-top">
+          <span class="pc-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3 21 8 12 13 3 8 12 3Z"/><path d="M3 16 12 21 21 16"/><path d="M3 12 12 17 21 12"/></svg></span>
+          <div>
+            <div class="pc-title">digithings</div>
+          </div>
+          <span class="pc-tier">Open Source</span>
+        </div>
+        <div class="pc-meta">
+          <a href="https://digithings.ai" target="_blank" rel="noopener">digithings.ai</a>
+          ·
+          <a href="https://github.com/digithings-ai/digithings" target="_blank" rel="noopener">github.com/digithings-ai/digithings</a>
+        </div>
+        <p class="pc-desc">
+          Open-source AI library and infrastructure stack. It is the canvas I use for agentic ideas and the layer underneath the apps I ship.
+          Composable modules for orchestration, RAG and retrieval, DigiChat, auth, and observability. Self-hosted by default, BYOK, MIT-licensed.
+        </p>
+        <ul class="pc-features">
+          <li><strong>Infra for apps</strong>: modules you can compose into production agentic systems</li>
+          <li><strong>Maintained in the open</strong>: public monorepo with ongoing commits, PRs, and DigiChat releases</li>
+          <li><strong>Client work on the same stack</strong>: private tools and embeds built on digithings, not a locked SaaS seat</li>
+        </ul>
+        <a href="https://digithings.ai" target="_blank" rel="noopener" class="pc-link">Visit digithings.ai ↗</a>
+      </div>
+
+      <div class="product-card span-2">
+        <div class="pc-top">
+          <span class="pc-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M3 3v18h18"/><path d="M7 14l3.5-4 3 3L21 6"/></svg></span>
+          <div><div class="pc-title">Olympus</div></div>
+          <span class="pc-tier">Product · digiquant</span>
+        </div>
+        <div class="pc-meta">
+          <a href="https://digiquant.io" target="_blank" rel="noopener">digiquant.io</a>
+        </div>
+        <p class="pc-desc">
+          Olympus is the digiquant research book and dashboard, built on digithings.
+          Agentic research produces ranked, sourced theses; multi-agent deliberation shapes portfolio direction and risk sizing;
+          then indicators, strategy specs, Optuna search, and reproducible NautilusTrader backtests with trade ledgers and tearsheets.
+          Research book and paper portfolio ship today; live broker execution is not built.
+        </p>
+        <ul class="pc-features">
+          <li><strong>Research book &amp; dash</strong>: paper book, tearsheets, and a front end for reading the research</li>
+          <li><strong>FX Hub</strong>: FX research with traders on bank and broker consensus and trade ideas</li>
+          <li><strong>Honest scope</strong>: paper workflows and backtests; broker adapters are stubs, not live trading</li>
+        </ul>
+        <a href="https://digiquant.io" target="_blank" rel="noopener" class="pc-link">Visit digiquant.io ↗</a>
+      </div>
+
+      <div class="product-card span-2">
+        <div class="pc-top">
+          <span class="pc-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+          <div><div class="pc-title">DigiChat</div></div>
+          <span class="pc-tier">Releases · embeds</span>
+        </div>
+        <div class="pc-meta">
+          digithings chat surface ·
+          <a href="https://datatap.stream/chat" target="_blank" rel="noopener">datatap.stream/chat</a>
+        </div>
+        <p class="pc-desc">
+          DigiChat is the production chat surface on digithings: Next.js BFF, BYOK, retrieval against live docs.
+          Releases ship on a regular cadence. DataTap Stream Chat is a DigiChat embed on a client’s product documentation,
+          with support chat and developer chat in place.
+        </p>
+        <ul class="pc-features">
+          <li><strong>Versioned releases</strong>: DigiChat tags land on the public digithings repo</li>
+          <li><strong>DataTap Stream Chat</strong>: embedded on live product docs for support and developer questions</li>
+          <li><strong>Same stack</strong>: orchestration, retrieval, and observability from digithings underneath</li>
+        </ul>
+        <a href="https://datatap.stream/chat" target="_blank" rel="noopener" class="pc-link">Open DataTap Stream Chat ↗</a>
+      </div>
+
+      <div class="product-card span-2">
+        <div class="pc-top">
+          <span class="pc-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 12h18"/></svg></span>
+          <div><div class="pc-title">Freelance desk AI</div></div>
+          <span class="pc-tier">Client work</span>
+        </div>
+        <div class="pc-meta">Forward deployed · digithings applications</div>
+        <p class="pc-desc">
+          For private clients I sit with the desk, ship on their stack, and build digithings applications they can run and own.
+          Source-traced answers, named analyses, and workflow layers wired into the terminals and research systems they already use.
+        </p>
+        <ul class="pc-features">
+          <li><strong>On their stack</strong>: agents and RAG against the data and tools the desk already runs</li>
+          <li><strong>Source-traced answers</strong>: claims link back so people can verify without leaving the product</li>
+          <li><strong>Owned code</strong>: applications the client keeps, not a locked vendor seat</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ═══════ EXPERIENCE ═══════ -->
-<section class="section reveal" id="experience">
+<section class="section section-alt reveal" id="experience">
   <div class="wrap">
     <div class="section-head" style="max-width:none;">
       <div class="head-row">
         <div>
-          <span class="kicker"><span class="kn">02</span> Experience</span>
+          <span class="kicker"><span class="kn">03</span> Experience</span>
           <h2>Where I've worked</h2>
         </div>
         <a href="Chris_Stefan_CV.pdf" download="Chris_Stefan_CV.pdf" class="btn btn-ghost btn-sm">For more detail, see the CV <span aria-hidden="true">→</span></a>
       </div>
-      <p>Production tenure building AI forward-deployed with the desks that use it. EU citizen with right to work in the EU; no sponsorship required. Based in Italy · open to contract.</p>
+      <p>Corporate production tenure before the open-source and freelance work above. EU citizen with right to work in the EU; no sponsorship required.</p>
     </div>
 
     <div class="timeline stagger">
@@ -573,9 +792,9 @@ ul { list-style: none; padding: 0; }
         </div>
         <ul class="tl-bullets">
           <li><strong>Virtual Analyst Platform:</strong> owned production agentic AI for analysts and PMs, including chatbot UI, step-level tracing, source traceability, and a workflow launcher</li>
-          <li><strong>Alpha Science SDK:</strong> full-stack base-class framework on the firm’s Databricks, Azure, and OpenAI stack; one-liner for agents &amp; vector indexes</li>
-          <li><strong>Agile roadmap:</strong> shipped weekly; rapid integration of emerging model and tooling capabilities into production; mentored interns</li>
-          <li><strong>On their stack:</strong> agents and RAG on the desk’s existing terminals and research systems. Platform demoed at the Databricks Data &amp; AI Summit</li>
+          <li><strong>Alpha Science SDK:</strong> full-stack framework on the firm’s Databricks, Azure, and OpenAI stack for agents and vector indexes</li>
+          <li><strong>Shipping cadence:</strong> weekly releases, rapid integration of new model and tooling capabilities, and mentoring interns</li>
+          <li><strong>On their stack:</strong> agents and RAG on the desk’s existing terminals and research systems. Demoed at the Databricks Data &amp; AI Summit</li>
         </ul>
         <div class="badges">
           <span class="badge">Agentic AI</span><span class="badge">RAG</span><span class="badge">Orchestration</span>
@@ -591,7 +810,7 @@ ul { list-style: none; padding: 0; }
         </div>
         <ul class="tl-bullets">
           <li><strong>Earnings Prediction Engine:</strong> ML beat/miss pipeline, point-in-time data, Power BI</li>
-          <li><strong>Alt-data pipeline:</strong> feature engineering; stakeholder buy-in across asset classes</li>
+          <li><strong>Alt-data pipeline:</strong> feature engineering and stakeholder buy-in across asset classes</li>
         </ul>
         <div class="badges">
           <span class="badge">Quant Strategy</span><span class="badge">Alt Data</span><span class="badge">ML Pipelines</span>
@@ -620,7 +839,7 @@ ul { list-style: none; padding: 0; }
           <span class="tl-date">Jun 2020 – Jun 2021</span>
         </div>
         <ul class="tl-bullets">
-          <li>SEO &amp; A/B testing (2× conversion); inventory analytics for merchandising</li>
+          <li>SEO and A/B testing; inventory analytics for merchandising</li>
         </ul>
         <div class="badges">
           <span class="badge">SEO</span><span class="badge">A/B Testing</span><span class="badge">Shopify</span>
@@ -631,24 +850,24 @@ ul { list-style: none; padding: 0; }
   </div>
 </section>
 
-<!-- ═══════ FLAGSHIP — VIRTUAL ANALYST PLATFORM ═══════ -->
-<section class="section section-alt reveal" id="platform">
+<!-- ═══════ VIRTUAL ANALYST PLATFORM (corporate deep dive) ═══════ -->
+<section class="section reveal" id="platform">
   <div class="wrap">
     <div class="section-head">
-      <span class="kicker"><span class="kn">03</span> Flagship</span>
+      <span class="kicker"><span class="kn">04</span> At PSP</span>
       <h2>Virtual Analyst Platform</h2>
-      <p>PSP Investments · Company-wide · Showcased at the Databricks Data &amp; AI Summit</p>
+      <p>PSP Investments · Company-wide agentic AI · Demoed at the Databricks Data &amp; AI Summit</p>
     </div>
     <div class="flagship">
       <div>
         <p class="flagship-desc">
-          PSP's company-wide flagship agentic AI platform, embedded in analyst–PM
-          daily workflows across the corporation. AI findings flow directly to PMs who audit &amp; red-team theses
-          in the same session, all powered by the proprietary <strong>Alpha Science SDK</strong>.
+          The company-wide agentic AI platform used across investment teams.
+          Analysts and portfolio managers could run research workflows, inspect agent steps, and verify claims
+          without leaving the tool. Powered by the <strong>Alpha Science SDK</strong>.
         </p>
         <div class="stat-tiles">
-          <div class="stat-tile"><div class="sv">Owned</div><div class="sl">Production agentic AI</div></div>
-          <div class="stat-tile"><div class="sv">Source</div><div class="sl">Traceability in the UI</div></div>
+          <div class="stat-tile"><div class="sv">Owned</div><div class="sl">End-to-end production AI</div></div>
+          <div class="stat-tile"><div class="sv">Traced</div><div class="sl">Sources in the UI</div></div>
           <div class="stat-tile"><div class="sv">Demoed</div><div class="sl">Databricks Data &amp; AI Summit</div></div>
         </div>
         <div class="flagship-badges badges">
@@ -658,108 +877,15 @@ ul { list-style: none; padding: 0; }
       </div>
       <div>
         <ul class="feature-list">
-          <li><strong>Custom dual-panel UI</strong> built from scratch: chat with full agentic step transparency plus a workflow launcher for named structured analyses</li>
+          <li><strong>Custom dual-panel UI</strong>: chat with agentic step transparency plus a workflow launcher for named analyses</li>
           <li><strong>Workflow launcher</strong>: company overviews, deep research, thesis memos, bull/bear reviews, buy-side research review</li>
-          <li><strong>Source traceability</strong>: every claim links to its exact document, page, and passage, surfaced in the UI so analysts never leave to verify</li>
-          <li><strong>Structured data</strong>: data retrieval &amp; manipulation in-chat, live charting (Plotly, Dash, ECharts), and interactive exportable dashboards</li>
+          <li><strong>Source traceability</strong>: every claim links to its document, page, and passage in the UI</li>
+          <li><strong>Structured data</strong>: retrieval and manipulation in-chat, live charting, and exportable dashboards</li>
           <li><strong>Artifact builder</strong>: export research to Microsoft Office documents and custom web pages</li>
-          <li><strong>Sub-agent delegation</strong>: to-do list planning to organize tasks and research plans, with parallel tool execution</li>
-          <li><strong>Multi-source RAG</strong>: broker research, financial filings, earnings call transcripts, and custom financial data indexes</li>
+          <li><strong>Sub-agent delegation</strong>: planning and parallel tool execution for longer research tasks</li>
+          <li><strong>Multi-source RAG</strong>: broker research, filings, earnings transcripts, and custom financial indexes</li>
         </ul>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════ PRODUCTS & FREELANCE ═══════ -->
-<section class="section reveal" id="products">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="kicker"><span class="kn">04</span> Products &amp; Freelance</span>
-      <h2>What I build on my own time</h2>
-      <p>Production knowledge from institutional AI, distilled into digithings (an open-source AI library), digiquant as the finance app on that stack, and custom desk AI.</p>
-    </div>
-    <div class="product-grid">
-
-      <div class="product-card span-2">
-        <div class="pc-top">
-          <span class="pc-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3 21 8 12 13 3 8 12 3Z"/><path d="M3 16 12 21 21 16"/><path d="M3 12 12 17 21 12"/></svg></span>
-          <div>
-            <div class="pc-title">digithings</div>
-          </div>
-          <span class="pc-tier">Open Source</span>
-        </div>
-        <div class="pc-meta">
-          <a href="https://digithings.ai" target="_blank" rel="noopener">digithings.ai</a>
-        </div>
-        <p class="pc-desc">
-          Open-source AI library and toolkit. It is a canvas for agentic ideas and the layer I use to build production applications. Orchestration, RAG/retrieval, DigiChat surfaces, auth, and observability as composable modules; self-hosted by default, BYOK, MIT-licensed.
-        </p>
-        <ul class="pc-features">
-          <li><strong>Infra layer</strong>: self-hosted modules for agentic apps (orchestration, retrieval, chat, observability)</li>
-          <li><strong>DigiChat releases</strong>: production chat surfaces on the digithings stack</li>
-          <li><strong>DataTap Stream Chat</strong>: DigiChat embedded on client product docs for support and developer chat</li>
-        </ul>
-        <a href="https://digithings.ai" target="_blank" rel="noopener" class="pc-link">Visit digithings.ai ↗</a>
-      </div>
-
-      <div class="product-card span-2">
-        <div class="pc-top">
-          <span class="pc-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M3 3v18h18"/><path d="M7 14l3.5-4 3 3L21 6"/></svg></span>
-          <div><div class="pc-title">digiquant</div></div>
-          <span class="pc-tier">Product</span>
-        </div>
-        <div class="pc-meta">
-          <a href="https://digiquant.io" target="_blank" rel="noopener">digiquant.io</a>
-        </div>
-        <p class="pc-desc">
-          Automated quant finance application built on digithings: agentic research into ranked theses, multi-agent portfolio deliberation and risk sizing, then Optuna optimization and NautilusTrader backtests with tearsheets. Research book and paper portfolio; live broker execution is not built.
-        </p>
-        <ul class="pc-features">
-          <li><strong>Research → portfolio → backtest</strong>: agentic research, deliberation, signals, optimize, backtest</li>
-          <li><strong>FX Hub</strong>: FX research with traders on bank and broker consensus and trade ideas</li>
-          <li><strong>Honest scope</strong>: paper workflows and backtests; live execution is not built</li>
-        </ul>
-        <a href="https://digiquant.io" target="_blank" rel="noopener" class="pc-link">Visit digiquant.io ↗</a>
-      </div>
-
-      <div class="product-card span-2">
-        <div class="pc-top">
-          <span class="pc-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
-          <div><div class="pc-title">DataTap Stream Chat</div></div>
-          <span class="pc-tier">Production digichat</span>
-        </div>
-        <div class="pc-meta">
-          <a href="https://datatap.stream/chat" target="_blank" rel="noopener">datatap.stream/chat</a>
-        </div>
-        <p class="pc-desc">
-          DigiChat release embedded on a client’s product documentation, with support chat and developer/docs chat in place and retrieval against the live docs, on the digithings stack.
-        </p>
-        <ul class="pc-features">
-          <li><strong>Docs chat in place</strong>: ask against the solutions documentation without leaving the product</li>
-          <li><strong>Support + developer chat</strong>: one embed covering both audiences on a live product surface</li>
-        </ul>
-        <a href="https://datatap.stream/chat" target="_blank" rel="noopener" class="pc-link">Open datatap.stream/chat ↗</a>
-      </div>
-
-      <div class="product-card span-2">
-        <div class="pc-top">
-          <span class="pc-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 12h18"/></svg></span>
-          <div><div class="pc-title">Custom desk AI</div></div>
-          <span class="pc-tier">digithings apps</span>
-        </div>
-        <div class="pc-meta">Forward deployed · Agentic research · Owned code</div>
-        <p class="pc-desc">
-          Forward-deployed agentic research and workflow layers on a desk’s existing terminals and research stack.
-          Source-traced answers, named analyses; client retains full code ownership. Built as digithings applications, not a locked SaaS seat.
-        </p>
-        <ul class="pc-features">
-          <li><strong>On their stack</strong>: sit with the desk; wire agents into the terminals and data they already run</li>
-          <li><strong>Source-traced answers</strong>: every claim links back; named analyses the desk can launch and audit</li>
-          <li><strong>Owned code</strong>: digithings applications the client owns, with no vendor lock-in</li>
-        </ul>
-      </div>
-
     </div>
   </div>
 </section>
@@ -770,7 +896,7 @@ ul { list-style: none; padding: 0; }
     <div class="section-head">
       <span class="kicker"><span class="kn">05</span> Skills</span>
       <h2>What I work with</h2>
-      <p>Complete skill set across AI in production, data, and finance.</p>
+      <p>Tools and platforms I use across agentic AI, data, and finance.</p>
     </div>
     <div class="skills-spec stagger">
       <div class="skill-row">
@@ -850,14 +976,14 @@ ul { list-style: none; padding: 0; }
 <section class="section reveal" id="qa">
   <div class="wrap">
     <div class="section-head">
-      <span class="kicker"><span class="kn">06</span> In My Own Words</span>
+      <span class="kicker"><span class="kn">06</span> In my own words</span>
       <h2>Interview Q&amp;A</h2>
     </div>
     <div class="qa-grid stagger">
       <div class="qa-card">
         <div class="qa-q"><span class="qi">Q</span><span>&ldquo;Tell me about yourself.&rdquo;</span></div>
         <div class="qa-a">
-          <p>I'm a Senior AI Engineer at the intersection of computer science and finance. I ramp up quickly, understand what clients need, and work full stack with agents throughout. At PSP Investments, a large Canadian pension fund, I owned the Virtual Analyst Platform through the full cycle: proof of concept, deployment, and years of production use with active users. I also maintain digithings, an open-source AI infrastructure stack, and build tools on it for private clients.</p>
+          <p>I'm a Senior AI Engineer at the intersection of computer science and finance. I ramp up quickly, understand what clients need, and work full stack with agents throughout. Most of my time now goes into digithings, Olympus on digiquant, DigiChat releases, and freelance builds on that stack. Before that, at PSP Investments, a large Canadian pension fund, I owned the Virtual Analyst Platform through proof of concept, deployment, and years of production use with active users.</p>
         </div>
       </div>
       <div class="qa-card">
@@ -881,7 +1007,7 @@ ul { list-style: none; padding: 0; }
       <div class="qa-card">
         <div class="qa-q"><span class="qi">Q</span><span>&ldquo;Where do you see yourself in 5 years?&rdquo;</span></div>
         <div class="qa-a">
-          <p>I want to keep owning production AI systems that matter: harder domains, deeper technical leadership, and teams that care about shipping real value. I'm open to remote and contract work; what matters is the work itself, the team, and the impact on clients.</p>
+          <p>I want to keep owning production AI systems that matter: harder domains, deeper technical work, and teams that care about shipping something people actually use. Contract and remote are fine when the work is right.</p>
         </div>
       </div>
     </div>
@@ -893,7 +1019,7 @@ ul { list-style: none; padding: 0; }
   <div class="wrap">
     <div class="section-head">
       <span class="kicker"><span class="kn">07</span> Education</span>
-      <h2>Background</h2>
+      <h2>School and languages</h2>
     </div>
     <div class="edu-grid stagger">
       <div class="edu-card">
@@ -928,25 +1054,25 @@ ul { list-style: none; padding: 0; }
 <section class="section reveal" id="beyond">
   <div class="wrap">
     <div class="section-head">
-      <span class="kicker"><span class="kn">08</span> Beyond Work</span>
-      <h2>What drives me outside the office</h2>
-      <p>The passions, interests, and projects that shape who I am beyond the code.</p>
+      <span class="kicker"><span class="kn">08</span> Beyond work</span>
+      <h2>Outside the day job</h2>
+      <p>What I spend time on when I am not on a client engagement.</p>
     </div>
     <div class="beyond-grid stagger">
       <div class="beyond-card">
         <div class="bi">01</div>
-        <div class="bt">Builder mentality</div>
-        <div class="bd">I don't just tinker; I ship. From AI toolkits to open-source components to full product builds, every interest becomes a project. I use AI to accelerate everything I make.</div>
+        <div class="bt">Building in public</div>
+        <div class="bd">Most free cycles go into digithings and digiquant: shipping modules, DigiChat releases, and the Olympus research book rather than demos that never leave the laptop.</div>
       </div>
       <div class="beyond-card">
         <div class="bi">02</div>
         <div class="bt">Markets &amp; finance</div>
-        <div class="bd">Actively follow tech, AI, equities, and crypto. My finance background keeps me close to the markets, and my engineering instinct makes me want to automate every thesis and strategy I come across.</div>
+        <div class="bd">I still follow tech, equities, and crypto closely. Finance is the domain I know best, and it is usually where I try new agent workflows first.</div>
       </div>
       <div class="beyond-card">
         <div class="bi">03</div>
-        <div class="bt">The AI frontier</div>
-        <div class="bd">Closely following the frontier: new model releases from OpenAI and Anthropic, the evolution of agentic frameworks, and what's actually shifting in how AI systems are built and deployed at scale.</div>
+        <div class="bt">Models and tooling</div>
+        <div class="bd">I keep up with new model releases and agent tooling, then fold what actually works into digithings and client builds.</div>
       </div>
     </div>
   </div>
@@ -955,8 +1081,8 @@ ul { list-style: none; padding: 0; }
 <!-- ═══════ CONTACT ═══════ -->
 <section class="section reveal contact" id="contact">
   <div class="wrap">
-    <span class="kicker" style="justify-content:center;"><span class="kn">09</span> Get in Touch</span>
-    <h2>Let's talk.</h2>
+    <span class="kicker" style="justify-content:center;"><span class="kn">09</span> Contact</span>
+    <h2>Get in touch</h2>
     <p class="tagline">Italy · EU citizen · remote-ready · Open to contract.</p>
     <div class="contact-links">
       <a href="mailto:chris.stefan@proton.me" class="contact-pill"><span class="pi" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span> chris.stefan@proton.me</a>
@@ -977,11 +1103,11 @@ ul { list-style: none; padding: 0; }
       <span>Chris Stefan</span>
     </a>
     <nav class="footer-links" aria-label="Footer">
+      <a href="#work">Work</a>
       <a href="#experience">Experience</a>
-      <a href="#platform">Platform</a>
       <a href="https://digithings.ai" target="_blank" rel="noopener">digithings.ai</a>
       <a href="https://digiquant.io" target="_blank" rel="noopener">digiquant.io</a>
-      <a href="https://github.com/chrizefan" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/digithings-ai/digithings" target="_blank" rel="noopener">Repo</a>
     </nav>
     <p class="footer-meta">Italy · EU Citizen · Remote-ready · © 2026 Chris Stefan</p>
   </div>
@@ -1057,6 +1183,88 @@ ul { list-style: none; padding: 0; }
       if (!running && raf) { cancelAnimationFrame(raf); raf = null; }
     });
     draw();
+  })();
+
+
+  // Live digithings repo activity (GitHub Search API, last 30 days)
+  (function () {
+    var root = document.getElementById('repo-activity');
+    if (!root) return;
+    var fmt = function (n) {
+      if (n == null || isNaN(n)) return '—';
+      try { return Number(n).toLocaleString('en-US'); } catch (e) { return String(n); }
+    };
+    var setText = function (key, value, loading) {
+      var nodes = root.querySelectorAll('[data-stat="' + key + '"]');
+      nodes.forEach(function (el) {
+        if (key === 'recent') return;
+        el.textContent = value;
+        el.classList.toggle('is-loading', !!loading);
+      });
+    };
+    var since = new Date();
+    since.setUTCDate(since.getUTCDate() - 30);
+    var sinceDay = since.toISOString().slice(0, 10);
+    var headers = { 'Accept': 'application/vnd.github+json', 'User-Agent': 'chrizefan-portfolio' };
+
+    var fetchJson = function (url, extraHeaders) {
+      var h = Object.assign({}, headers, extraHeaders || {});
+      return fetch(url, { headers: h }).then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      });
+    };
+
+    Promise.all([
+      fetchJson('https://api.github.com/search/commits?q=repo:digithings-ai/digithings+committer-date:>=' + sinceDay + '&per_page=1', { 'Accept': 'application/vnd.github.cloak-preview+json' }),
+      fetchJson('https://api.github.com/search/issues?q=repo:digithings-ai/digithings+is:pr+is:merged+merged:>=' + sinceDay + '&per_page=5&sort=updated'),
+      fetchJson('https://api.github.com/search/issues?q=repo:digithings-ai/digithings+is:issue+is:closed+closed:>=' + sinceDay + '&per_page=1'),
+      fetchJson('https://api.github.com/repos/digithings-ai/digithings/releases/latest')
+    ]).then(function (results) {
+      var commits = results[0];
+      var prs = results[1];
+      var issues = results[2];
+      var release = results[3];
+      setText('commits', fmt(commits && commits.total_count));
+      setText('prs', fmt(prs && prs.total_count));
+      setText('issues', fmt(issues && issues.total_count));
+      if (release && release.tag_name) {
+        var when = (release.published_at || '').slice(0, 10);
+        setText('release', release.tag_name + (when ? ' · ' + when : ''));
+      } else {
+        setText('release', 'see GitHub');
+      }
+      var list = root.querySelector('[data-stat="recent"]');
+      if (list && prs && Array.isArray(prs.items)) {
+        list.innerHTML = '';
+        prs.items.slice(0, 5).forEach(function (item) {
+          var li = document.createElement('li');
+          var a = document.createElement('a');
+          a.href = item.html_url;
+          a.target = '_blank';
+          a.rel = 'noopener';
+          a.textContent = '#' + item.number + ' ' + item.title;
+          var meta = document.createElement('span');
+          meta.className = 'ra-pr-meta';
+          meta.textContent = (item.closed_at || item.updated_at || '').slice(0, 10);
+          li.appendChild(a);
+          li.appendChild(meta);
+          list.appendChild(li);
+        });
+        if (!prs.items.length) {
+          list.innerHTML = '<li class="ra-pr-meta">No recent merges found.</li>';
+        }
+      }
+    }).catch(function () {
+      setText('commits', '—');
+      setText('prs', '—');
+      setText('issues', '—');
+      setText('release', 'see GitHub');
+      var list = root.querySelector('[data-stat="recent"]');
+      if (list) {
+        list.innerHTML = '<li class="ra-pr-meta">Could not load live stats. <a href="https://github.com/digithings-ai/digithings" target="_blank" rel="noopener">Open the repo</a>.</li>';
+      }
+    });
   })();
 
   // reveal on scroll
