@@ -19,7 +19,7 @@ I bring strong proficiency in {tech_skills}, along with a B.Com in Finance & Bus
 
 {alignment_paragraph}
 
-I would welcome the opportunity to discuss how I can contribute. I am available at your earliest convenience and can be reached at +1.514.710.9601 or chris.stefan@proton.me. You can also view my portfolio at chrizefan.github.io/me and digithings.ai.
+I would welcome the opportunity to discuss how I can contribute. I am available at your earliest convenience and can be reached at +1.514.710.9601 or chris@digithings.ai. You can also view my portfolio at chrizefan.github.io/me and digithings.ai.
 
 Thank you for your consideration. I look forward to hearing from you.
 

@@ -8,7 +8,7 @@ I also built and maintained financial and alternative data pipelines from raw in
 
 I bring strong proficiency in Python, TypeScript, React, NestJS, FastAPI, LangChain, Azure AI Foundry, SQL, Power BI/Tableau, and modern data platforms, along with a B.Com in Finance & Business Analytics from McGill University (Desautels) and a DEC in Computer Science & Mathematics from Champlain College (Honor Roll). I hold Microsoft Azure AI Fundamentals certification. English, French, and Romanian at native level; Spanish basic; Italian basic. I thrive in ambiguous, high-stakes environments and am quick to learn and ship new tools. I am an EU citizen with right to work in the EU; no sponsorship required. I am based in Italy and remote-ready. Open to contract.
 
-I am excited to bring this blend of deep AI engineering experience, production deployment know-how, and finance domain insight to your team. I would welcome the opportunity to discuss how I can contribute. I am available at your earliest convenience and can be reached at +39 377 393 0371 or chris.stefan@proton.me. You can also view my portfolio at chrizefan.github.io/me, digithings.ai, and digiquant.io.
+I am excited to bring this blend of deep AI engineering experience, production deployment know-how, and finance domain insight to your team. I would welcome the opportunity to discuss how I can contribute. I am available at your earliest convenience and can be reached at +39 377 393 0371 or chris@digithings.ai. You can also view my portfolio at chrizefan.github.io/me, digithings.ai, and digiquant.io.
 
 Thank you for your consideration. I look forward to hearing from you.
 
