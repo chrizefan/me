@@ -4,7 +4,7 @@
 
 Personal portfolio and CV. Single-page site with experience, projects, skills, and interview Q&A. Deployed on [GitHub Pages](https://pages.github.com/).
 
-Senior AI Engineer at the intersection of computer science and finance. At PSP Investments (Sep 2022 – Aug 2026) I owned the Virtual Analyst Platform through proof of concept to years of production use. I maintain digithings, an open-source AI infrastructure stack, and build tools on it for private clients. Public proof in finance: digiquant.
+Senior AI Engineer at the intersection of computer science and finance. I maintain [digithings](https://digithings.ai), an open-source AI infrastructure stack, and [digiquant](https://digiquant.io), a module of that stack and its own product (research book and dashboard). I also ship digichat releases and FX Hub, a custom desk-AI application of digiquant. Before that, at PSP Investments (Sep 2022 – Aug 2026) I owned the Virtual Analyst Platform through proof of concept to years of production use.
 
 ---
 
@@ -14,7 +14,7 @@ Senior AI Engineer at the intersection of computer science and finance. At PSP I
 | [LinkedIn](https://linkedin.com/in/chris-stefan) | Profile |
 | [GitHub @chrizefan](https://github.com/chrizefan) | Personal repos |
 | [digithings.ai](https://digithings.ai) | Open-source AI infra |
-| [digiquant.io](https://digiquant.io) | AI finance toolkit / quant desk |
+| [digiquant.io](https://digiquant.io) | Research book & dash |
 
 ---
 
