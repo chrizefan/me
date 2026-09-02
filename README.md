@@ -19,4 +19,4 @@ Senior AI Engineer at the intersection of computer science and finance. I mainta
 ---
 
 **Chris Stefan**  
-chris.stefan@proton.me · [LinkedIn](https://linkedin.com/in/chris-stefan) · [GitHub](https://github.com/chrizefan)
+chris@digithings.ai · [LinkedIn](https://linkedin.com/in/chris-stefan) · [GitHub](https://github.com/chrizefan)
