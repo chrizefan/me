@@ -1,0 +1,143 @@
+/* Compact digithings activity strip — static Pages port of digiweb RepoActivity.
+   Uses the me-page token names (--hair, --surface, --font-mono, --accent, --ink*). */
+
+.ra-compact {
+  border: 1px solid var(--hair);
+  background: var(--surface);
+  padding: 1.15rem 1.25rem;
+  margin-bottom: 1.4rem;
+}
+
+.ra-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+
+.ra-stamp {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--ink-mute);
+}
+
+.ra-n {
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  line-height: 1.1;
+}
+
+.ra-l {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--ink-mute);
+}
+
+.ra-num {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent);
+  text-underline-offset: 2px;
+}
+
+.ra-num:hover {
+  text-decoration: underline;
+}
+
+.ra-title {
+  flex: 1 1 12rem;
+  min-width: 0;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+
+.ra-date {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--ink-mute);
+  white-space: nowrap;
+}
+
+.ra-head,
+.ra-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.4rem 1.1rem;
+}
+
+.ra-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem 1.6rem;
+  margin-top: 0.7rem;
+  list-style: none;
+  padding: 0;
+}
+
+.ra-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 0.18rem;
+  min-width: 5.2rem;
+}
+
+.ra-meta {
+  margin-top: 0.95rem;
+}
+
+.ra-release {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-mute);
+}
+
+.ra-release a {
+  color: var(--ink);
+  text-underline-offset: 2px;
+}
+
+.ra-release a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.ra-repo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+
+.ra-repo:hover {
+  color: var(--accent);
+}
+
+.ra-repo svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+}
+
+.ra-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.85rem;
+  border-top: 1px solid var(--hair);
+}
+
+.ra-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.7rem;
+  padding: 0.62rem 0;
+  border-bottom: 1px solid var(--hair);
+}
