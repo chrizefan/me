@@ -318,101 +318,6 @@ ul { list-style: none; padding: 0; }
 .flagship-badges { margin-top: 1.6rem; }
 
 
-/* ── repo activity (live digithings strip) ──────────────────────────── */
-.repo-activity {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 1.2rem 2rem;
-  align-items: end;
-  background: var(--surface);
-  border: 1px solid var(--hair);
-  border-radius: var(--r-md);
-  padding: 1.35rem 1.5rem;
-  margin-bottom: 1.4rem;
-}
-.repo-activity .ra-live { text-transform: none; letter-spacing: 0.02em; color: var(--ink-mute); }
-.repo-activity .ra-kicker {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--ink-mute);
-  margin-bottom: 0.85rem;
-}
-.repo-activity .ra-stats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: clamp(1.2rem, 4vw, 2.4rem);
-}
-.repo-activity .ra-stat { display: flex; flex-direction: column; gap: 0.15rem; min-width: 5.5rem; }
-.repo-activity .ra-n {
-  font-family: var(--font-mono);
-  font-size: 1.2rem;
-  font-weight: 500;
-  letter-spacing: -0.03em;
-  color: var(--ink);
-  line-height: 1.1;
-}
-.repo-activity .ra-n.is-loading { color: var(--ink-mute); }
-.repo-activity .ra-l { font-size: 0.74rem; color: var(--ink-mute); }
-.repo-activity .ra-side {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 0.55rem;
-  text-align: right;
-}
-.repo-activity .ra-release {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  color: var(--ink-soft);
-}
-.repo-activity .ra-release strong { color: var(--ink); font-weight: 600; }
-.repo-activity .ra-link {
-  font-size: 0.85rem;
-  color: var(--accent);
-  font-weight: 500;
-}
-.repo-activity .ra-link:hover { text-decoration: underline; }
-.repo-activity .ra-recent {
-  grid-column: 1 / -1;
-  border-top: 1px solid var(--hair);
-  padding-top: 0.95rem;
-  margin-top: 0.2rem;
-}
-.repo-activity .ra-recent-label {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--ink-mute);
-  margin-bottom: 0.55rem;
-}
-.repo-activity .ra-pr-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-.repo-activity .ra-pr-list li {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem 0.7rem;
-  font-size: 0.86rem;
-  color: var(--ink-soft);
-  line-height: 1.4;
-}
-.repo-activity .ra-pr-list a { color: var(--ink); }
-.repo-activity .ra-pr-list a:hover { color: var(--accent); }
-.repo-activity .ra-pr-meta {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--ink-mute);
-}
-@media (max-width: 700px) {
-  .repo-activity { grid-template-columns: 1fr; }
-  .repo-activity .ra-side { align-items: flex-start; text-align: left; }
-}
-
 /* ── products / freelance cards ─────────────────────────────────────── */
 .product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
 .product-card { position: relative; overflow: hidden; background: var(--surface); border: 1px solid var(--hair); border-radius: var(--r-md); padding: 1.9rem 1.75rem; display: flex; flex-direction: column; transition: transform 0.3s var(--ease), border-color 0.3s var(--ease); }
@@ -545,6 +450,7 @@ ul { list-style: none; padding: 0; }
   * { scroll-behavior: auto !important; }
 }
 </style>
+<link rel="stylesheet" href="repo-activity/repo-activity.css">
 </head>
 <body>
 <div class="grain" aria-hidden="true"></div>
@@ -661,29 +567,29 @@ ul { list-style: none; padding: 0; }
       <p>Open-source infra, product apps, digichat releases, and FX Hub. This is where I spend most of my time.</p>
     </div>
 
-    <div class="repo-activity reveal" id="repo-activity" aria-live="polite"
-         data-snapshot-commits="1567" data-snapshot-prs="983" data-snapshot-issues="388"
-         data-snapshot-release="digichat-v1.3.2 · 2026-08-25">
-      <div>
-        <div class="ra-kicker">digithings · last 30 days on main <span class="ra-live" data-stat="freshness">· updating…</span></div>
-        <div class="ra-stats">
-          <div class="ra-stat"><span class="ra-n" data-stat="commits">1,567</span><span class="ra-l">commits</span></div>
-          <div class="ra-stat"><span class="ra-n" data-stat="prs">983</span><span class="ra-l">PRs merged</span></div>
-          <div class="ra-stat"><span class="ra-n" data-stat="issues">388</span><span class="ra-l">issues closed</span></div>
-        </div>
+    <article class="ra ra-compact reveal" id="repo-activity" data-variant="compact" data-source="snapshot" aria-label="Repository activity">
+      <header class="ra-head">
+        <p class="ra-kicker">// last 30 days on main</p>
+        <p class="ra-stamp" data-stat="freshness">snapshot 2026-09-02</p>
+      </header>
+      <ul class="ra-metrics" role="list">
+        <li class="ra-metric"><span class="ra-n" data-stat="commits">1,981</span><span class="ra-l">commits</span></li>
+        <li class="ra-metric"><span class="ra-n" data-stat="prs">1,128</span><span class="ra-l">PRs merged</span></li>
+        <li class="ra-metric"><span class="ra-n" data-stat="issues">379</span><span class="ra-l">issues closed</span></li>
+      </ul>
+      <div class="ra-meta">
+        <p class="ra-release">latest <a href="https://github.com/digithings-ai/digithings/releases/tag/digichat-v1.4.0" target="_blank" rel="noreferrer" data-stat="release-url"><span data-stat="release">digichat-v1.4.0</span></a></p>
+        <a class="ra-repo" href="https://github.com/digithings-ai/digithings" target="_blank" rel="noreferrer">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 4.7 18 5 18 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+          browse the repo <span aria-hidden="true">→</span>
+        </a>
       </div>
-      <div class="ra-side">
-        <div class="ra-release">Latest release · <strong data-stat="release">digichat-v1.3.2 · 2026-08-25</strong></div>
-        <a class="ra-link" href="https://github.com/digithings-ai/digithings" target="_blank" rel="noopener">Browse the repo →</a>
-      </div>
-      <div class="ra-recent">
-        <div class="ra-recent-label">Shipped recently</div>
-        <ul class="ra-pr-list" data-stat="recent">
-          <li><a href="https://github.com/digithings-ai/digithings/pull/3187" target="_blank" rel="noopener">#3187 feat(digiquant): GET profile + Settings profile hydrate</a><span class="ra-pr-meta">2026-08-30</span></li>
-          <li><a href="https://github.com/digithings-ai/digithings/pull/3190" target="_blank" rel="noopener">#3190 chore(sync): module/digichat &lt;- develop</a><span class="ra-pr-meta">2026-08-30</span></li>
-        </ul>
-      </div>
-    </div>
+      <ol class="ra-list" role="list" data-stat="recent">
+        <li class="ra-row"><a class="ra-num" href="https://github.com/digithings-ai/digithings/pull/3446" target="_blank" rel="noreferrer">#3446</a><span class="ra-title">promote: develop → main (rolling)</span><span class="ra-date">2026-09-02</span></li>
+        <li class="ra-row"><a class="ra-num" href="https://github.com/digithings-ai/digithings/pull/3436" target="_blank" rel="noreferrer">#3436</a><span class="ra-title">perf(root): faster review-coverage check + retire greek package paths</span><span class="ra-date">2026-09-02</span></li>
+        <li class="ra-row"><a class="ra-num" href="https://github.com/digithings-ai/digithings/pull/3444" target="_blank" rel="noreferrer">#3444</a><span class="ra-title">promote: develop → main (digichat 1.4.0)</span><span class="ra-date">2026-09-02</span></li>
+      </ol>
+    </article>
 
     <div class="product-grid">
 
@@ -1201,86 +1107,6 @@ ul { list-style: none; padding: 0; }
   })();
 
 
-  // Live digithings repo activity (GitHub Search API, last 30 days)
-  (function () {
-    var root = document.getElementById('repo-activity');
-    if (!root) return;
-    var fmt = function (n) {
-      if (n == null || isNaN(n)) return '—';
-      try { return Number(n).toLocaleString('en-US'); } catch (e) { return String(n); }
-    };
-    var clean = function (s) {
-      return String(s || '').replace(/\u2014|\u2013/g, '-');
-    };
-    var setText = function (key, value) {
-      var nodes = root.querySelectorAll('[data-stat="' + key + '"]');
-      nodes.forEach(function (el) {
-        if (key === 'recent') return;
-        el.textContent = value;
-        el.classList.remove('is-loading');
-      });
-    };
-    var renderRecent = function (items) {
-      var list = root.querySelector('[data-stat="recent"]');
-      if (!list || !items || !items.length) return;
-      var filtered = items.filter(function (item) {
-        return !/\bkairos\b/i.test(item.title || '');
-      });
-      if (!filtered.length) filtered = items.slice(0, 5);
-      list.innerHTML = '';
-      filtered.slice(0, 5).forEach(function (item) {
-        var li = document.createElement('li');
-        var a = document.createElement('a');
-        a.href = item.html_url;
-        a.target = '_blank';
-        a.rel = 'noopener';
-        a.textContent = '#' + item.number + ' ' + clean(item.title);
-        var meta = document.createElement('span');
-        meta.className = 'ra-pr-meta';
-        meta.textContent = (item.closed_at || item.updated_at || '').slice(0, 10);
-        li.appendChild(a);
-        li.appendChild(meta);
-        list.appendChild(li);
-      });
-    };
-    var since = new Date();
-    since.setUTCDate(since.getUTCDate() - 30);
-    var sinceDay = since.toISOString().slice(0, 10);
-    var headers = { 'Accept': 'application/vnd.github+json' };
-
-    var fetchJson = function (url, extraHeaders) {
-      var h = Object.assign({}, headers, extraHeaders || {});
-      return fetch(url, { headers: h }).then(function (r) {
-        if (!r.ok) throw new Error('HTTP ' + r.status);
-        return r.json();
-      });
-    };
-
-    Promise.all([
-      fetchJson('https://api.github.com/search/commits?q=repo:digithings-ai/digithings+committer-date:>=' + sinceDay + '&per_page=1', { 'Accept': 'application/vnd.github.cloak-preview+json' }),
-      fetchJson('https://api.github.com/search/issues?q=repo:digithings-ai/digithings+is:pr+is:merged+merged:>=' + sinceDay + '&per_page=10&sort=updated'),
-      fetchJson('https://api.github.com/search/issues?q=repo:digithings-ai/digithings+is:issue+is:closed+closed:>=' + sinceDay + '&per_page=1'),
-      fetchJson('https://api.github.com/repos/digithings-ai/digithings/releases/latest')
-    ]).then(function (results) {
-      var commits = results[0];
-      var prs = results[1];
-      var issues = results[2];
-      var release = results[3];
-      setText('commits', fmt(commits && commits.total_count));
-      setText('prs', fmt(prs && prs.total_count));
-      setText('issues', fmt(issues && issues.total_count));
-      if (release && release.tag_name) {
-        var when = (release.published_at || '').slice(0, 10);
-        setText('release', release.tag_name + (when ? ' · ' + when : ''));
-      }
-      renderRecent(prs && prs.items);
-      setText('freshness', '· live');
-    }).catch(function () {
-      // Keep snapshot numbers already in the HTML; mark freshness.
-      setText('freshness', '· snapshot');
-    });
-  })();
-
   // reveal on scroll
   var els = document.querySelectorAll('.reveal, .stagger');
   if ('IntersectionObserver' in window) {
@@ -1295,5 +1121,6 @@ ul { list-style: none; padding: 0; }
   }
 })();
 </script>
+<script src="repo-activity/repo-activity.js"></script>
 </body>
 </html>
